@@ -203,20 +203,20 @@
    ILLUSTRATIONS
    ═══════════════════════════════════ */
 
-/* Hourglass — sand falling continuously */
-.illo-hourglass { width: 100px; margin: 0 auto; display: block; }
+/* Hourglass — follows global system */
+.illo-hourglass { width: 80px; margin: 0 auto; display: block; }
 .sand { animation: sandFall 2s ease-in infinite; }
 .sand--1 { animation-delay: 0s; }
 .sand--2 { animation-delay: 0.7s; }
 .sand--3 { animation-delay: 1.4s; }
 @keyframes sandFall {
-  0% { opacity: .70; transform: translateY(0); }
-  50% { opacity: .40; transform: translateY(6px); }
+  0% { opacity: .80; transform: translateY(0); }
+  50% { opacity: .45; transform: translateY(6px); }
   100% { opacity: 0; transform: translateY(12px); }
 }
 
-/* Spiral — slowly rotating */
-.illo-spiral { width: 200px; height: auto; animation: spiralSpin 30s linear infinite; }
+/* Spiral — follows global system (divider = 180px) */
+.illo-spiral { width: 160px; height: auto; animation: spiralSpin 30s linear infinite; }
 @keyframes spiralSpin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
@@ -227,22 +227,22 @@
 .svg-sunrise line:nth-of-type(3) { animation-delay: .3s; }
 .svg-sunrise line:nth-of-type(4) { animation-delay: .6s; }
 @keyframes rayPulse {
-  0%,100% { opacity: .45; transform: scaleY(1); }
-  50% { opacity: .75; transform: scaleY(1.3); }
+  0%,100% { opacity: .55; transform: scaleY(1); }
+  50% { opacity: .80; transform: scaleY(1.2); }
 }
 
 /* Crossroads — the center pulses */
 .svg-crossroads circle { animation: crossPulse 5s ease-in-out infinite; }
 @keyframes crossPulse {
-  0%,100% { r: 3; opacity: .65; }
-  50% { r: 4.5; opacity: .90; }
+  0%,100% { r: 3; opacity: .55; }
+  50% { r: 4; opacity: .80; }
 }
 
 /* Horizon — the path shimmers */
 .svg-horizon path { animation: horizonShimmer 6s ease-in-out infinite; }
 @keyframes horizonShimmer {
-  0%,100% { opacity: .45; }
-  50% { opacity: .75; }
+  0%,100% { opacity: .55; }
+  50% { opacity: .80; }
 }
 
 /* ═══════════════════════════════════

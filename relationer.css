@@ -106,51 +106,23 @@
    ILLUSTRATIONS — vivid on dark
    ═══════════════════════════════════ */
 
-/* Family constellation */
-.illo-family { width: 280px; height: auto; animation: familyBreathe 10s ease-in-out infinite; }
-@keyframes familyBreathe {
-  0%,100% { opacity: 1; }
-  50% { opacity: .50; }
-}
-
-/* Two trees from shared roots */
-.illo-trees { width: 200px; animation: treeGrow 12s ease-in-out infinite; }
-@keyframes treeGrow {
-  0%,100% { transform: scaleY(1); opacity: .90; }
-  50% { transform: scaleY(1.04); opacity: .50; }
-}
-
-/* Orbiting moon */
-.illo-orbit { width: 160px; }
-.illo-orbit-moon { animation: moonOrbit 18s linear infinite; transform-origin: 40px 35px; }
+/* ── Illustrations — follows global system (60-160px, .55↔.80) ── */
+.illo-family      { width: 160px; height: auto; animation: familyBreathe 10s ease-in-out infinite; }
+.illo-trees       { width: 130px; animation: treeGrow 12s ease-in-out infinite; }
+.illo-orbit       { width: 100px; }
+.illo-waves-meet  { width: 160px; }
+.illo-nest        { width: 100px; animation: nestPulse 10s ease-in-out infinite; }
+.illo-bridge-anim { width: 160px; animation: bridgeSway 8s ease-in-out infinite; }
+.illo-orbit-moon  { animation: moonOrbit 18s linear infinite; transform-origin: 40px 35px; }
 @keyframes moonOrbit { to { transform: rotate(360deg); } }
-
-/* Two waves meeting */
-.illo-waves-meet { width: 260px; }
-.illo-waves-meet path:first-child {
-  stroke: rgba(90,140,190,0.55);
-  animation: waveUp 6s ease-in-out infinite;
-}
-.illo-waves-meet path:nth-child(2) {
-  stroke: rgba(120,170,130,0.50);
-  animation: waveDown 6s ease-in-out infinite 0.5s;
-}
-@keyframes waveUp { 0%,100% { opacity: .50; } 50% { opacity: .90; } }
-@keyframes waveDown { 0%,100% { opacity: .45; } 50% { opacity: .80; } }
-
-/* Nested circles — generations */
-.illo-nest { width: 160px; animation: nestPulse 10s ease-in-out infinite; }
-@keyframes nestPulse {
-  0%,100% { opacity: .90; transform: scale(1); }
-  50% { opacity: .40; transform: scale(1.05); }
-}
-
-/* Bridge between shores */
-.illo-bridge-anim { width: 280px; animation: bridgeSway 8s ease-in-out infinite; }
-@keyframes bridgeSway {
-  0%,100% { transform: rotate(0); opacity: .90; }
-  50% { transform: rotate(.5deg); opacity: .50; }
-}
+@keyframes familyBreathe { 0%,100%{opacity:.80} 50%{opacity:.55} }
+@keyframes treeGrow { 0%,100%{transform:scaleY(1);opacity:.80} 50%{transform:scaleY(1.03);opacity:.55} }
+.illo-waves-meet path:first-child { stroke:rgba(90,140,190,0.55); animation:waveUp 6s ease-in-out infinite; }
+.illo-waves-meet path:nth-child(2) { stroke:rgba(120,170,130,0.50); animation:waveDown 6s ease-in-out infinite .5s; }
+@keyframes waveUp { 0%,100%{opacity:.55} 50%{opacity:.80} }
+@keyframes waveDown { 0%,100%{opacity:.50} 50%{opacity:.75} }
+@keyframes nestPulse { 0%,100%{opacity:.80;transform:scale(1)} 50%{opacity:.55;transform:scale(1.04)} }
+@keyframes bridgeSway { 0%,100%{transform:rotate(0);opacity:.80} 50%{transform:rotate(.5deg);opacity:.55} }
 
 /* ── Deep page ── */
 .body--rel { padding-top: 56px; }

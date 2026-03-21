@@ -239,63 +239,92 @@
 }
 .dp-back a:hover { color: var(--text-secondary); }
 
-/* ── Illustration pauses between sections ── */
+/* ══════════════════════════════════════
+   ILLUSTRATION SYSTEM
+   Consistent sizing across ALL deep pages:
+   - Small (icon-like): 60-80px
+   - Medium (between sections): 120-160px
+   - Wide (horizontal): max 200px
+   All opacity range: .55 → .85 (visible but not harsh)
+   ══════════════════════════════════════ */
 .illo-pause {
   display: flex;
   justify-content: center;
   padding: 20px 0;
 }
-.illo-pause svg { height: auto; }
+.illo-pause svg { height: auto; max-width: 160px; }
 
-/* Falling leaf — gentle sway */
-.illo-leaf { width: 72px; animation: leafDrift 8s ease-in-out infinite; }
+/* ── Dit Dybe Billede (Metal/Høsten) ── */
+.illo-leaf        { width: 60px;  animation: leafDrift 8s ease-in-out infinite; }
+.illo-lungs       { width: 120px; animation: lungsBreathe 6s ease-in-out infinite; }
+.illo-harvest     { width: 160px; animation: harvestSway 10s ease-in-out infinite; }
+.illo-generations { width: 130px; animation: genPulse 8s ease-in-out infinite; }
+.illo-breath-rhythm { width: 180px; max-width: 180px; }
+.illo-stillwater  { width: 160px; animation: rippleSpread 8s ease-in-out infinite; }
+.illo-drops       { width: 70px;  animation: dropsFall 10s ease-in-out infinite; }
+
+/* ── Din Tidsrejse (Ild/Sommer) ── */
+.illo-dawn        { width: 160px; animation: dawnGlow 8s ease-in-out infinite; }
+.illo-flame       { width: 70px;  max-width: 70px; animation: flameBreathe 5s ease-in-out infinite; }
+.illo-pendulum    { width: 80px;  max-width: 80px; animation: pendSwing 6s ease-in-out infinite; }
+.illo-timepoints  { width: 180px; max-width: 200px; }
+
+/* ── Animations — all use same opacity range .55↔.85 ── */
 @keyframes leafDrift {
-  0%,100% { transform: rotate(-3deg) translateY(0); opacity: .90; }
-  50% { transform: rotate(4deg) translateY(4px); opacity: .55; }
+  0%,100% { transform: rotate(-2deg) translateY(0); opacity: .80; }
+  50% { transform: rotate(3deg) translateY(3px); opacity: .55; }
 }
-
-/* Lungs — breathing expand/contract */
-.illo-lungs { width: 140px; animation: lungsBreathe 6s ease-in-out infinite; }
 @keyframes lungsBreathe {
-  0%,100% { transform: scaleX(1); opacity: .90; }
-  50% { transform: scaleX(1.08); opacity: .60; }
+  0%,100% { transform: scaleX(1); opacity: .80; }
+  50% { transform: scaleX(1.06); opacity: .55; }
 }
-
-/* Harvest stalks — gentle wind */
-.illo-harvest { width: 240px; animation: harvestSway 10s ease-in-out infinite; }
 @keyframes harvestSway {
-  0%,100% { transform: skewX(0deg); opacity: .85; }
-  33% { transform: skewX(2deg); opacity: .70; }
-  66% { transform: skewX(-1.5deg); opacity: .80; }
+  0%,100% { transform: skewX(0deg); opacity: .80; }
+  33% { transform: skewX(1.5deg); opacity: .60; }
+  66% { transform: skewX(-1deg); opacity: .70; }
 }
-
-/* Three generations — subtle pulse */
-.illo-generations { width: 180px; animation: genPulse 8s ease-in-out infinite; }
 @keyframes genPulse {
-  0%,100% { opacity: .90; }
+  0%,100% { opacity: .80; }
   50% { opacity: .50; }
 }
+@keyframes rippleSpread {
+  0%,100% { opacity: .80; }
+  50% { opacity: .50; }
+}
+@keyframes dropsFall {
+  0%,100% { transform: translateY(0); opacity: .80; }
+  50% { transform: translateY(3px); opacity: .50; }
+}
+@keyframes dawnGlow {
+  0%,100% { opacity: .80; }
+  50% { opacity: .55; }
+}
+@keyframes flameBreathe {
+  0%,100% { transform: scaleY(1) scaleX(1); opacity: .80; }
+  50% { transform: scaleY(1.04) scaleX(.96); opacity: .55; }
+}
+@keyframes pendSwing {
+  0%,100% { transform: rotate(-2deg); opacity: .80; }
+  50% { transform: rotate(2deg); opacity: .55; }
+}
 
-/* Breath rhythm — the ssss exhale */
-.illo-breath-rhythm { width: 280px; }
 .illo-breath-rhythm path:last-of-type { animation: exhaleGlow 6s ease-in-out infinite; }
 @keyframes exhaleGlow {
-  0%,100% { opacity: .50; }
-  50% { opacity: .90; }
+  0%,100% { opacity: .55; }
+  50% { opacity: .85; }
 }
 
-/* Still water — ripples spreading */
-.illo-stillwater { width: 240px; animation: rippleSpread 8s ease-in-out infinite; }
-@keyframes rippleSpread {
-  0%,100% { opacity: .90; }
-  50% { opacity: .45; }
-}
-
-/* Water drops — metal condensing into water */
-.illo-drops { width: 110px; animation: dropsFall 10s ease-in-out infinite; }
-@keyframes dropsFall {
-  0%,100% { transform: translateY(0); opacity: .90; }
-  50% { transform: translateY(4px); opacity: .50; }
+/* Timepoints dots stagger */
+.illo-timepoints circle { animation: tpDot 3s ease-in-out infinite; }
+.illo-timepoints circle:nth-child(1){animation-delay:0s}
+.illo-timepoints circle:nth-child(2){animation-delay:.2s}
+.illo-timepoints circle:nth-child(3){animation-delay:.4s}
+.illo-timepoints circle:nth-child(4){animation-delay:.6s}
+.illo-timepoints circle:nth-child(5){animation-delay:.8s}
+.illo-timepoints circle:nth-child(6){animation-delay:1s}
+@keyframes tpDot {
+  0%,100% { opacity: .80; transform: scale(1); }
+  50% { opacity: .45; transform: scale(1.2); }
 }
 
 /* ── SVG animations ── */
