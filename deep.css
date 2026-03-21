@@ -18,7 +18,7 @@
 /* ── Hero portrait ── */
 .dp-hero {
   text-align: center;
-  padding: 28px 0 20px;
+  padding: 40px 0 36px;
 }
 .dp-hero__symbol {
   position: relative;
@@ -60,8 +60,8 @@
 
 /* ── Sections ── */
 .dp-section {
-  padding: 22px 20px;
-  margin-bottom: 8px;
+  padding: 24px 22px;
+  margin-bottom: 20px;
   background: var(--surface);
   border: 1px solid var(--border-light);
   border-radius: 14px;
@@ -222,7 +222,7 @@
 /* ── Divider ── */
 .dp-divider {
   display: flex; justify-content: center;
-  padding: 10px 0 6px;
+  padding: 20px 0 16px;
 }
 .dp-divider svg { width: 180px; height: auto; }
 
