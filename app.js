@@ -97,6 +97,26 @@
     }
   }
 
+  // ── Deep bars — update with live data ──
+  const deepOrganEl = document.getElementById('deepOrgan');
+  if (deepOrganEl) {
+    const end = currentOrgan.end < 10 ? '0' + currentOrgan.end : currentOrgan.end;
+    const start = currentOrgan.start < 10 ? '0' + currentOrgan.start : currentOrgan.start;
+    deepOrganEl.textContent = currentOrgan.organ + ' · ' + currentOrgan.element + ' · kl. ' + start + '–' + end;
+  }
+
+  const deepSeasonEl = document.getElementById('deepSeason');
+  if (deepSeasonEl) deepSeasonEl.textContent = currentSeason.name + ' møder ' + currentOrgan.element;
+
+  const deepClimateEl = document.getElementById('deepClimate');
+  if (deepClimateEl) {
+    if (currentSeason.element === currentOrgan.element) {
+      deepClimateEl.textContent = 'Fuld resonans i ' + currentOrgan.element.toLowerCase();
+    } else {
+      deepClimateEl.textContent = 'Kreativ spænding — ' + currentSeason.element.toLowerCase() + ' og ' + currentOrgan.element.toLowerCase();
+    }
+  }
+
   // ── Top nav scroll ──
   const topnav = document.querySelector('.topnav');
   let ticking = false;
