@@ -6,9 +6,9 @@
 .body--deep { padding-top: 56px; }
 
 .topnav--inner {
-  background: rgba(62,81,104,.82);
+  background: rgba(20,34,54,.85);
   backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(255,255,255,.06);
+  border-bottom: 1px solid rgba(255,255,255,.05);
 }
 .topnav--inner .topnav__brand { color: var(--text-bright); font-size: 1rem; }
 .topnav--inner .topnav__btn { color: var(--text-dim); }
@@ -248,54 +248,54 @@
 .illo-pause svg { height: auto; }
 
 /* Falling leaf — gentle sway */
-.illo-leaf { width: 36px; animation: leafDrift 8s ease-in-out infinite; }
+.illo-leaf { width: 72px; animation: leafDrift 8s ease-in-out infinite; }
 @keyframes leafDrift {
-  0%,100% { transform: rotate(-2deg) translateY(0); opacity: .85; }
-  50% { transform: rotate(3deg) translateY(3px); opacity: .65; }
+  0%,100% { transform: rotate(-3deg) translateY(0); opacity: .90; }
+  50% { transform: rotate(4deg) translateY(4px); opacity: .55; }
 }
 
 /* Lungs — breathing expand/contract */
-.illo-lungs { width: 70px; animation: lungsBreathe 6s ease-in-out infinite; }
+.illo-lungs { width: 140px; animation: lungsBreathe 6s ease-in-out infinite; }
 @keyframes lungsBreathe {
-  0%,100% { transform: scaleX(1); opacity: .9; }
-  50% { transform: scaleX(1.06); opacity: .7; }
+  0%,100% { transform: scaleX(1); opacity: .90; }
+  50% { transform: scaleX(1.08); opacity: .60; }
 }
 
 /* Harvest stalks — gentle wind */
-.illo-harvest { width: 120px; animation: harvestSway 10s ease-in-out infinite; }
+.illo-harvest { width: 240px; animation: harvestSway 10s ease-in-out infinite; }
 @keyframes harvestSway {
-  0%,100% { transform: skewX(0deg); }
-  33% { transform: skewX(1.5deg); }
-  66% { transform: skewX(-1deg); }
+  0%,100% { transform: skewX(0deg); opacity: .85; }
+  33% { transform: skewX(2deg); opacity: .70; }
+  66% { transform: skewX(-1.5deg); opacity: .80; }
 }
 
 /* Three generations — subtle pulse */
-.illo-generations { width: 90px; animation: genPulse 8s ease-in-out infinite; }
+.illo-generations { width: 180px; animation: genPulse 8s ease-in-out infinite; }
 @keyframes genPulse {
-  0%,100% { opacity: .9; }
-  50% { opacity: .6; }
+  0%,100% { opacity: .90; }
+  50% { opacity: .50; }
 }
 
 /* Breath rhythm — the ssss exhale */
-.illo-breath-rhythm { width: 140px; }
+.illo-breath-rhythm { width: 280px; }
 .illo-breath-rhythm path:last-of-type { animation: exhaleGlow 6s ease-in-out infinite; }
 @keyframes exhaleGlow {
-  0%,100% { opacity: .5; }
-  50% { opacity: .8; }
+  0%,100% { opacity: .50; }
+  50% { opacity: .90; }
 }
 
 /* Still water — ripples spreading */
-.illo-stillwater { width: 120px; animation: rippleSpread 8s ease-in-out infinite; }
+.illo-stillwater { width: 240px; animation: rippleSpread 8s ease-in-out infinite; }
 @keyframes rippleSpread {
-  0%,100% { opacity: .9; }
-  50% { opacity: .5; }
+  0%,100% { opacity: .90; }
+  50% { opacity: .45; }
 }
 
 /* Water drops — metal condensing into water */
-.illo-drops { width: 55px; animation: dropsFall 10s ease-in-out infinite; }
+.illo-drops { width: 110px; animation: dropsFall 10s ease-in-out infinite; }
 @keyframes dropsFall {
-  0%,100% { transform: translateY(0); opacity: .85; }
-  50% { transform: translateY(3px); opacity: .55; }
+  0%,100% { transform: translateY(0); opacity: .90; }
+  50% { transform: translateY(4px); opacity: .50; }
 }
 
 /* ── SVG animations ── */

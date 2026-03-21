@@ -107,52 +107,49 @@
    ═══════════════════════════════════ */
 
 /* Family constellation */
-.illo-family { width: 180px; height: auto; animation: familyBreathe 10s ease-in-out infinite; }
+.illo-family { width: 280px; height: auto; animation: familyBreathe 10s ease-in-out infinite; }
 @keyframes familyBreathe {
   0%,100% { opacity: 1; }
-  50% { opacity: .55; }
+  50% { opacity: .50; }
 }
 
 /* Two trees from shared roots */
-.illo-trees { width: 110px; animation: treeGrow 12s ease-in-out infinite; }
-.illo-trees line { stroke-opacity: .65; }
-.illo-trees circle { stroke-opacity: .50; fill-opacity: .06; }
+.illo-trees { width: 200px; animation: treeGrow 12s ease-in-out infinite; }
 @keyframes treeGrow {
   0%,100% { transform: scaleY(1); opacity: .90; }
-  50% { transform: scaleY(1.03); opacity: .55; }
+  50% { transform: scaleY(1.04); opacity: .50; }
 }
 
 /* Orbiting moon */
-.illo-orbit { width: 90px; }
-.illo-orbit circle { stroke-opacity: .45; }
+.illo-orbit { width: 160px; }
 .illo-orbit-moon { animation: moonOrbit 18s linear infinite; transform-origin: 40px 35px; }
 @keyframes moonOrbit { to { transform: rotate(360deg); } }
 
 /* Two waves meeting */
-.illo-waves-meet { width: 140px; }
+.illo-waves-meet { width: 260px; }
 .illo-waves-meet path:first-child {
-  stroke: rgba(80,112,160,0.50);
+  stroke: rgba(90,140,190,0.55);
   animation: waveUp 6s ease-in-out infinite;
 }
 .illo-waves-meet path:nth-child(2) {
-  stroke: rgba(106,154,106,0.45);
+  stroke: rgba(120,170,130,0.50);
   animation: waveDown 6s ease-in-out infinite 0.5s;
 }
-@keyframes waveUp { 0%,100% { opacity: .50; } 50% { opacity: .85; } }
-@keyframes waveDown { 0%,100% { opacity: .45; } 50% { opacity: .75; } }
+@keyframes waveUp { 0%,100% { opacity: .50; } 50% { opacity: .90; } }
+@keyframes waveDown { 0%,100% { opacity: .45; } 50% { opacity: .80; } }
 
 /* Nested circles — generations */
-.illo-nest { width: 90px; animation: nestPulse 10s ease-in-out infinite; }
+.illo-nest { width: 160px; animation: nestPulse 10s ease-in-out infinite; }
 @keyframes nestPulse {
-  0%,100% { opacity: .85; transform: scale(1); }
-  50% { opacity: .45; transform: scale(1.04); }
+  0%,100% { opacity: .90; transform: scale(1); }
+  50% { opacity: .40; transform: scale(1.05); }
 }
 
 /* Bridge between shores */
-.illo-bridge-anim { width: 160px; animation: bridgeSway 8s ease-in-out infinite; }
+.illo-bridge-anim { width: 280px; animation: bridgeSway 8s ease-in-out infinite; }
 @keyframes bridgeSway {
   0%,100% { transform: rotate(0); opacity: .90; }
-  50% { transform: rotate(.5deg); opacity: .55; }
+  50% { transform: rotate(.5deg); opacity: .50; }
 }
 
 /* ── Deep page ── */
