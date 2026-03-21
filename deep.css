@@ -1,5 +1,6 @@
 /* ═══════════════════════════════════════════════════
-   DIT DYBE BILLEDE — Deep portrait screen
+   DIT DYBE BILLEDE
+   Same style as forside — light, airy, expandable
    ═══════════════════════════════════════════════════ */
 
 .body--deep { padding-top: 56px; }
@@ -14,335 +15,238 @@
 
 .deep { position: relative; z-index: 1; padding-bottom: 40px; }
 
-/* ── Hero ── */
-.deep__hero {
+/* ── Hero portrait ── */
+.dp-hero {
   text-align: center;
-  padding: 32px 0 24px;
+  padding: 28px 0 20px;
 }
-
-.deep__char-wrap {
+.dp-hero__symbol {
   position: relative;
-  width: 100px; height: 100px;
-  margin: 0 auto 16px;
+  width: 88px; height: 88px;
+  margin: 0 auto 14px;
   display: flex; align-items: center; justify-content: center;
 }
-.deep__halo {
-  position: absolute;
-  inset: 0;
+.dp-hero__halo {
+  position: absolute; inset: 0;
   width: 100%; height: 100%;
 }
-.deep__char {
+.dp-hero__char {
   font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 2.8rem;
+  font-size: 2.4rem;
   font-weight: 300;
   color: var(--text-bright);
-  position: relative;
-  z-index: 1;
+  position: relative; z-index: 1;
 }
-
-.deep__title {
+.dp-hero__title {
   font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 1.6rem;
-  font-weight: 400;
+  font-size: 1.5rem; font-weight: 400;
   color: var(--text-bright);
-  margin-bottom: 4px;
+  margin-bottom: 3px;
 }
-.deep__sub {
-  font-size: .72rem;
+.dp-hero__meta {
+  font-size: .70rem;
   color: var(--text-dim);
-  letter-spacing: .06em;
-  margin-bottom: 16px;
+  letter-spacing: .05em;
+  margin-bottom: 14px;
 }
-.deep__climate {
+.dp-hero__climate {
   font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: .92rem;
-  font-weight: 300;
-  font-style: italic;
+  font-size: .90rem; font-weight: 300;
   color: var(--text-secondary);
   line-height: 1.7;
-  max-width: 380px;
+  max-width: 340px;
   margin: 0 auto;
 }
 
-/* ── Cards ── */
-.card {
-  position: relative;
-  padding: 24px 22px;
-  margin-bottom: 10px;
+/* ── Sections ── */
+.dp-section {
+  padding: 22px 20px;
+  margin-bottom: 8px;
   background: var(--surface);
   border: 1px solid var(--border-light);
   border-radius: 14px;
   backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
-  overflow: hidden;
 }
+.dp-section--center { text-align: center; }
 
-.card__label {
+.dp-section__head {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 10px;
+}
+.dp-section__illo {
+  width: 40px; height: 40px;
+  flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  opacity: .6;
+}
+.dp-section__illo svg { width: 100%; height: 100%; }
+
+/* Labels & headings — same fonts as forside */
+.dp-label {
   font-size: .58rem;
   font-weight: 500;
   letter-spacing: .12em;
   text-transform: uppercase;
   color: var(--text-dim);
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
-
-.card__heading {
+.dp-heading {
   font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 1.25rem;
-  font-weight: 400;
+  font-size: 1.15rem; font-weight: 400;
   color: var(--text-bright);
-  margin-bottom: 10px;
   line-height: 1.3;
 }
-
-.card__body {
-  font-size: .86rem;
+.dp-text {
+  font-size: .84rem;
   color: var(--text-secondary);
   line-height: 1.7;
-  margin-bottom: 8px;
 }
-.card__body.dim {
+.dp-text.dim {
   color: var(--text-dim);
   font-style: italic;
 }
-
-.card__hint {
-  font-size: .75rem;
+.dp-meta {
+  font-size: .68rem;
   color: var(--text-dim);
-  font-style: italic;
-  line-height: 1.6;
-  margin-top: 12px;
-  padding-top: 10px;
-  border-top: 1px solid var(--border-light);
+  margin-top: 10px;
+  letter-spacing: .03em;
 }
-
-.card__link {
+.dp-link {
   display: inline-block;
-  margin-top: 8px;
-  font-size: .72rem;
-  font-weight: 400;
-  letter-spacing: .06em;
+  margin-top: 10px;
+  font-size: .70rem;
   color: var(--text-dim);
+  letter-spacing: .04em;
   transition: color var(--transition);
 }
-.card__link:hover { color: var(--text-secondary); }
+.dp-link:hover { color: var(--text-secondary); }
 
-/* Floating SVG in card */
-.card__illo-float {
-  position: absolute;
-  top: 16px; right: 16px;
-  width: 64px; height: 64px;
-  opacity: .45;
+/* ── Expand/collapse ── */
+.dp-expand { margin-top: 10px; }
+
+.dp-expand__btn {
+  background: none; border: none; cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-size: .70rem; font-weight: 400;
+  letter-spacing: .04em;
+  color: var(--text-dim);
+  padding: 6px 0;
+  transition: color var(--transition);
+  display: flex; align-items: center; gap: 6px;
 }
-.card__illo-float svg { width: 100%; height: 100%; }
+.dp-expand__btn:hover { color: var(--text-secondary); }
 
-/* Tags */
-.card__tag-row {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+.dp-expand__body {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height .5s var(--ease), opacity .4s var(--ease), margin .4s var(--ease);
+  margin-top: 0;
+}
+.dp-expand.open .dp-expand__body {
+  max-height: 600px;
+  opacity: 1;
+  margin-top: 10px;
+}
+
+/* Tema-style expand buttons */
+.dp-expand__btn--tema {
+  width: 100%;
+  padding: 14px 0;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.02rem; font-weight: 400;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border-light);
+}
+.dp-expand:last-child .dp-expand__btn--tema {
+  border-bottom: none;
+}
+.dp-tema-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ── Advice ── */
+.dp-advice { display: flex; flex-direction: column; gap: 8px; }
+.dp-advice p {
+  font-size: .82rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  display: flex; gap: 10px; align-items: flex-start;
+}
+.dp-advice span {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: .75rem;
+  color: var(--text-dim);
+  letter-spacing: .06em;
+  flex-shrink: 0;
+  padding-top: 1px;
+}
+
+/* ── Tags ── */
+.dp-tags {
+  display: flex; align-items: center; gap: 8px;
   margin-top: 14px;
 }
-.card__tag {
+.dp-tag {
   font-size: .62rem;
-  font-weight: 400;
-  letter-spacing: .04em;
   color: var(--text-dim);
   padding: 4px 12px;
   border-radius: 20px;
   border: 1px solid var(--border);
-  background: rgba(255,255,255,.20);
-  position: relative;
+  background: rgba(255,255,255,.18);
 }
-.card__tag::before {
+.dp-tag::before {
   content: '';
   display: inline-block;
   width: 5px; height: 5px;
   border-radius: 50%;
-  background: var(--tag-color, rgba(138,138,160,.5));
+  background: var(--dot, rgba(138,138,160,.4));
   margin-right: 6px;
   vertical-align: middle;
 }
-.card__tag-arrow {
-  font-size: .7rem;
-  color: var(--text-muted);
-}
+.dp-tag-arrow { font-size: .70rem; color: var(--text-muted); }
 
-/* ── Resonance ── */
-.resonance { padding: 4px 0; }
-.resonance__bar {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 12px;
-}
-.resonance__dot {
-  flex: 1;
-  height: 36px;
-  border-radius: 10px;
-  background: rgba(100,120,150,.06);
-  border: 1px solid var(--border-light);
-  display: flex; align-items: center; justify-content: center;
-  transition: all var(--transition);
-}
-.resonance__dot span {
-  font-size: .60rem;
-  font-weight: 400;
-  letter-spacing: .06em;
-  color: var(--text-muted);
-}
-.resonance__dot.active {
-  background: rgba(138,138,160,.10);
-  border-color: rgba(138,138,160,.20);
-}
-.resonance__dot.active span {
-  color: var(--text-primary);
-  font-weight: 500;
-}
-.resonance__text {
-  font-size: .80rem;
-  color: var(--text-secondary);
-  line-height: 1.6;
-}
-
-/* ── Dual columns ── */
-.dual {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-}
-.dual__head {
-  font-size: .62rem;
-  font-weight: 500;
-  letter-spacing: .10em;
-  text-transform: uppercase;
-  color: var(--text-dim);
-  margin-bottom: 6px;
-}
-.dual__text {
-  font-size: .82rem;
-  color: var(--text-secondary);
-  line-height: 1.6;
-}
-
-/* ── Advice ── */
-.advice { display: flex; flex-direction: column; gap: 12px; }
-.advice__item {
-  display: flex;
-  gap: 12px;
-  align-items: flex-start;
-}
-.advice__num {
+/* ── Reflection ── */
+.dp-reflection {
   font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: .78rem;
-  color: var(--text-dim);
-  letter-spacing: .08em;
-  flex-shrink: 0;
-  padding-top: 2px;
-}
-.advice__item p {
-  font-size: .84rem;
-  color: var(--text-secondary);
-  line-height: 1.6;
-}
-
-/* ── Practice card ── */
-.card--practice {
-  background: linear-gradient(135deg, var(--surface), rgba(138,138,160,.05));
-}
-.practice-meta {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-top: 12px;
-  padding-top: 10px;
-  border-top: 1px solid var(--border-light);
-}
-.practice-meta__item {
-  font-size: .68rem;
-  color: var(--text-dim);
-}
-.practice-meta__dot {
-  font-size: .5rem;
-  color: var(--text-muted);
-}
-
-/* ── Diet grid ── */
-.diet-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-}
-.diet-item__head {
-  font-size: .62rem;
-  font-weight: 500;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  color: var(--text-dim);
-  margin-bottom: 4px;
-}
-.diet-item__text {
-  font-size: .80rem;
-  color: var(--text-secondary);
-  line-height: 1.5;
-}
-
-/* ── Reflection card ── */
-.card--reflection {
-  text-align: center;
-  padding: 32px 24px;
-}
-.reflection-q {
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 1.15rem;
-  font-weight: 300;
-  font-style: italic;
+  font-size: 1.1rem; font-weight: 300;
   color: var(--text-primary);
   line-height: 1.7;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
-/* ── Transition card ── */
-.card--transition {
-  background: linear-gradient(135deg, var(--surface), rgba(90,112,152,.04));
+/* ── Divider ── */
+.dp-divider {
+  display: flex; justify-content: center;
+  padding: 10px 0 6px;
 }
+.dp-divider svg { width: 180px; height: auto; }
 
-/* ── Dividers ── */
-.deep__divider {
-  display: flex;
-  justify-content: center;
-  padding: 12px 0 8px;
-}
-.deep__divider svg { width: 200px; height: auto; }
-.illo-poles-sm { width: 200px; animation: polesFade 15s ease-in-out infinite; }
-
-/* ── Bottom nav ── */
-.deep__bottom {
+/* ── Back ── */
+.dp-back {
   text-align: center;
-  padding: 32px 0 20px;
+  padding: 28px 0 16px;
 }
-.deep__back {
-  font-size: .72rem;
-  font-weight: 400;
-  letter-spacing: .06em;
+.dp-back a {
+  font-size: .70rem;
   color: var(--text-dim);
+  letter-spacing: .04em;
   transition: color var(--transition);
 }
-.deep__back:hover { color: var(--text-secondary); }
+.dp-back a:hover { color: var(--text-secondary); }
 
 /* ── SVG animations ── */
-.svg-breath-slow {
-  animation: svgBreathSlow 10s ease-in-out infinite;
-}
+.svg-breath-slow { animation: svgBreathSlow 10s ease-in-out infinite; }
 @keyframes svgBreathSlow {
   0%, 100% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.04); opacity: .6; }
+  50% { transform: scale(1.04); opacity: .55; }
 }
-
-.svg-relation-sm {
-  animation: relPulse 10s ease-in-out infinite;
-}
-
-/* Responsive */
-@media (max-width: 480px) {
-  .dual { grid-template-columns: 1fr; gap: 12px; }
-  .diet-grid { grid-template-columns: 1fr; }
+.svg-relation-sm { animation: relPulseSm 10s ease-in-out infinite; }
+@keyframes relPulseSm {
+  0%, 100% { opacity: .6; }
+  50% { opacity: .3; }
 }
