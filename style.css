@@ -4,45 +4,51 @@
    ═══════════════════════════════════════════════════ */
 
 :root {
-  --bg: #e8ecf2;
-  --surface: rgba(255,255,255,0.32);
-  --surface-hover: rgba(255,255,255,0.50);
-  --glass-border: rgba(255,255,255,0.16);
-  --border: rgba(100,120,150,0.10);
-  --border-light: rgba(100,120,150,0.06);
-  --text-bright: #1c2a3a;
-  --text-primary: #2c3e50;
-  --text-secondary: #556a7e;
-  --text-dim: #8a9bb0;
-  --text-muted: #a0b0c2;
-  --hero-deep: #4a5a6e;
-  --hero-base: #6b7d94;
-  --hero-mid: #7a8da2;
-  --hero-light: #95a5b8;
-  --hero-pale: #b0bfcf;
+  /* Deep atmospheric dark — Re-Balan inspired */
+  --bg: #080c14;
+  --bg-up: #0d1520;
+  --surface: rgba(255,255,255,0.025);
+  --surface-hover: rgba(255,255,255,0.045);
+  --glass-border: rgba(255,255,255,0.06);
+  --border: rgba(255,255,255,0.06);
+  --border-light: rgba(255,255,255,0.035);
+  --text-bright: #e6edf3;
+  --text-primary: #c4d5e2;
+  --text-secondary: #7a9ab5;
+  --text-dim: #4a657d;
+  --text-muted: #354a5e;
+  --hero-deep: #060a12;
+  --hero-base: #0c1524;
+  --hero-mid: #142238;
+  --hero-light: #1a2d45;
+  --hero-pale: #0a0f18;
+  --accent: #3d6a8a;
+  --accent-light: #5a8aab;
+  --warm: #8a7a60;
+  --warm-light: #a89880;
   --ease: cubic-bezier(0.4,0,0.2,1);
   --ease-out: cubic-bezier(0,0,0.2,1);
   --transition: 0.4s var(--ease);
-  --shadow: 0 2px 20px rgba(0,0,0,0.04);
-  --shadow-up: 0 4px 24px rgba(0,0,0,0.07);
+  --shadow: 0 4px 30px rgba(0,0,0,0.30);
+  --shadow-up: 0 8px 40px rgba(0,0,0,0.40);
 }
 
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;font-size:16px;-webkit-font-smoothing:antialiased}
 body{font-family:'Inter',-apple-system,sans-serif;font-weight:300;color:var(--text-primary);background:var(--bg);line-height:1.7;overflow-x:hidden;padding-bottom:72px}
-::selection{background:rgba(90,112,152,.18)}
+::selection{background:rgba(61,106,138,.30);color:var(--text-bright)}
 a{text-decoration:none;color:inherit}
 .container{max-width:520px;margin:0 auto;padding:0 24px}
 
 /* ── Grain ── */
-.grain{position:fixed;inset:-50%;width:200%;height:200%;z-index:9999;pointer-events:none;opacity:.18;mix-blend-mode:multiply}
+.grain{position:fixed;inset:-50%;width:200%;height:200%;z-index:9999;pointer-events:none;opacity:.35;mix-blend-mode:soft-light}
 
 /* ── Ambient ── */
 .ambient{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
-.orb{position:absolute;border-radius:50%;filter:blur(80px);opacity:.18}
-.orb--1{width:400px;height:400px;background:radial-gradient(circle,rgba(106,154,106,.18),transparent);top:-100px;right:-60px;animation:drift1 40s ease-in-out infinite}
-.orb--2{width:450px;height:450px;background:radial-gradient(circle,rgba(90,112,152,.14),transparent);bottom:10%;left:-150px;animation:drift2 35s ease-in-out infinite}
-.orb--3{width:350px;height:350px;background:radial-gradient(circle,rgba(176,152,80,.10),transparent);top:40%;right:5%;animation:drift3 45s ease-in-out infinite}
+.orb{position:absolute;border-radius:50%;filter:blur(80px);opacity:.04}
+.orb--1{width:500px;height:500px;background:radial-gradient(circle,rgba(61,106,138,.35),transparent);top:-120px;right:-80px;animation:drift1 40s ease-in-out infinite}
+.orb--2{width:550px;height:550px;background:radial-gradient(circle,rgba(80,112,160,.25),transparent);bottom:10%;left:-200px;animation:drift2 35s ease-in-out infinite}
+.orb--3{width:400px;height:400px;background:radial-gradient(circle,rgba(138,122,96,.15),transparent);top:40%;right:5%;animation:drift3 45s ease-in-out infinite}
 @keyframes drift1{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(-50px,40px) scale(1.05)}66%{transform:translate(25px,-35px) scale(.95)}}
 @keyframes drift2{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(40px,-30px) scale(.92)}66%{transform:translate(-35px,50px) scale(1.08)}}
 @keyframes drift3{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(-30px,-25px) scale(1.06)}66%{transform:translate(40px,20px) scale(.94)}}
@@ -51,9 +57,9 @@ a{text-decoration:none;color:inherit}
    TOP NAV
    ═══════════════════════════════════ */
 .topnav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:14px 20px;transition:all .5s var(--ease)}
-.topnav.scrolled{background:rgba(232,236,242,.82);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border-light)}
-.topnav__brand{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.05rem;font-weight:400;color:rgba(255,255,255,.75);letter-spacing:.02em;transition:color .5s var(--ease)}
-.topnav.scrolled .topnav__brand{color:var(--text-bright)}
+.topnav.scrolled{background:rgba(8,12,20,.85);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.04)}
+.topnav__brand{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.05rem;font-weight:400;color:rgba(255,255,255,.60);letter-spacing:.02em;transition:color .5s var(--ease)}
+.topnav.scrolled .topnav__brand{color:rgba(255,255,255,.75)}
 .topnav__btn{background:none;border:none;cursor:pointer;width:22px;height:22px;color:rgba(255,255,255,.55);transition:color .5s var(--ease)}
 .topnav__btn svg{width:100%;height:100%}
 .topnav.scrolled .topnav__btn{color:var(--text-dim)}
@@ -67,10 +73,10 @@ a{text-decoration:none;color:inherit}
   display:flex;align-items:center;justify-content:center;
   overflow:hidden;
   padding:80px 0 48px;
-  background:linear-gradient(170deg,var(--hero-deep),var(--hero-base) 35%,var(--hero-mid) 60%,var(--hero-light) 80%,var(--hero-pale));
+  background:linear-gradient(170deg,#060a12 0%,#0c1524 30%,#142238 55%,#1a2d45 75%,#0a0f18 100%);
 }
-.mirror::before{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(74,90,110,.30) 0%,transparent 28%,transparent 72%,rgba(74,90,110,.38) 100%);pointer-events:none;z-index:1}
-.mirror::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 65% 55% at 50% 48%,transparent,rgba(74,90,110,.25));pointer-events:none;z-index:1}
+.mirror::before{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(6,10,18,.45) 0%,transparent 25%,transparent 75%,rgba(6,10,18,.55) 100%);pointer-events:none;z-index:1}
+.mirror::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 50% 48%,transparent,rgba(6,10,18,.40));pointer-events:none;z-index:1}
 
 /* Breathing SVG rings */
 .mirror__circle{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:min(320px,65vw);height:min(320px,65vw);z-index:1;pointer-events:none;opacity:.55}
@@ -273,19 +279,20 @@ a{text-decoration:none;color:inherit}
 /* ═══════════════════════════════════
    TAB BAR
    ═══════════════════════════════════ */
-.tabbar{position:fixed;bottom:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-around;height:60px;background:rgba(232,236,242,.88);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-top:1px solid var(--border-light);padding-bottom:env(safe-area-inset-bottom,0)}
+.tabbar{position:fixed;bottom:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-around;height:60px;background:rgba(8,12,20,.90);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-top:1px solid rgba(255,255,255,.04);padding-bottom:env(safe-area-inset-bottom,0)}
 .tab{display:flex;flex-direction:column;align-items:center;gap:2px;padding:6px 0;min-width:52px;transition:all var(--transition)}
-.tab svg{width:18px;height:18px;color:var(--text-muted);transition:color var(--transition)}
-.tab span{font-size:.55rem;font-weight:400;letter-spacing:.03em;color:var(--text-muted);transition:color var(--transition)}
-.tab.active svg{color:var(--text-primary)}
-.tab.active span{color:var(--text-primary);font-weight:500}
+.tab svg{width:18px;height:18px;color:rgba(255,255,255,.20);transition:color var(--transition)}
+.tab span{font-size:.55rem;font-weight:400;letter-spacing:.03em;color:rgba(255,255,255,.20);transition:color var(--transition)}
+.tab.active svg{color:rgba(255,255,255,.70)}
+.tab.active span{color:rgba(255,255,255,.70);font-weight:500}
 
 /* ═══════════════════════════════════
    SCROLLBAR
    ═══════════════════════════════════ */
-::-webkit-scrollbar{width:3px}
+::-webkit-scrollbar{width:4px}
 ::-webkit-scrollbar-track{background:transparent}
-::-webkit-scrollbar-thumb{background:var(--border);border-radius:4px}
+::-webkit-scrollbar-thumb{background:rgba(255,255,255,.08);border-radius:4px}
+::-webkit-scrollbar-thumb:hover{background:rgba(255,255,255,.14)}
 
 /* ═══════════════════════════════════
    RESPONSIVE
