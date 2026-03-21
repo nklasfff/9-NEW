@@ -204,7 +204,7 @@
    ═══════════════════════════════════ */
 
 /* Hourglass — sand falling continuously */
-.illo-hourglass { width: 80px; }
+.illo-hourglass { width: 100px; margin: 0 auto; display: block; }
 .sand { animation: sandFall 2s ease-in infinite; }
 .sand--1 { animation-delay: 0s; }
 .sand--2 { animation-delay: 0.7s; }
