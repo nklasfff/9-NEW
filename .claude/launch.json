@@ -4,7 +4,7 @@
     {
       "name": "livsfaser-app",
       "runtimeExecutable": "npx",
-      "runtimeArgs": ["serve", "-l", "8090", "-s"],
+      "runtimeArgs": ["serve", "-l", "8090"],
       "port": 8090
     }
   ]
