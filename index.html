@@ -2,7 +2,7 @@
 <html lang="da">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>De 9 Livsfaser</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,10 +13,8 @@
 
   <!-- Film grain -->
   <svg class="grain" aria-hidden="true">
-    <filter id="grain-filter">
-      <feTurbulence type="fractalNoise" baseFrequency="0.80" numOctaves="4" stitchTiles="stitch"/>
-    </filter>
-    <rect width="200%" height="200%" filter="url(#grain-filter)"/>
+    <filter id="grn"><feTurbulence type="fractalNoise" baseFrequency="0.80" numOctaves="4" stitchTiles="stitch"/></filter>
+    <rect width="200%" height="200%" filter="url(#grn)"/>
   </svg>
 
   <!-- Ambient orbs -->
@@ -26,29 +24,37 @@
     <div class="orb orb--3"></div>
   </div>
 
+  <!-- ── Top nav: hamburger · brand · search ── -->
+  <nav class="topnav">
+    <button class="topnav__btn" aria-label="Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="16" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+    </button>
+    <span class="topnav__brand">De Ni Livsfaser</span>
+    <button class="topnav__btn" aria-label="Søg">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg>
+    </button>
+  </nav>
+
   <!-- ═══════════════════════════════════════
-       HERO — atmospheric, breathing, alive
+       HERO
        ═══════════════════════════════════════ -->
   <section class="hero">
-
-    <!-- Living SVG: Five nested cycles — the engine -->
+    <!-- Living cycle engine SVG -->
     <div class="hero__illo" aria-hidden="true">
       <svg viewBox="0 0 400 400" class="illo-engine">
-        <!-- Five cycle rings — life, season, month, week, organ -->
-        <circle cx="200" cy="200" r="185" fill="none" stroke="rgba(255,255,255,0.035)" stroke-width="0.5" class="illo-ring illo-ring--1"/>
-        <circle cx="200" cy="200" r="148" fill="none" stroke="rgba(255,255,255,0.045)" stroke-width="0.5" class="illo-ring illo-ring--2"/>
-        <circle cx="200" cy="200" r="111" fill="none" stroke="rgba(255,255,255,0.055)" stroke-width="0.5" class="illo-ring illo-ring--3"/>
-        <circle cx="200" cy="200" r="74" fill="none" stroke="rgba(255,255,255,0.065)" stroke-width="0.5" class="illo-ring illo-ring--4"/>
-        <circle cx="200" cy="200" r="37" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="0.5" class="illo-ring illo-ring--5"/>
-        <!-- Center glow -->
-        <circle cx="200" cy="200" r="4" fill="rgba(196,213,226,0.5)"/>
-        <!-- Element markers on outer ring -->
-        <g class="illo-markers" opacity="0.6">
-          <circle cx="200" cy="15" r="2.5" fill="rgba(106,154,106,0.8)"/>  <!-- Træ top -->
-          <circle cx="370" cy="130" r="2.5" fill="rgba(184,112,96,0.8)"/>  <!-- Ild -->
-          <circle cx="340" cy="330" r="2.5" fill="rgba(176,152,80,0.8)"/>  <!-- Jord -->
-          <circle cx="60" cy="330" r="2.5" fill="rgba(138,138,160,0.8)"/>  <!-- Metal -->
-          <circle cx="30" cy="130" r="2.5" fill="rgba(90,112,152,0.8)"/>   <!-- Vand -->
+        <circle cx="200" cy="200" r="185" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="0.5" class="illo-spin illo-spin--1"/>
+        <circle cx="200" cy="200" r="145" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="0.5" class="illo-spin illo-spin--2"/>
+        <circle cx="200" cy="200" r="105" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="0.5" class="illo-spin illo-spin--3"/>
+        <circle cx="200" cy="200" r="65" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="0.5" class="illo-spin illo-spin--4"/>
+        <circle cx="200" cy="200" r="28" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="0.5" class="illo-pulse"/>
+        <circle cx="200" cy="200" r="3.5" fill="rgba(196,213,226,0.5)"/>
+        <!-- 5 element markers orbiting -->
+        <g class="illo-orbit">
+          <circle cx="200" cy="15" r="2.5" fill="rgba(106,154,106,0.75)"/>
+          <circle cx="376" cy="142" r="2.5" fill="rgba(184,112,96,0.75)"/>
+          <circle cx="309" cy="348" r="2.5" fill="rgba(176,152,80,0.75)"/>
+          <circle cx="91" cy="348" r="2.5" fill="rgba(138,138,160,0.75)"/>
+          <circle cx="24" cy="142" r="2.5" fill="rgba(90,112,152,0.75)"/>
         </g>
       </svg>
     </div>
@@ -60,179 +66,177 @@
       <div class="ring ring--3"></div>
     </div>
 
-    <!-- Hero content -->
     <div class="hero__content">
-      <p class="hero__label anim-fade" style="--delay: 0.3s">
-        D E &thinsp; N I &thinsp; L I V S F A S E R
-      </p>
+      <p class="hero__label anim-fade" style="--d:.3s">D E &thinsp; N I &thinsp; L I V S F A S E R</p>
       <h1 class="hero__title">
-        <span class="anim-fade" style="--delay: 0.6s">Livets</span>
-        <em class="anim-fade" style="--delay: 0.8s">&</em>
-        <span class="anim-fade" style="--delay: 1.0s">Årstider</span>
+        <span class="anim-fade" style="--d:.6s">Livets</span>
+        <em class="anim-fade" style="--d:.8s">&</em>
+        <span class="anim-fade" style="--d:1s">Årstider</span>
       </h1>
-      <div class="hero__rule anim-fade" style="--delay: 1.2s"></div>
-      <p class="hero__quote anim-fade" style="--delay: 1.4s">
-        <em>"Fem rytmer mødes i dig lige nu — dit livs fase, årets årstid, månedens cyklus, ugens gang, døgnets timer."</em>
-      </p>
+      <div class="hero__rule anim-fade" style="--d:1.2s"></div>
+      <p class="hero__quote anim-fade" style="--d:1.4s"><em>"Fem rytmer mødes i dig lige nu — dit livs fase, årets årstid, månedens cyklus, ugens gang, døgnets timer."</em></p>
     </div>
 
-    <!-- Scroll cue -->
-    <div class="scroll-cue anim-fade" style="--delay: 1.8s">
-      <div class="scroll-cue__line"></div>
-    </div>
+    <div class="scroll-cue anim-fade" style="--d:1.8s"><div class="scroll-cue__line"></div></div>
   </section>
 
   <!-- ═══════════════════════════════════════
-       PORTALS — the three gateways into the app
+       BARS — elegant horizontal navigation
        ═══════════════════════════════════════ -->
-  <section class="portals">
+  <section class="bars">
     <div class="container">
 
-      <!-- Portal 1: Lige Nu — your living mirror -->
-      <a href="#" class="portal reveal" data-accent="warm">
-        <div class="portal__glow"></div>
-        <div class="portal__illo" aria-hidden="true">
-          <!-- Breathing circles — your current moment -->
-          <svg viewBox="0 0 200 200" fill="none" class="illo-breath">
-            <circle cx="100" cy="100" r="80" stroke="rgba(122,154,181,0.40)" stroke-width="1"/>
-            <circle cx="100" cy="100" r="55" stroke="rgba(90,138,106,0.35)" stroke-width="1"/>
-            <circle cx="100" cy="100" r="30" stroke="rgba(122,154,181,0.45)" stroke-width="1"/>
-            <circle cx="100" cy="100" r="4" fill="rgba(196,213,226,0.55)"/>
+      <!-- Bar: Lige Nu -->
+      <a href="#" class="bar reveal">
+        <div class="bar__illo">
+          <svg viewBox="0 0 48 48" fill="none" class="svg-breath">
+            <circle cx="24" cy="24" r="20" stroke="rgba(122,154,181,0.35)" stroke-width="0.8"/>
+            <circle cx="24" cy="24" r="13" stroke="rgba(90,138,106,0.30)" stroke-width="0.8"/>
+            <circle cx="24" cy="24" r="6" stroke="rgba(122,154,181,0.40)" stroke-width="0.8"/>
+            <circle cx="24" cy="24" r="1.8" fill="rgba(196,213,226,0.55)"/>
           </svg>
         </div>
-        <div class="portal__body">
-          <span class="portal__num">01</span>
-          <h2 class="portal__title">Lige Nu</h2>
-          <p class="portal__desc">Dit levende spejl. Fem cyklusser mødes i dette øjeblik og tegner et portræt af din energi — lige nu, lige her.</p>
-          <span class="portal__cta">Åbn dit spejl <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        <div class="bar__body">
+          <h3 class="bar__title">Lige Nu</h3>
+          <p class="bar__sub">Dit levende spejl — fem cyklusser i dette øjeblik</p>
         </div>
+        <svg class="bar__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 6l6 6-6 6"/></svg>
       </a>
 
-      <!-- Portal 2: Tidsrejse — move through time -->
-      <a href="#" class="portal reveal" data-accent="cool">
-        <div class="portal__glow"></div>
-        <div class="portal__illo" aria-hidden="true">
-          <!-- Wave patterns — journey through time -->
-          <svg viewBox="0 0 200 120" fill="none" class="illo-waves">
-            <path d="M10,60 Q35,30 60,60 Q85,90 110,60 Q135,30 160,60 Q180,75 195,60" stroke="rgba(160,96,80,0.40)" stroke-width="1.2" fill="none"/>
-            <path d="M10,60 Q55,42 100,60 Q145,78 190,60" stroke="rgba(90,112,152,0.45)" stroke-width="1.2" fill="none"/>
-            <circle cx="100" cy="60" r="3.5" fill="rgba(196,213,226,0.5)"/>
-            <!-- Time dots -->
-            <circle cx="35" cy="45" r="1.5" fill="rgba(106,154,106,0.5)"/>
-            <circle cx="60" cy="60" r="1.5" fill="rgba(184,112,96,0.5)"/>
-            <circle cx="110" cy="60" r="1.5" fill="rgba(176,152,80,0.5)"/>
-            <circle cx="160" cy="60" r="1.5" fill="rgba(138,138,160,0.5)"/>
+      <!-- Bar: Tidsrejse -->
+      <a href="#" class="bar reveal">
+        <div class="bar__illo">
+          <svg viewBox="0 0 48 32" fill="none" class="svg-wave">
+            <path d="M4,16 Q10,6 16,16 Q22,26 28,16 Q34,6 40,16 Q43,20 46,16" stroke="rgba(160,96,80,0.35)" stroke-width="1" fill="none"/>
+            <path d="M4,16 Q16,10 28,16 Q40,22 46,16" stroke="rgba(90,112,152,0.40)" stroke-width="1" fill="none"/>
+            <circle cx="24" cy="16" r="1.8" fill="rgba(196,213,226,0.50)"/>
           </svg>
         </div>
-        <div class="portal__body">
-          <span class="portal__num">02</span>
-          <h2 class="portal__title">Tidsrejse</h2>
-          <p class="portal__desc">Rejse til enhver dato — se hvilke cyklusser der var aktive da du var 14, og hvilke der venter om fem år.</p>
-          <span class="portal__cta">Rejse i tid <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        <div class="bar__body">
+          <h3 class="bar__title">Tidsrejse</h3>
+          <p class="bar__sub">Rejse til enhver dato i dit liv — fortid og fremtid</p>
         </div>
+        <svg class="bar__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 6l6 6-6 6"/></svg>
       </a>
 
-      <!-- Portal 3: Relationer — your connections -->
-      <a href="#" class="portal reveal" data-accent="green">
-        <div class="portal__glow"></div>
-        <div class="portal__illo" aria-hidden="true">
-          <!-- Vesica Piscis — the space between two people -->
-          <svg viewBox="0 0 220 140" fill="none" class="illo-relation">
-            <circle cx="82" cy="70" r="42" stroke="rgba(122,154,181,0.35)" stroke-width="1"/>
-            <circle cx="138" cy="70" r="42" stroke="rgba(122,154,181,0.35)" stroke-width="1"/>
-            <ellipse cx="110" cy="70" rx="14" ry="32" fill="rgba(90,138,106,0.10)" stroke="rgba(90,138,106,0.40)" stroke-width="0.8"/>
-            <circle cx="82" cy="70" r="3" fill="rgba(196,213,226,0.45)"/>
-            <circle cx="138" cy="70" r="3" fill="rgba(196,213,226,0.45)"/>
+      <!-- Bar: Relationer -->
+      <a href="#" class="bar reveal">
+        <div class="bar__illo">
+          <svg viewBox="0 0 48 36" fill="none" class="svg-relation">
+            <circle cx="18" cy="18" r="12" stroke="rgba(122,154,181,0.30)" stroke-width="0.8"/>
+            <circle cx="30" cy="18" r="12" stroke="rgba(122,154,181,0.30)" stroke-width="0.8"/>
+            <ellipse cx="24" cy="18" rx="4.5" ry="10" fill="rgba(90,138,106,0.08)" stroke="rgba(90,138,106,0.35)" stroke-width="0.7"/>
+            <circle cx="18" cy="18" r="1.5" fill="rgba(196,213,226,0.40)"/>
+            <circle cx="30" cy="18" r="1.5" fill="rgba(196,213,226,0.40)"/>
           </svg>
         </div>
-        <div class="portal__body">
-          <span class="portal__num">03</span>
-          <h2 class="portal__title">Relationer</h2>
-          <p class="portal__desc">Udforsk det usynlige rum mellem dig og dine nærmeste — tre generationer af kvinder, forbundet af elementernes kraft.</p>
-          <span class="portal__cta">Udforsk forbindelser <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        <div class="bar__body">
+          <h3 class="bar__title">Relationer</h3>
+          <p class="bar__sub">Tre generationer — det usynlige rum mellem jer</p>
         </div>
+        <svg class="bar__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 6l6 6-6 6"/></svg>
+      </a>
+
+      <!-- Bar: Vinduer -->
+      <a href="#" class="bar reveal">
+        <div class="bar__illo">
+          <svg viewBox="0 0 48 48" fill="none" class="svg-window">
+            <circle cx="24" cy="24" r="18" stroke="rgba(176,152,80,0.25)" stroke-width="0.7" stroke-dasharray="2 4"/>
+            <circle cx="24" cy="24" r="10" stroke="rgba(176,152,80,0.35)" stroke-width="0.7"/>
+            <circle cx="24" cy="24" r="2" fill="rgba(176,152,80,0.55)"/>
+            <!-- Rays -->
+            <line x1="24" y1="6" x2="24" y2="14" stroke="rgba(176,152,80,0.20)" stroke-width="0.6"/>
+            <line x1="24" y1="34" x2="24" y2="42" stroke="rgba(176,152,80,0.20)" stroke-width="0.6"/>
+            <line x1="6" y1="24" x2="14" y2="24" stroke="rgba(176,152,80,0.20)" stroke-width="0.6"/>
+            <line x1="34" y1="24" x2="42" y2="24" stroke="rgba(176,152,80,0.20)" stroke-width="0.6"/>
+          </svg>
+        </div>
+        <div class="bar__body">
+          <h3 class="bar__title">Vinduer</h3>
+          <p class="bar__sub">Sjældne øjeblikke hvor cyklusser mødes i resonans</p>
+        </div>
+        <svg class="bar__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 6l6 6-6 6"/></svg>
+      </a>
+
+      <!-- Bar: De Ni Faser -->
+      <a href="#" class="bar reveal">
+        <div class="bar__illo">
+          <svg viewBox="0 0 48 48" fill="none" class="svg-phases">
+            <!-- 9 dots in a gentle arc -->
+            <circle cx="6" cy="34" r="1.8" fill="rgba(106,154,106,0.55)"/>
+            <circle cx="11" cy="26" r="1.8" fill="rgba(106,154,106,0.50)"/>
+            <circle cx="17" cy="20" r="1.8" fill="rgba(184,112,96,0.55)"/>
+            <circle cx="23" cy="16" r="1.8" fill="rgba(176,152,80,0.55)"/>
+            <circle cx="29" cy="15" r="1.8" fill="rgba(176,152,80,0.50)"/>
+            <circle cx="35" cy="17" r="1.8" fill="rgba(138,138,160,0.55)"/>
+            <circle cx="40" cy="22" r="1.8" fill="rgba(138,138,160,0.50)"/>
+            <circle cx="43" cy="28" r="1.8" fill="rgba(90,112,152,0.55)"/>
+            <circle cx="44" cy="36" r="2" fill="rgba(106,154,106,0.65)"/>
+            <!-- Connecting arc -->
+            <path d="M6,34 Q12,18 24,15 Q36,12 44,36" fill="none" stroke="rgba(122,154,181,0.18)" stroke-width="0.7"/>
+          </svg>
+        </div>
+        <div class="bar__body">
+          <h3 class="bar__title">De Ni Faser</h3>
+          <p class="bar__sub">Livets bue fra spiring til det Andet Forår</p>
+        </div>
+        <svg class="bar__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 6l6 6-6 6"/></svg>
       </a>
 
     </div>
   </section>
 
   <!-- ═══════════════════════════════════════
-       ORGANIC DIVIDER — vertical poles with reflections
+       DIVIDER — poles in water
        ═══════════════════════════════════════ -->
   <div class="divider reveal" aria-hidden="true">
-    <svg viewBox="0 0 300 140" fill="none" class="illo-poles">
-      <line x1="60" y1="120" x2="60" y2="30" stroke="rgba(90,112,152,0.50)" stroke-width="2.2" stroke-linecap="round"/>
-      <line x1="95" y1="120" x2="95" y2="12" stroke="rgba(122,154,181,0.55)" stroke-width="1.8" stroke-linecap="round"/>
-      <line x1="125" y1="120" x2="125" y2="38" stroke="rgba(106,154,106,0.45)" stroke-width="2" stroke-linecap="round"/>
-      <line x1="160" y1="120" x2="160" y2="6" stroke="rgba(122,154,181,0.50)" stroke-width="1.5" stroke-linecap="round"/>
-      <line x1="190" y1="120" x2="190" y2="28" stroke="rgba(160,96,80,0.40)" stroke-width="2.2" stroke-linecap="round"/>
-      <line x1="225" y1="120" x2="225" y2="42" stroke="rgba(90,112,152,0.38)" stroke-width="1.8" stroke-linecap="round"/>
-      <line x1="250" y1="120" x2="250" y2="20" stroke="rgba(122,154,181,0.35)" stroke-width="1.5" stroke-linecap="round"/>
-      <!-- Water line -->
-      <line x1="30" y1="100" x2="270" y2="100" stroke="rgba(122,154,181,0.18)" stroke-width="1" stroke-dasharray="4 6"/>
-      <!-- Reflections -->
-      <line x1="60" y1="100" x2="60" y2="130" stroke="rgba(90,112,152,0.15)" stroke-width="2.2" stroke-linecap="round"/>
-      <line x1="95" y1="100" x2="95" y2="135" stroke="rgba(122,154,181,0.18)" stroke-width="1.8" stroke-linecap="round"/>
-      <line x1="125" y1="100" x2="125" y2="128" stroke="rgba(106,154,106,0.12)" stroke-width="2" stroke-linecap="round"/>
-      <line x1="160" y1="100" x2="160" y2="138" stroke="rgba(122,154,181,0.15)" stroke-width="1.5" stroke-linecap="round"/>
-      <line x1="190" y1="100" x2="190" y2="130" stroke="rgba(160,96,80,0.10)" stroke-width="2.2" stroke-linecap="round"/>
+    <svg viewBox="0 0 300 120" fill="none" class="illo-poles">
+      <line x1="60" y1="105" x2="60" y2="25" stroke="rgba(90,112,152,0.45)" stroke-width="2" stroke-linecap="round"/>
+      <line x1="95" y1="105" x2="95" y2="10" stroke="rgba(122,154,181,0.50)" stroke-width="1.6" stroke-linecap="round"/>
+      <line x1="125" y1="105" x2="125" y2="32" stroke="rgba(106,154,106,0.40)" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="160" y1="105" x2="160" y2="5" stroke="rgba(122,154,181,0.45)" stroke-width="1.4" stroke-linecap="round"/>
+      <line x1="190" y1="105" x2="190" y2="22" stroke="rgba(160,96,80,0.35)" stroke-width="2" stroke-linecap="round"/>
+      <line x1="225" y1="105" x2="225" y2="36" stroke="rgba(90,112,152,0.35)" stroke-width="1.6" stroke-linecap="round"/>
+      <line x1="250" y1="105" x2="250" y2="18" stroke="rgba(122,154,181,0.30)" stroke-width="1.4" stroke-linecap="round"/>
+      <line x1="30" y1="88" x2="270" y2="88" stroke="rgba(122,154,181,0.15)" stroke-width="0.8" stroke-dasharray="3 5"/>
+      <line x1="60" y1="88" x2="60" y2="112" stroke="rgba(90,112,152,0.12)" stroke-width="2" stroke-linecap="round"/>
+      <line x1="95" y1="88" x2="95" y2="115" stroke="rgba(122,154,181,0.14)" stroke-width="1.6" stroke-linecap="round"/>
+      <line x1="125" y1="88" x2="125" y2="110" stroke="rgba(106,154,106,0.10)" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="160" y1="88" x2="160" y2="118" stroke="rgba(122,154,181,0.12)" stroke-width="1.4" stroke-linecap="round"/>
+      <line x1="190" y1="88" x2="190" y2="112" stroke="rgba(160,96,80,0.08)" stroke-width="2" stroke-linecap="round"/>
     </svg>
   </div>
 
   <!-- ═══════════════════════════════════════
-       DISCOVER — secondary navigation
+       DEEPER — secondary slim bars
        ═══════════════════════════════════════ -->
-  <section class="discover reveal">
+  <section class="deeper reveal">
     <div class="container">
-      <div class="discover__header">
-        <p class="kicker">Gå i dybden</p>
-        <h2 class="discover__title">Udforsk din rejse</h2>
-      </div>
-      <div class="discover__grid">
-        <a href="#" class="disc-card">
-          <div class="disc-card__icon">
-            <svg viewBox="0 0 40 40" fill="none">
-              <circle cx="20" cy="20" r="14" stroke="rgba(106,154,106,0.5)" stroke-width="1"/>
-              <circle cx="20" cy="20" r="8" stroke="rgba(106,154,106,0.4)" stroke-width="1"/>
-              <circle cx="20" cy="20" r="2.5" fill="rgba(106,154,106,0.6)"/>
-            </svg>
-          </div>
-          <h3>De Ni Faser</h3>
-          <p>Fra livets spiring til det Andet Forår</p>
-        </a>
-        <a href="#" class="disc-card">
-          <div class="disc-card__icon">
-            <svg viewBox="0 0 40 40" fill="none">
-              <circle cx="13" cy="20" r="8" stroke="rgba(90,112,152,0.5)" stroke-width="1"/>
-              <circle cx="27" cy="20" r="8" stroke="rgba(90,112,152,0.5)" stroke-width="1"/>
-            </svg>
-          </div>
-          <h3>Vinduer</h3>
-          <p>Sjældne øjeblikke hvor cyklusser mødes</p>
-        </a>
-        <a href="#" class="disc-card">
-          <div class="disc-card__icon">
-            <svg viewBox="0 0 40 40" fill="none">
-              <line x1="20" y1="6" x2="20" y2="34" stroke="rgba(90,138,106,0.5)" stroke-width="1.5" stroke-linecap="round"/>
-              <circle cx="20" cy="12" r="3" stroke="rgba(90,138,106,0.4)" stroke-width="1"/>
-              <circle cx="20" cy="22" r="4" stroke="rgba(90,138,106,0.5)" stroke-width="1"/>
-              <circle cx="20" cy="32" r="2.5" stroke="rgba(90,138,106,0.3)" stroke-width="1"/>
-            </svg>
-          </div>
-          <h3>Min Praksis</h3>
-          <p>Yin yoga, kost og øvelser for dit element</p>
-        </a>
-        <a href="#" class="disc-card">
-          <div class="disc-card__icon">
-            <svg viewBox="0 0 40 40" fill="none">
-              <path d="M8,30 Q14,10 20,20 Q26,30 32,12" stroke="rgba(160,96,80,0.5)" stroke-width="1.2" fill="none"/>
-              <circle cx="20" cy="20" r="2" fill="rgba(160,96,80,0.5)"/>
-            </svg>
-          </div>
-          <h3>Min Rejse</h3>
-          <p>Journal og refleksioner langs din livsbue</p>
-        </a>
-      </div>
+      <p class="deeper__label">Gå i dybden</p>
+      <a href="#" class="mini-bar">
+        <span class="mini-bar__dot" style="background: rgba(90,138,106,0.5)"></span>
+        <span class="mini-bar__title">Min Praksis</span>
+        <span class="mini-bar__sub">Yin yoga, kost og øvelser</span>
+        <svg class="mini-bar__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 6l6 6-6 6"/></svg>
+      </a>
+      <a href="#" class="mini-bar">
+        <span class="mini-bar__dot" style="background: rgba(160,96,80,0.5)"></span>
+        <span class="mini-bar__title">Min Rejse</span>
+        <span class="mini-bar__sub">Journal og refleksioner</span>
+        <svg class="mini-bar__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 6l6 6-6 6"/></svg>
+      </a>
+      <a href="#" class="mini-bar">
+        <span class="mini-bar__dot" style="background: rgba(122,154,181,0.5)"></span>
+        <span class="mini-bar__title">Tre Generationer</span>
+        <span class="mini-bar__sub">Mormor, dig, din datter</span>
+        <svg class="mini-bar__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 6l6 6-6 6"/></svg>
+      </a>
+      <a href="#" class="mini-bar">
+        <span class="mini-bar__dot" style="background: rgba(176,152,80,0.5)"></span>
+        <span class="mini-bar__title">Baggrund</span>
+        <span class="mini-bar__sub">Kinesisk medicin og de fem elementer</span>
+        <svg class="mini-bar__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 6l6 6-6 6"/></svg>
+      </a>
     </div>
   </section>
 
@@ -241,9 +245,35 @@
     <div class="container">
       <div class="footer__rule"></div>
       <p class="footer__brand">De Ni Livsfaser</p>
-      <p class="footer__sub">Baseret på kinesisk medicins visdom og de fem elementers cyklusser</p>
+      <p class="footer__sub">Baseret på kinesisk medicins visdom</p>
     </div>
   </footer>
+
+  <!-- ═══════════════════════════════════════
+       BOTTOM TAB BAR — 5 icons
+       ═══════════════════════════════════════ -->
+  <nav class="tabbar">
+    <a href="#" class="tab active">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></svg>
+      <span>Lige Nu</span>
+    </a>
+    <a href="#" class="tab">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4,12 Q8,4 12,12 Q16,20 20,12"/><circle cx="12" cy="12" r="1.5"/></svg>
+      <span>Tidsrejse</span>
+    </a>
+    <a href="#" class="tab">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="9" cy="12" r="5"/><circle cx="15" cy="12" r="5"/></svg>
+      <span>Relationer</span>
+    </a>
+    <a href="#" class="tab">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="8" stroke-dasharray="2 3"/><circle cx="12" cy="12" r="3"/></svg>
+      <span>Vinduer</span>
+    </a>
+    <a href="#" class="tab">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="19" r="1.5"/></svg>
+      <span>Mere</span>
+    </a>
+  </nav>
 
   <script src="app.js"></script>
 </body>
