@@ -6,7 +6,7 @@
 .body--deep { padding-top: 56px; }
 
 .topnav--inner {
-  background: rgba(20,34,54,.85);
+  background: rgba(8,12,20,.85);
   backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(255,255,255,.05);
 }
@@ -197,14 +197,14 @@
   padding: 4px 12px;
   border-radius: 20px;
   border: 1px solid var(--border);
-  background: rgba(255,255,255,.18);
+  background: rgba(255,255,255,.025);
 }
 .dp-tag::before {
   content: '';
   display: inline-block;
   width: 5px; height: 5px;
   border-radius: 50%;
-  background: var(--dot, rgba(138,138,160,.4));
+  background: var(--dot, rgba(122,154,181,.4));
   margin-right: 6px;
   vertical-align: middle;
 }
@@ -224,7 +224,7 @@
   display: flex; justify-content: center;
   padding: 20px 0 16px;
 }
-.dp-divider svg { width: 180px; height: auto; }
+.dp-divider svg { width: 340px; height: auto; }
 
 /* ── Back ── */
 .dp-back {
@@ -252,22 +252,22 @@
   justify-content: center;
   padding: 20px 0;
 }
-.illo-pause svg { height: auto; max-width: 160px; }
+.illo-pause svg { height: auto; max-width: 340px; }
 
 /* ── Dit Dybe Billede (Metal/Høsten) ── */
-.illo-leaf        { width: 60px;  animation: leafDrift 8s ease-in-out infinite; }
-.illo-lungs       { width: 120px; animation: lungsBreathe 6s ease-in-out infinite; }
-.illo-harvest     { width: 160px; animation: harvestSway 10s ease-in-out infinite; }
-.illo-generations { width: 130px; animation: genPulse 8s ease-in-out infinite; }
-.illo-breath-rhythm { width: 180px; max-width: 180px; }
-.illo-stillwater  { width: 160px; animation: rippleSpread 8s ease-in-out infinite; }
-.illo-drops       { width: 70px;  animation: dropsFall 10s ease-in-out infinite; }
+.illo-leaf        { width: 200px;  animation: leafDrift 8s ease-in-out infinite; }
+.illo-lungs       { width: 280px; animation: lungsBreathe 6s ease-in-out infinite; }
+.illo-harvest     { width: 340px; animation: harvestSway 10s ease-in-out infinite; }
+.illo-generations { width: 280px; animation: genPulse 8s ease-in-out infinite; }
+.illo-breath-rhythm { width: 300px; max-width: 300px; }
+.illo-stillwater  { width: 300px; animation: rippleSpread 8s ease-in-out infinite; }
+.illo-drops       { width: 200px;  animation: dropsFall 10s ease-in-out infinite; }
 
 /* ── Din Tidsrejse (Ild/Sommer) ── */
-.illo-dawn        { width: 160px; animation: dawnGlow 8s ease-in-out infinite; }
-.illo-flame       { width: 70px;  max-width: 70px; animation: flameBreathe 5s ease-in-out infinite; }
-.illo-pendulum    { width: 80px;  max-width: 80px; animation: pendSwing 6s ease-in-out infinite; }
-.illo-timepoints  { width: 180px; max-width: 200px; }
+.illo-dawn        { width: 340px; animation: dawnGlow 8s ease-in-out infinite; }
+.illo-flame       { width: 200px;  max-width: 200px; animation: flameBreathe 5s ease-in-out infinite; }
+.illo-pendulum    { width: 280px;  max-width: 280px; animation: pendSwing 6s ease-in-out infinite; }
+.illo-timepoints  { width: 340px; max-width: 340px; }
 
 /* ── Animations — all use same opacity range .55↔.85 ── */
 @keyframes leafDrift {
@@ -328,9 +328,9 @@
 }
 
 /* ── Dit Vindue illustrations ── */
-.illo-keyhole     { width: 60px; animation: keyholeGlow 8s ease-in-out infinite; }
-.illo-four-rings  { width: 140px; max-width: 160px; }
-.illo-beam        { width: 80px; animation: beamFlicker 6s ease-in-out infinite; }
+.illo-keyhole     { width: 200px; animation: keyholeGlow 8s ease-in-out infinite; }
+.illo-four-rings  { width: 320px; max-width: 340px; }
+.illo-beam        { width: 240px; animation: beamFlicker 6s ease-in-out infinite; }
 
 .illo-four-rings circle:not(:last-child) { animation: ringSlide 10s ease-in-out infinite; }
 .illo-four-rings circle:nth-child(2) { animation-delay: .5s; }

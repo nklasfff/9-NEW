@@ -115,8 +115,8 @@
 
 .tj-picker__go {
   padding: 14px 20px;
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.025);
+  border: 1px solid rgba(255,255,255,0.06);
   border-radius: 12px;
   color: var(--text-primary);
   font-family: 'Inter', sans-serif;
@@ -128,8 +128,8 @@
   white-space: nowrap;
 }
 .tj-picker__go:hover {
-  background: rgba(255,255,255,0.10);
-  border-color: rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.04);
+  border-color: rgba(255,255,255,0.08);
   color: var(--text-bright);
 }
 
@@ -204,7 +204,7 @@
    ═══════════════════════════════════ */
 
 /* Hourglass — follows global system */
-.illo-hourglass { width: 80px; margin: 0 auto; display: block; }
+.illo-hourglass { width: 240px; margin: 0 auto; display: block; }
 .sand { animation: sandFall 2s ease-in infinite; }
 .sand--1 { animation-delay: 0s; }
 .sand--2 { animation-delay: 0.7s; }
@@ -216,7 +216,7 @@
 }
 
 /* Spiral — follows global system (divider = 180px) */
-.illo-spiral { width: 160px; height: auto; animation: spiralSpin 30s linear infinite; }
+.illo-spiral { width: 340px; height: auto; animation: spiralSpin 30s linear infinite; }
 @keyframes spiralSpin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }

@@ -21,16 +21,16 @@
 .svg-vesica { width: 100%; height: auto; }
 
 .vesica-left {
-  stroke: rgba(80,112,160,0.20);
+  stroke: rgba(122,154,181,0.40);
   animation: vesicaLeft 8s ease-in-out infinite;
 }
 .vesica-right {
-  stroke: rgba(160,100,80,0.18);
+  stroke: rgba(122,154,181,0.40);
   animation: vesicaRight 8s ease-in-out infinite;
 }
 .vesica-center {
-  fill: rgba(90,138,106,0.04);
-  stroke: rgba(90,138,106,0.16);
+  fill: rgba(61,106,138,0.15);
+  stroke: rgba(122,154,181,0.50);
   animation: vesicaCenter 8s ease-in-out infinite;
 }
 
@@ -70,7 +70,7 @@
   align-items: center;
   gap: 12px;
   padding: 16px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.035);
+  border-bottom: 1px solid var(--border-light);
 }
 .rel-row:last-child { border-bottom: none; }
 
@@ -107,18 +107,18 @@
    ═══════════════════════════════════ */
 
 /* ── Illustrations — follows global system (60-160px, .55↔.80) ── */
-.illo-family      { width: 160px; height: auto; animation: familyBreathe 10s ease-in-out infinite; }
-.illo-trees       { width: 130px; animation: treeGrow 12s ease-in-out infinite; }
-.illo-orbit       { width: 100px; }
-.illo-waves-meet  { width: 160px; }
-.illo-nest        { width: 100px; animation: nestPulse 10s ease-in-out infinite; }
-.illo-bridge-anim { width: 160px; animation: bridgeSway 8s ease-in-out infinite; }
+.illo-family      { width: 340px; height: auto; animation: familyBreathe 10s ease-in-out infinite; }
+.illo-trees       { width: 280px; animation: treeGrow 12s ease-in-out infinite; }
+.illo-orbit       { width: 280px; }
+.illo-waves-meet  { width: 340px; }
+.illo-nest        { width: 280px; animation: nestPulse 10s ease-in-out infinite; }
+.illo-bridge-anim { width: 340px; animation: bridgeSway 8s ease-in-out infinite; }
 .illo-orbit-moon  { animation: moonOrbit 18s linear infinite; transform-origin: 40px 35px; }
 @keyframes moonOrbit { to { transform: rotate(360deg); } }
 @keyframes familyBreathe { 0%,100%{opacity:.80} 50%{opacity:.55} }
 @keyframes treeGrow { 0%,100%{transform:scaleY(1);opacity:.80} 50%{transform:scaleY(1.03);opacity:.55} }
-.illo-waves-meet path:first-child { stroke:rgba(90,140,190,0.55); animation:waveUp 6s ease-in-out infinite; }
-.illo-waves-meet path:nth-child(2) { stroke:rgba(120,170,130,0.50); animation:waveDown 6s ease-in-out infinite .5s; }
+.illo-waves-meet path:first-child { stroke:rgba(80,112,160,0.55); animation:waveUp 6s ease-in-out infinite; }
+.illo-waves-meet path:nth-child(2) { stroke:rgba(90,138,106,0.50); animation:waveDown 6s ease-in-out infinite .5s; }
 @keyframes waveUp { 0%,100%{opacity:.55} 50%{opacity:.80} }
 @keyframes waveDown { 0%,100%{opacity:.50} 50%{opacity:.75} }
 @keyframes nestPulse { 0%,100%{opacity:.80;transform:scale(1)} 50%{opacity:.55;transform:scale(1.04)} }
