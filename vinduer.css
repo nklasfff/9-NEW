@@ -134,7 +134,7 @@
 
 /* ── Alignment illustration — follows global system (160px divider) ── */
 .illo-alignment {
-  width: 140px;
+  width: 320px;
   height: auto;
   animation: alignBreathe 10s ease-in-out infinite;
 }
