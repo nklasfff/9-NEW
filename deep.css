@@ -6,9 +6,9 @@
 .body--deep { padding-top: 56px; }
 
 .topnav--inner {
-  background: rgba(8,12,20,.85);
+  background: rgba(62,81,104,.82);
   backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(255,255,255,.04);
+  border-bottom: 1px solid rgba(255,255,255,.06);
 }
 .topnav--inner .topnav__brand { color: var(--text-bright); font-size: 1rem; }
 .topnav--inner .topnav__btn { color: var(--text-dim); }
