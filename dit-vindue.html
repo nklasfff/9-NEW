@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Dit Vindue — De 9 Livsfaser</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="deep.css">
+  <link rel="stylesheet" href="vinduer.css">
+</head>
+<body class="body--deep">
+
+  <svg class="grain" aria-hidden="true">
+    <filter id="grn"><feTurbulence type="fractalNoise" baseFrequency="0.80" numOctaves="4" stitchTiles="stitch"/></filter>
+    <rect width="200%" height="200%" filter="url(#grn)"/>
+  </svg>
+
+  <div class="ambient" aria-hidden="true">
+    <div class="orb orb--1"></div>
+    <div class="orb orb--2"></div>
+  </div>
+
+  <nav class="topnav topnav--inner scrolled">
+    <a href="vinduer.html" class="topnav__btn" aria-label="Tilbage">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+    </a>
+    <span class="topnav__brand">Dit Vindue</span>
+    <div style="width:22px"></div>
+  </nav>
+
+  <main class="deep">
+    <div class="container">
+
+      <!-- ══ Hero ══ -->
+      <header class="dp-hero reveal">
+        <div class="dp-hero__symbol">
+          <svg viewBox="0 0 100 100" fill="none" class="dp-hero__halo">
+            <circle cx="50" cy="50" r="44" stroke="rgba(200,180,110,0.18)" stroke-width="0.5" stroke-dasharray="2 4"/>
+            <circle cx="50" cy="50" r="28" stroke="rgba(200,180,110,0.25)" stroke-width="0.5"/>
+          </svg>
+          <span class="dp-hero__char">窗</span>
+        </div>
+        <h1 class="dp-hero__title">Vinduer af Resonans</h1>
+        <p class="dp-hero__meta">Når cyklusserne mødes</p>
+        <p class="dp-hero__climate"><em>Et vindue er det øjeblik, hvor flere lag af tid vibrerer i samme frekvens.</em></p>
+      </header>
+
+      <!-- Keyhole — looking through the window -->
+      <div class="illo-pause reveal" aria-hidden="true">
+        <svg viewBox="0 0 60 80" fill="none" class="illo-keyhole">
+          <circle cx="30" cy="28" r="18" stroke="rgba(200,180,110,0.50)" stroke-width="0.8" fill="rgba(200,180,110,0.03)"/>
+          <path d="M22,42 L20,72 Q30,76 40,72 L38,42" stroke="rgba(200,180,110,0.45)" stroke-width="0.8" fill="rgba(200,180,110,0.02)"/>
+          <circle cx="30" cy="28" r="5" fill="rgba(220,230,240,0.60)"/>
+        </svg>
+      </div>
+
+      <!-- ══ Hvad er et vindue ══ -->
+      <section class="dp-section reveal">
+        <p class="dp-label">Forståelse</p>
+        <h2 class="dp-heading">Hvad er et vindue?</h2>
+        <p class="dp-text">Hver dag krydser fire cyklusser i dig: livsfase, årstid, organur og ugedag. Hvert lag har sit element. Når to eller flere deler element, opstår der resonans — et vindue.</p>
+        <div class="dp-expand" data-expand="w1">
+          <button class="dp-expand__btn">De fire lag</button>
+          <div class="dp-expand__body">
+            <p class="dp-text">Livsfasen skifter hvert 7. år. Årstiden hvert kvartal. Organens energi hver 2. time. Ugedagen dagligt. Når de mødes i samme element, forstærkes dets kvalitet eksponentielt.</p>
+          </div>
+        </div>
+        <div class="dp-expand" data-expand="w2">
+          <button class="dp-expand__btn">Grader af resonans</button>
+          <div class="dp-expand__body">
+            <p class="dp-text"><strong style="font-weight:400;color:var(--text-bright)">2 af 4:</strong> Svag resonans — en undertone du kan mærke hvis du lytter.</p>
+            <p class="dp-text" style="margin-top:6px"><strong style="font-weight:400;color:var(--text-bright)">3 af 4:</strong> Stærk resonans — elementet pulserer tydeligt i krop og sind.</p>
+            <p class="dp-text" style="margin-top:6px"><strong style="font-weight:400;color:var(--text-bright)">4 af 4:</strong> Fuld resonans — sjælden. Alt vibrerer i samme frekvens. Et vindue der kun åbner sig kort.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Four rings aligning — the concept visualized -->
+      <div class="illo-pause reveal" aria-hidden="true">
+        <svg viewBox="0 0 140 70" fill="none" class="illo-four-rings">
+          <circle cx="30" cy="35" r="20" stroke="rgba(138,154,170,0.50)" stroke-width="0.7" fill="none"/>
+          <circle cx="55" cy="35" r="20" stroke="rgba(130,185,140,0.50)" stroke-width="0.7" fill="none"/>
+          <circle cx="85" cy="35" r="20" stroke="rgba(210,140,120,0.50)" stroke-width="0.7" fill="none"/>
+          <circle cx="110" cy="35" r="20" stroke="rgba(200,180,110,0.50)" stroke-width="0.7" fill="none"/>
+          <!-- Overlap zones glow -->
+          <circle cx="42" cy="35" r="2" fill="rgba(220,230,240,0.50)"/>
+          <circle cx="70" cy="35" r="2" fill="rgba(220,230,240,0.50)"/>
+          <circle cx="98" cy="35" r="2" fill="rgba(220,230,240,0.50)"/>
+        </svg>
+      </div>
+
+      <!-- ══ Dit næste vindue ══ -->
+      <section class="dp-section reveal">
+        <p class="dp-label">Dit næste vindue</p>
+        <h2 class="dp-heading">Torsdag 27. marts · Træ</h2>
+        <p class="dp-text">Årstid (Forår·Træ) + Ugedag (Torsdag·Træ) + Organur (Lever·Træ, kl. 01–03). Tre af fire cyklusser i Træ.</p>
+        <div class="dp-expand" data-expand="w3">
+          <button class="dp-expand__btn">Hvad du kan gøre</button>
+          <div class="dp-expand__body">
+            <p class="dp-text">Træ-resonans handler om retning og vækst. Brug dette vindue til at sætte en intention — ikke en plan, men en retning. Skriv ét ord der beskriver hvad du vil gro mod. Lad det ligge i dig.</p>
+          </div>
+        </div>
+        <div class="dp-expand" data-expand="w4">
+          <button class="dp-expand__btn">Øvelse for dette vindue</button>
+          <div class="dp-expand__body">
+            <p class="dp-text">Stå oprejst. Mærk fødderne som rødder. Stræk armene opad som grene. Hold 30 sekunder. Mærk retningen — opad. Træets bevægelse er altid opad, også når det er svært.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- A single beam of light through a narrow opening -->
+      <div class="illo-pause reveal" aria-hidden="true">
+        <svg viewBox="0 0 80 70" fill="none" class="illo-beam">
+          <!-- Dark walls -->
+          <rect x="5" y="5" width="28" height="60" fill="rgba(26,42,62,0.20)" rx="2"/>
+          <rect x="47" y="5" width="28" height="60" fill="rgba(26,42,62,0.20)" rx="2"/>
+          <!-- The opening -->
+          <rect x="33" y="5" width="14" height="60" fill="rgba(200,180,110,0.04)"/>
+          <!-- Light beam spreading down -->
+          <path d="M36,8 L30,62 L50,62 L44,8Z" fill="rgba(200,180,110,0.06)" stroke="none"/>
+          <!-- Light particles -->
+          <circle cx="40" cy="20" r="1.2" fill="rgba(220,230,240,0.65)"/>
+          <circle cx="38" cy="35" r="1" fill="rgba(220,230,240,0.50)"/>
+          <circle cx="42" cy="48" r="1.2" fill="rgba(220,230,240,0.55)"/>
+        </svg>
+      </div>
+
+      <!-- ══ De fem element-vinduer ══ -->
+      <section class="dp-section reveal">
+        <p class="dp-label">De fem vinduer</p>
+        <div class="dp-expand" data-expand="ew1">
+          <button class="dp-expand__btn dp-expand__btn--tema"><span class="dp-tema-dot" style="background:rgba(130,185,140,0.65)"></span>Træ-vindue</button>
+          <div class="dp-expand__body"><p class="dp-text">Vækst, retning, nye begyndelser. Bedst til at sætte intentioner og starte projekter. Kroppen vil bevæge sig — gå en tur, stræk dig.</p></div>
+        </div>
+        <div class="dp-expand" data-expand="ew2">
+          <button class="dp-expand__btn dp-expand__btn--tema"><span class="dp-tema-dot" style="background:rgba(210,140,120,0.65)"></span>Ild-vindue</button>
+          <div class="dp-expand__body"><p class="dp-text">Forbindelse, glæde, åbenhed. Bedst til samtaler, kreativt arbejde, at møde mennesker. Hjertet banker hurtigere.</p></div>
+        </div>
+        <div class="dp-expand" data-expand="ew3">
+          <button class="dp-expand__btn dp-expand__btn--tema"><span class="dp-tema-dot" style="background:rgba(200,180,110,0.65)"></span>Jord-vindue</button>
+          <div class="dp-expand__body"><p class="dp-text">Næring, fundament, omsorg. Bedst til at tage sig af andre og sig selv. Lav mad, ryd op, skab struktur.</p></div>
+        </div>
+        <div class="dp-expand" data-expand="ew4">
+          <button class="dp-expand__btn dp-expand__btn--tema"><span class="dp-tema-dot" style="background:rgba(138,154,170,0.65)"></span>Metal-vindue</button>
+          <div class="dp-expand__body"><p class="dp-text">Klarhed, skelneevne, slippe. Bedst til at rydde op — fysisk og mentalt. Sige nej. Trække vejret dybt.</p></div>
+        </div>
+        <div class="dp-expand" data-expand="ew5">
+          <button class="dp-expand__btn dp-expand__btn--tema"><span class="dp-tema-dot" style="background:rgba(120,155,205,0.65)"></span>Vand-vindue</button>
+          <div class="dp-expand__body"><p class="dp-text">Dybde, stilhed, visdom. Bedst til meditation, journalskrivning, at lytte indad. Kroppen vil hvile.</p></div>
+        </div>
+      </section>
+
+      <!-- ══ Refleksion ══ -->
+      <section class="dp-section dp-section--center reveal">
+        <p class="dp-label">Refleksion</p>
+        <p class="dp-reflection"><em>Hvornår har du sidst mærket at alt faldt på plads — uden at du gjorde noget?</em></p>
+        <a href="#" class="dp-link">Skriv i din journal →</a>
+      </section>
+
+      <div class="dp-back reveal">
+        <a href="vinduer.html">← Tilbage til vinduer</a>
+      </div>
+    </div>
+  </main>
+
+  <nav class="tabbar">
+    <a href="index.html" class="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></svg><span>Lige Nu</span></a>
+    <a href="tidsrejse.html" class="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4,12 Q8,4 12,12 Q16,20 20,12"/><circle cx="12" cy="12" r="1.5"/></svg><span>Tidsrejse</span></a>
+    <a href="relationer.html" class="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="9" cy="12" r="5"/><circle cx="15" cy="12" r="5"/></svg><span>Relationer</span></a>
+    <a href="vinduer.html" class="tab active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="8" stroke-dasharray="2 3"/><circle cx="12" cy="12" r="3"/></svg><span>Vinduer</span></a>
+    <a href="#" class="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="19" r="1.5"/></svg><span>Mere</span></a>
+  </nav>
+
+  <script>
+  document.querySelectorAll('.reveal').forEach((el, i) => {
+    setTimeout(() => el.classList.add('visible'), 80 + i * 70);
+  });
+  document.querySelectorAll('.dp-expand__btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const wrap = btn.closest('.dp-expand');
+      wrap.classList.toggle('open');
+      if (wrap.classList.contains('open')) {
+        btn.dataset.origText = btn.textContent;
+        btn.textContent = 'Skjul';
+      } else {
+        btn.textContent = btn.dataset.origText || btn.textContent;
+      }
+    });
+  });
+  </script>
+</body>
+</html>

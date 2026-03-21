@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Vinduer — De 9 Livsfaser</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="vinduer.css">
+</head>
+<body>
+
+  <svg class="grain" aria-hidden="true">
+    <filter id="grn"><feTurbulence type="fractalNoise" baseFrequency="0.80" numOctaves="4" stitchTiles="stitch"/></filter>
+    <rect width="200%" height="200%" filter="url(#grn)"/>
+  </svg>
+
+  <div class="ambient" aria-hidden="true">
+    <div class="orb orb--1"></div>
+    <div class="orb orb--2"></div>
+    <div class="orb orb--3"></div>
+  </div>
+
+  <nav class="topnav">
+    <button class="topnav__btn" aria-label="Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="16" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+    </button>
+    <span class="topnav__brand">Vinduer</span>
+    <button class="topnav__btn" aria-label="Søg">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg>
+    </button>
+  </nav>
+
+  <!-- ═══════════════════════════════════════
+       HERO — rare alignment, a window opening
+       ═══════════════════════════════════════ -->
+  <section class="mirror win-mirror">
+
+    <!-- Compass rose — alignment of cycles -->
+    <div class="win-mirror__illo" aria-hidden="true">
+      <svg viewBox="0 0 200 200" fill="none" class="svg-compass">
+        <!-- Outer ring -->
+        <circle cx="100" cy="100" r="85" stroke="rgba(255,255,255,0.08)" stroke-width="0.5" stroke-dasharray="3 5" class="compass-outer"/>
+        <!-- Inner ring -->
+        <circle cx="100" cy="100" r="55" stroke="rgba(255,255,255,0.10)" stroke-width="0.5" class="compass-inner"/>
+        <!-- Cross axes -->
+        <line x1="100" y1="15" x2="100" y2="185" stroke="rgba(255,255,255,0.05)" stroke-width="0.4"/>
+        <line x1="15" y1="100" x2="185" y2="100" stroke="rgba(255,255,255,0.05)" stroke-width="0.4"/>
+        <!-- Four cardinal dots — when they align, a window opens -->
+        <circle cx="100" cy="18" r="3.5" fill="rgba(200,180,110,0.65)" class="compass-dot compass-dot--1"/>
+        <circle cx="182" cy="100" r="3.5" fill="rgba(200,180,110,0.55)" class="compass-dot compass-dot--2"/>
+        <circle cx="100" cy="182" r="3.5" fill="rgba(200,180,110,0.55)" class="compass-dot compass-dot--3"/>
+        <circle cx="18" cy="100" r="3.5" fill="rgba(200,180,110,0.55)" class="compass-dot compass-dot--4"/>
+        <!-- Center — the moment of alignment -->
+        <circle cx="100" cy="100" r="4" fill="rgba(220,230,240,0.70)"/>
+      </svg>
+    </div>
+
+    <div class="mirror__halo" aria-hidden="true">
+      <div class="halo halo--1"></div>
+    </div>
+
+    <div class="mirror__content">
+      <p class="mirror__greeting anim-fade" style="--d:.3s">Sjældne øjeblikke</p>
+
+      <h1 class="win-mirror__title anim-fade" style="--d:.6s">Vinduer</h1>
+
+      <div class="mirror__rule anim-fade" style="--d:.9s"></div>
+
+      <p class="mirror__climate anim-fade" style="--d:1.1s">
+        <em>Når livsfase, årstid, organur og ugedag mødes i samme element — åbner der sig et vindue af sjælden resonans.</em>
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       CURRENT ALIGNMENT — what's open now
+       ═══════════════════════════════════════ -->
+  <section class="win-now reveal">
+    <div class="container">
+      <p class="win-now__label">Lige nu</p>
+
+      <div class="win-status" id="winStatus">
+        <div class="win-status__icon">
+          <svg viewBox="0 0 40 40" fill="none" class="svg-window-status">
+            <circle cx="20" cy="20" r="16" stroke="rgba(200,180,110,0.40)" stroke-width="0.7" stroke-dasharray="2 4"/>
+            <circle cx="20" cy="20" r="8" stroke="rgba(200,180,110,0.55)" stroke-width="0.7"/>
+            <circle cx="20" cy="20" r="2" fill="rgba(200,180,110,0.70)"/>
+          </svg>
+        </div>
+        <div class="win-status__body">
+          <p class="win-status__title">Delvis resonans</p>
+          <p class="win-status__desc">To af fire cyklusser deler element — en svag men mærkbar harmoni.</p>
+        </div>
+      </div>
+
+      <div class="win-alignment reveal">
+        <div class="win-align-dot" style="background:rgba(138,154,170,0.60)"></div>
+        <span class="win-align-label">Livsfase</span>
+        <span class="win-align-el">Metal</span>
+        <div class="win-align-dot" style="background:rgba(130,185,140,0.60)"></div>
+        <span class="win-align-label">Årstid</span>
+        <span class="win-align-el">Træ</span>
+        <div class="win-align-dot" style="background:rgba(210,140,120,0.60)"></div>
+        <span class="win-align-label">Organur</span>
+        <span class="win-align-el">Ild</span>
+        <div class="win-align-dot" style="background:rgba(200,180,110,0.60)"></div>
+        <span class="win-align-label">Ugedag</span>
+        <span class="win-align-el">Jord</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       UPCOMING WINDOWS — next alignments
+       ═══════════════════════════════════════ -->
+  <section class="win-upcoming reveal">
+    <div class="container">
+      <p class="win-upcoming__label">Kommende vinduer</p>
+
+      <a href="dit-vindue.html" class="deep-bar">
+        <div class="deep-bar__left">
+          <p class="deep-bar__label">Næste fulde resonans</p>
+          <p class="deep-bar__value">Torsdag 27. marts · Træ</p>
+        </div>
+        <p class="deep-bar__hint">3 af 4 matcher</p>
+        <svg class="deep-bar__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 6l6 6-6 6"/></svg>
+      </a>
+
+      <a href="dit-vindue.html" class="deep-bar">
+        <div class="deep-bar__left">
+          <p class="deep-bar__label">Stærk ild-resonans</p>
+          <p class="deep-bar__value">Fredag 4. april · kl. 11–13</p>
+        </div>
+        <p class="deep-bar__hint">Hjerte-timen</p>
+        <svg class="deep-bar__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 6l6 6-6 6"/></svg>
+      </a>
+
+      <a href="dit-vindue.html" class="deep-bar">
+        <div class="deep-bar__left">
+          <p class="deep-bar__label">Metal-vindue</p>
+          <p class="deep-bar__value">Efterår 2026 · Fase 7 + Årstid</p>
+        </div>
+        <p class="deep-bar__hint">Din stærkeste tid</p>
+        <svg class="deep-bar__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- Illustration — concentric rings aligning -->
+  <div class="divider reveal" aria-hidden="true">
+    <svg viewBox="0 0 160 160" fill="none" class="illo-alignment">
+      <circle cx="80" cy="80" r="70" stroke="rgba(200,180,110,0.20)" stroke-width="0.6" stroke-dasharray="3 5"/>
+      <circle cx="80" cy="80" r="50" stroke="rgba(200,180,110,0.28)" stroke-width="0.6"/>
+      <circle cx="80" cy="80" r="30" stroke="rgba(200,180,110,0.35)" stroke-width="0.6"/>
+      <circle cx="80" cy="80" r="12" stroke="rgba(200,180,110,0.45)" stroke-width="0.7"/>
+      <circle cx="80" cy="80" r="3" fill="rgba(220,230,240,0.70)"/>
+      <!-- Alignment lines — when cycles sync -->
+      <line x1="80" y1="10" x2="80" y2="30" stroke="rgba(200,180,110,0.25)" stroke-width="0.4" stroke-linecap="round"/>
+      <line x1="80" y1="130" x2="80" y2="150" stroke="rgba(200,180,110,0.25)" stroke-width="0.4" stroke-linecap="round"/>
+      <line x1="10" y1="80" x2="30" y2="80" stroke="rgba(200,180,110,0.25)" stroke-width="0.4" stroke-linecap="round"/>
+      <line x1="130" y1="80" x2="150" y2="80" stroke="rgba(200,180,110,0.25)" stroke-width="0.4" stroke-linecap="round"/>
+    </svg>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       READING
+       ═══════════════════════════════════════ -->
+  <section class="reading reveal">
+    <div class="container">
+      <div class="reading__card">
+        <p class="reading__label">Vinduets Indsigt</p>
+        <p class="reading__text">Et vindue er ikke noget du skaber — det er noget du opdager. Når cyklusserne mødes, er din opgave blot at være opmærksom.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       EXPLORE
+       ═══════════════════════════════════════ -->
+  <section class="explore reveal">
+    <div class="container">
+      <p class="explore__label">Forstå vinduer</p>
+
+      <a href="dit-vindue.html" class="bar">
+        <div class="bar__illo">
+          <svg viewBox="0 0 48 48" fill="none">
+            <circle cx="24" cy="24" r="18" stroke="rgba(200,180,110,0.35)" stroke-width="0.7" stroke-dasharray="2 3"/>
+            <circle cx="24" cy="24" r="10" stroke="rgba(200,180,110,0.45)" stroke-width="0.7"/>
+            <circle cx="24" cy="24" r="3" fill="rgba(200,180,110,0.65)"/>
+          </svg>
+        </div>
+        <div class="bar__body">
+          <h3 class="bar__title">Hvad er et vindue?</h3>
+          <p class="bar__sub">Forstå resonans mellem cyklusser</p>
+        </div>
+        <svg class="bar__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 6l6 6-6 6"/></svg>
+      </a>
+
+      <a href="dit-vindue.html" class="bar">
+        <div class="bar__illo">
+          <svg viewBox="0 0 48 48" fill="none">
+            <circle cx="16" cy="24" r="10" stroke="rgba(130,185,140,0.40)" stroke-width="0.7" fill="none"/>
+            <circle cx="32" cy="24" r="10" stroke="rgba(138,154,170,0.40)" stroke-width="0.7" fill="none"/>
+            <circle cx="24" cy="24" r="2" fill="rgba(220,230,240,0.60)"/>
+          </svg>
+        </div>
+        <div class="bar__body">
+          <h3 class="bar__title">Element-par</h3>
+          <p class="bar__sub">Når to elementer mødes i dig</p>
+        </div>
+        <svg class="bar__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 6l6 6-6 6"/></svg>
+      </a>
+
+      <a href="dit-vindue.html" class="bar">
+        <div class="bar__illo">
+          <svg viewBox="0 0 48 48" fill="none">
+            <path d="M8,38 Q16,14 24,24 Q32,34 40,10" stroke="rgba(150,180,210,0.50)" stroke-width="0.8" fill="none"/>
+            <circle cx="24" cy="24" r="2" fill="rgba(220,230,240,0.55)"/>
+            <circle cx="8" cy="38" r="1.5" fill="rgba(130,185,140,0.55)"/>
+            <circle cx="40" cy="10" r="1.5" fill="rgba(210,140,120,0.55)"/>
+          </svg>
+        </div>
+        <div class="bar__body">
+          <h3 class="bar__title">Dine personlige vinduer</h3>
+          <p class="bar__sub">Baseret på din fødselsdato</p>
+        </div>
+        <svg class="bar__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <footer class="footer reveal">
+    <div class="container">
+      <div class="footer__rule"></div>
+      <p class="footer__brand">De Ni Livsfaser</p>
+      <p class="footer__sub">Baseret på kinesisk medicins visdom</p>
+    </div>
+  </footer>
+
+  <nav class="tabbar">
+    <a href="index.html" class="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></svg><span>Lige Nu</span></a>
+    <a href="tidsrejse.html" class="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4,12 Q8,4 12,12 Q16,20 20,12"/><circle cx="12" cy="12" r="1.5"/></svg><span>Tidsrejse</span></a>
+    <a href="relationer.html" class="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="9" cy="12" r="5"/><circle cx="15" cy="12" r="5"/></svg><span>Relationer</span></a>
+    <a href="vinduer.html" class="tab active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="8" stroke-dasharray="2 3"/><circle cx="12" cy="12" r="3"/></svg><span>Vinduer</span></a>
+    <a href="#" class="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="19" r="1.5"/></svg><span>Mere</span></a>
+  </nav>
+
+  <script src="app.js"></script>
+  <script>
+  document.querySelectorAll('.reveal').forEach((el, i) => {
+    setTimeout(() => el.classList.add('visible'), 80 + i * 70);
+  });
+  </script>
+</body>
+</html>

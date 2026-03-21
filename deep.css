@@ -327,6 +327,30 @@
   50% { opacity: .45; transform: scale(1.2); }
 }
 
+/* ── Dit Vindue illustrations ── */
+.illo-keyhole     { width: 60px; animation: keyholeGlow 8s ease-in-out infinite; }
+.illo-four-rings  { width: 140px; max-width: 160px; }
+.illo-beam        { width: 80px; animation: beamFlicker 6s ease-in-out infinite; }
+
+.illo-four-rings circle:not(:last-child) { animation: ringSlide 10s ease-in-out infinite; }
+.illo-four-rings circle:nth-child(2) { animation-delay: .5s; }
+.illo-four-rings circle:nth-child(3) { animation-delay: 1s; }
+.illo-four-rings circle:nth-child(4) { animation-delay: 1.5s; }
+@keyframes ringSlide {
+  0%,100% { opacity: .50; }
+  50% { opacity: .80; }
+}
+@keyframes keyholeGlow {
+  0%,100% { opacity: .80; }
+  50% { opacity: .55; }
+}
+@keyframes beamFlicker {
+  0%,100% { opacity: .80; }
+  30% { opacity: .55; }
+  60% { opacity: .75; }
+  80% { opacity: .55; }
+}
+
 /* ── SVG animations ── */
 .svg-breath-slow { animation: svgBreathSlow 10s ease-in-out infinite; }
 @keyframes svgBreathSlow {

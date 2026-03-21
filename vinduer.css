@@ -1,0 +1,152 @@
+/* ═══════════════════════════════════════════════════
+   VINDUER — Windows of resonance
+   Compass · Alignment · Golden warmth
+   ═══════════════════════════════════════════════════ */
+
+/* ── Hero ── */
+.win-mirror { min-height: 48vh; }
+
+.win-mirror__illo {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(240px, 60vw);
+  z-index: 1;
+  pointer-events: none;
+  opacity: .75;
+}
+.svg-compass { width: 100%; height: auto; }
+
+/* Compass rings rotate slowly in opposite directions */
+.compass-outer { animation: sp 100s linear infinite; transform-origin: 100px 100px; }
+.compass-inner { animation: sp 70s linear infinite reverse; transform-origin: 100px 100px; }
+@keyframes sp { to { transform: rotate(360deg); } }
+
+/* Cardinal dots pulse — when aligned, the window opens */
+.compass-dot { animation: compassPulse 5s ease-in-out infinite; }
+.compass-dot--2 { animation-delay: 1.2s; }
+.compass-dot--3 { animation-delay: 2.4s; }
+.compass-dot--4 { animation-delay: 3.6s; }
+@keyframes compassPulse {
+  0%,100% { opacity: .55; transform: scale(1); }
+  50% { opacity: .80; transform: scale(1.3); }
+}
+
+.win-mirror__title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(2.2rem, 7vw, 3.2rem);
+  font-weight: 300;
+  color: rgba(255,255,255,0.88);
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+/* ── Current alignment status ── */
+.win-now {
+  position: relative;
+  z-index: 1;
+  padding: 48px 0 20px;
+}
+.win-now__label {
+  font-size: .58rem;
+  font-weight: 500;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 14px;
+}
+
+.win-status {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 20px;
+  background: var(--surface);
+  border: 1px solid var(--border-light);
+  border-radius: 14px;
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  margin-bottom: 16px;
+}
+.win-status__icon { width: 40px; height: 40px; flex-shrink: 0; }
+.win-status__icon svg { width: 100%; height: 100%; }
+.win-status__title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: var(--text-bright);
+}
+.win-status__desc {
+  font-size: .72rem;
+  color: var(--text-dim);
+  line-height: 1.5;
+}
+
+/* Window status icon animation */
+.svg-window-status circle:first-child { animation: winRingSpin 15s linear infinite; transform-origin: 20px 20px; }
+.svg-window-status circle:nth-child(2) { animation: winRingPulse 4s ease-in-out infinite; transform-origin: 20px 20px; }
+@keyframes winRingSpin { to { transform: rotate(360deg); } }
+@keyframes winRingPulse { 0%,100% { opacity: .55; } 50% { opacity: .80; } }
+
+/* Alignment grid */
+.win-alignment {
+  display: grid;
+  grid-template-columns: 8px 56px 1fr;
+  gap: 6px 10px;
+  align-items: center;
+  padding: 12px 16px;
+  background: var(--surface);
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+}
+.win-align-dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  box-shadow: 0 0 6px currentColor;
+}
+.win-align-label {
+  font-size: .60rem;
+  font-weight: 500;
+  letter-spacing: .10em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+.win-align-el {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: .95rem;
+  font-weight: 400;
+  color: var(--text-bright);
+}
+
+/* ── Upcoming windows ── */
+.win-upcoming {
+  position: relative;
+  z-index: 1;
+  padding: 20px 0;
+}
+.win-upcoming__label {
+  font-size: .58rem;
+  font-weight: 500;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 12px;
+}
+
+/* ── Alignment illustration — follows global system (160px divider) ── */
+.illo-alignment {
+  width: 140px;
+  height: auto;
+  animation: alignBreathe 10s ease-in-out infinite;
+}
+@keyframes alignBreathe {
+  0%,100% { opacity: .80; transform: scale(1); }
+  50% { opacity: .55; transform: scale(1.03); }
+}
+
+/* ═══════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════ */
+@media(max-width:580px) {
+  .win-mirror__illo { width: min(200px, 65vw); }
+  .win-mirror__title { font-size: clamp(1.8rem, 9vw, 2.6rem); }
+}
