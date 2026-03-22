@@ -60,19 +60,15 @@
       dot.classList.toggle('ob-progress__dot--active', dotN === n);
     });
 
-    // Small delay for exit transition
-    setTimeout(function () {
-      var next = document.querySelector('[data-step="' + n + '"]');
-      if (next) {
-        next.classList.add('ob-step--active');
-        // Re-trigger animations
-        next.querySelectorAll('.anim-fade').forEach(function (el) {
-          el.style.animation = 'none';
-          el.offsetHeight; // reflow
-          el.style.animation = '';
-        });
+    var next = document.querySelector('[data-step="' + n + '"]');
+    if (next) {
+      next.classList.add('ob-step--active');
+
+      // Auto-focus first input on step 2
+      if (n === 2) {
+        setTimeout(function () { dayInput.focus(); }, 100);
       }
-    }, 400);
+    }
   }
 
   // ── Navigation buttons ──
