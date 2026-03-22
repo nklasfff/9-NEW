@@ -30,9 +30,12 @@
        ═══════════════════════════════════════ -->
   <section class="ob-step ob-step--active" data-step="1">
     <div class="ob-step__inner">
+      <h1 class="ob-title anim-fade" style="--d:.6s">De Ni Livsfaser</h1>
+      <div class="ob-rule anim-fade" style="--d:1s"></div>
+      <p class="ob-text anim-fade" style="--d:1.3s">Et levende spejl baseret på kinesisk medicins visdom.<br>Ni faser. Fem elementer. Dit liv — lige nu.</p>
 
-      <!-- Breathing seed SVG -->
-      <div class="ob-seed" aria-hidden="true">
+      <!-- Breathing seed SVG — below text -->
+      <div class="ob-seed anim-fade" style="--d:1.5s" aria-hidden="true">
         <svg viewBox="0 0 200 200" fill="none" class="ob-seed__svg">
           <circle cx="100" cy="100" r="70" stroke="rgba(122,154,181,0.25)" stroke-width="0.8" class="ob-seed__ring ob-seed__ring--1"/>
           <circle cx="100" cy="100" r="48" stroke="rgba(90,138,106,0.20)" stroke-width="0.8" class="ob-seed__ring ob-seed__ring--2"/>
@@ -41,9 +44,6 @@
         </svg>
       </div>
 
-      <h1 class="ob-title anim-fade" style="--d:.6s">De Ni Livsfaser</h1>
-      <div class="ob-rule anim-fade" style="--d:1s"></div>
-      <p class="ob-text anim-fade" style="--d:1.3s">Et levende spejl baseret på kinesisk medicins visdom.<br>Ni faser. Fem elementer. Dit liv — lige nu.</p>
       <button class="ob-btn anim-fade" style="--d:1.8s" data-next="2">Begynd</button>
     </div>
   </section>
@@ -61,17 +61,17 @@
       <div class="ob-date anim-fade" style="--d:1s">
         <div class="ob-date__field">
           <label class="ob-date__label" for="ob-day">Dag</label>
-          <input class="ob-date__input" type="number" id="ob-day" min="1" max="31" placeholder="15" inputmode="numeric">
+          <input class="ob-date__input" type="text" id="ob-day" maxlength="2" placeholder="15" inputmode="numeric" autocomplete="off">
         </div>
         <span class="ob-date__sep">·</span>
         <div class="ob-date__field">
           <label class="ob-date__label" for="ob-month">Måned</label>
-          <input class="ob-date__input" type="number" id="ob-month" min="1" max="12" placeholder="6" inputmode="numeric">
+          <input class="ob-date__input" type="text" id="ob-month" maxlength="2" placeholder="6" inputmode="numeric" autocomplete="off">
         </div>
         <span class="ob-date__sep">·</span>
         <div class="ob-date__field">
           <label class="ob-date__label" for="ob-year">År</label>
-          <input class="ob-date__input ob-date__input--wide" type="number" id="ob-year" min="1920" max="2026" placeholder="1980" inputmode="numeric">
+          <input class="ob-date__input ob-date__input--wide" type="text" id="ob-year" maxlength="4" placeholder="1980" inputmode="numeric" autocomplete="off">
         </div>
       </div>
 
@@ -148,15 +148,16 @@
        STEP 4 — Phase Reveal
        ═══════════════════════════════════════ -->
   <section class="ob-step" data-step="4">
-    <div class="ob-step__inner ob-step__inner--reveal">
+    <div class="ob-step__inner">
 
-      <!-- Breathing halo -->
-      <div class="ob-reveal-halo" aria-hidden="true">
-        <div class="halo halo--1"></div>
-        <div class="halo halo--2"></div>
-      </div>
+      <p class="ob-label ob-reveal-label">Din livsfase</p>
+      <div class="ob-reveal-char" id="ob-reveal-char">金</div>
+      <h2 class="ob-reveal-title" id="ob-reveal-title">Metal · Høsten</h2>
+      <p class="ob-reveal-meta" id="ob-reveal-meta">Fase 7 · 42 – 49 år</p>
+      <div class="ob-rule ob-rule--reveal"></div>
+      <p class="ob-reveal-text" id="ob-reveal-text">Metallets gave til dig er evnen til at skelne det væsentlige fra det overflødige.</p>
 
-      <!-- Breathing rings -->
+      <!-- Breathing rings — below text -->
       <div class="ob-reveal-circle" aria-hidden="true">
         <svg viewBox="0 0 200 200" fill="none" class="ob-reveal-svg">
           <circle cx="100" cy="100" r="80" stroke-width="1.2" class="ob-reveal-ring ob-reveal-ring--1"/>
@@ -165,13 +166,6 @@
           <circle cx="100" cy="100" r="4" class="ob-reveal-ring ob-reveal-ring--4"/>
         </svg>
       </div>
-
-      <p class="ob-label ob-reveal-label">Din livsfase</p>
-      <div class="ob-reveal-char" id="ob-reveal-char">金</div>
-      <h2 class="ob-reveal-title" id="ob-reveal-title">Metal · Høsten</h2>
-      <p class="ob-reveal-meta" id="ob-reveal-meta">Fase 7 · 42 – 49 år</p>
-      <div class="ob-rule ob-rule--reveal"></div>
-      <p class="ob-reveal-text" id="ob-reveal-text">Metallets gave til dig er evnen til at skelne det væsentlige fra det overflødige.</p>
 
       <button class="ob-btn ob-btn--final" id="ob-enter-btn">Åbn dit spejl</button>
     </div>

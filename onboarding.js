@@ -6,7 +6,7 @@
   'use strict';
 
   // ── Redirect if already onboarded ──
-  if (localStorage.getItem('dnl_birthday')) {
+  if (localStorage.getItem('dnl_onboarded')) {
     window.location.replace('index.html');
     return;
   }
@@ -97,13 +97,21 @@
     var d = dayInput.value.trim();
     var m = monthInput.value.trim();
     var y = yearInput.value.trim();
-    birthdayBtn.disabled = !(d && m && y && y.length === 4);
+    birthdayBtn.disabled = !(d && m && y && y.length >= 4);
+  }
+
+  // Filter to digits only
+  function filterDigits(input) {
+    input.value = input.value.replace(/[^0-9]/g, '');
   }
 
   [dayInput, monthInput, yearInput].forEach(function (input) {
-    input.addEventListener('input', function () {
-      errorEl.textContent = '';
-      checkInputs();
+    ['input', 'keyup', 'change'].forEach(function (evt) {
+      input.addEventListener(evt, function () {
+        filterDigits(input);
+        errorEl.textContent = '';
+        checkInputs();
+      });
     });
     input.addEventListener('keydown', function (e) {
       if (e.key === 'Enter') {
