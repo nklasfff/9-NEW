@@ -10,27 +10,26 @@
 
 /* ── Vesica piscis — glowing, alive ── */
 .rel-mirror__illo {
-  position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
   width: min(320px, 75vw);
-  z-index: 1;
+  z-index: 2;
   pointer-events: none;
-  opacity: .80;
+  opacity: 1;
+  margin-top: 20px;
 }
 .svg-vesica { width: 100%; height: auto; }
 
 .vesica-left {
-  stroke: rgba(122,154,181,0.40);
+  stroke: rgba(122,154,181,0.65);
   animation: vesicaLeft 8s ease-in-out infinite;
 }
 .vesica-right {
-  stroke: rgba(122,154,181,0.40);
+  stroke: rgba(122,154,181,0.65);
   animation: vesicaRight 8s ease-in-out infinite;
 }
 .vesica-center {
-  fill: rgba(61,106,138,0.15);
-  stroke: rgba(122,154,181,0.50);
+  fill: rgba(61,106,138,0.25);
+  stroke: rgba(122,154,181,0.70);
   animation: vesicaCenter 8s ease-in-out infinite;
 }
 
@@ -134,7 +133,10 @@
 .rel-hero__illo {
   width: 80px; height: 80px;
   margin: 0 auto 14px;
-  opacity: .7;
+  opacity: 1;
+}
+.rel-hero__illo--below {
+  margin: 18px auto 0;
 }
 .rel-hero__illo svg { width: 100%; height: 100%; }
 .rel-hero__title {

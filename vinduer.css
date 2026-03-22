@@ -7,13 +7,12 @@
 .win-mirror { min-height: 48vh; }
 
 .win-mirror__illo {
-  position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
   width: min(240px, 60vw);
-  z-index: 1;
+  z-index: 2;
   pointer-events: none;
-  opacity: .75;
+  opacity: 1;
+  margin-top: 20px;
 }
 .svg-compass { width: 100%; height: auto; }
 
