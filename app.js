@@ -38,6 +38,42 @@
     'Vand': 'Dybde & Stilhed'
   };
 
+  // ── Life phase from stored birthday ──
+  const phaseData = [
+    { num: 1, name: 'Spiring',         element: 'Træ',   char: '木', range: '0 – 7 år' },
+    { num: 2, name: 'Vækst',           element: 'Træ',   char: '木', range: '7 – 14 år' },
+    { num: 3, name: 'Flammen',         element: 'Ild',   char: '火', range: '14 – 21 år' },
+    { num: 4, name: 'Det Åbne Hjerte', element: 'Ild',   char: '火', range: '21 – 28 år' },
+    { num: 5, name: 'Fundament',       element: 'Jord',  char: '土', range: '28 – 35 år' },
+    { num: 6, name: 'Modning',         element: 'Jord',  char: '土', range: '35 – 42 år' },
+    { num: 7, name: 'Høsten',          element: 'Metal', char: '金', range: '42 – 49 år' },
+    { num: 8, name: 'Stilheden',       element: 'Vand',  char: '水', range: '49 – 56 år' },
+    { num: 9, name: 'Det Andet Forår', element: 'Træ',   char: '木', range: '56+ år' }
+  ];
+
+  let userPhase = phaseData[6]; // default: phase 7
+  const bdayStr = localStorage.getItem('dnl_birthday');
+  if (bdayStr) {
+    const p = bdayStr.split('-');
+    const bday = new Date(parseInt(p[0],10), parseInt(p[1],10)-1, parseInt(p[2],10));
+    const now = new Date();
+    let age = now.getFullYear() - bday.getFullYear();
+    if (now.getMonth() < bday.getMonth() || (now.getMonth() === bday.getMonth() && now.getDate() < bday.getDate())) age--;
+    if (age < 7) userPhase = phaseData[0];
+    else if (age < 14) userPhase = phaseData[1];
+    else if (age < 21) userPhase = phaseData[2];
+    else if (age < 28) userPhase = phaseData[3];
+    else if (age < 35) userPhase = phaseData[4];
+    else if (age < 42) userPhase = phaseData[5];
+    else if (age < 49) userPhase = phaseData[6];
+    else if (age < 56) userPhase = phaseData[7];
+    else userPhase = phaseData[8];
+  }
+
+  // Update phase display
+  const cyclePhaseEl = document.getElementById('cyclePhase');
+  if (cyclePhaseEl) cyclePhaseEl.textContent = 'Fase ' + userPhase.num + ' · ' + userPhase.name;
+
   // Find current organ
   const currentOrgan = organClock.find(o => {
     if (o.start > o.end) return hour >= o.start || hour < o.end; // midnight crossing
@@ -54,13 +90,13 @@
     organTimeEl.textContent = 'kl. ' + start + '–' + end;
   }
 
-  // Update element character and name
+  // Update element character and name — use life phase element
   const charEl = document.getElementById('elementChar');
   const nameEl = document.getElementById('elementName');
   const qualEl = document.getElementById('elementQuality');
-  if (charEl) charEl.textContent = currentOrgan.char;
-  if (nameEl) nameEl.textContent = currentOrgan.element;
-  if (qualEl) qualEl.textContent = elementQualities[currentOrgan.element] || '';
+  if (charEl) charEl.textContent = userPhase.char;
+  if (nameEl) nameEl.textContent = userPhase.element;
+  if (qualEl) qualEl.textContent = elementQualities[userPhase.element] || '';
 
   // ── Season detection ──
   const month = new Date().getMonth(); // 0-indexed
@@ -87,13 +123,13 @@
   const climateEl = document.getElementById('climateText');
   if (climateEl) {
     const seasonEl2 = currentSeason.element;
-    const organEl2 = currentOrgan.element;
-    if (seasonEl2 === organEl2) {
+    const phaseEl2 = userPhase.element;
+    if (seasonEl2 === phaseEl2) {
       climateEl.textContent = 'Fuld resonans — ' + seasonEl2.toLowerCase() + '-energien pulserer i alt omkring dig lige nu. Mærk den.';
     } else {
-      climateEl.textContent = currentSeason.name + ' møder ' + organEl2.toLowerCase() + ' i dig lige nu — en ' +
+      climateEl.textContent = currentSeason.name + ' møder ' + phaseEl2.toLowerCase() + ' i dig lige nu — en ' +
         (Math.random() > 0.5 ? 'sjælden spænding' : 'poetisk dialog') +
-        ' mellem ' + seasonEl2.toLowerCase() + ' og ' + organEl2.toLowerCase() + '.';
+        ' mellem ' + seasonEl2.toLowerCase() + ' og ' + phaseEl2.toLowerCase() + '.';
     }
   }
 
@@ -106,16 +142,19 @@
   }
 
   const deepSeasonEl = document.getElementById('deepSeason');
-  if (deepSeasonEl) deepSeasonEl.textContent = currentSeason.name + ' møder ' + currentOrgan.element;
+  if (deepSeasonEl) deepSeasonEl.textContent = currentSeason.name + ' møder ' + userPhase.element;
 
   const deepClimateEl = document.getElementById('deepClimate');
   if (deepClimateEl) {
-    if (currentSeason.element === currentOrgan.element) {
-      deepClimateEl.textContent = 'Fuld resonans i ' + currentOrgan.element.toLowerCase();
+    if (currentSeason.element === userPhase.element) {
+      deepClimateEl.textContent = 'Fuld resonans i ' + userPhase.element.toLowerCase();
     } else {
-      deepClimateEl.textContent = 'Kreativ spænding — ' + currentSeason.element.toLowerCase() + ' og ' + currentOrgan.element.toLowerCase();
+      deepClimateEl.textContent = 'Kreativ spænding — ' + currentSeason.element.toLowerCase() + ' og ' + userPhase.element.toLowerCase();
     }
   }
+
+  const deepPhaseEl = document.getElementById('deepPhase');
+  if (deepPhaseEl) deepPhaseEl.textContent = 'Fase ' + userPhase.num + ' · ' + userPhase.name + ' · ' + userPhase.element;
 
   // ── Top nav scroll ──
   const topnav = document.querySelector('.topnav');

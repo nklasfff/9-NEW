@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script>if(!localStorage.getItem('dnl_onboarded'))window.location.replace('onboarding.html');</script>
 </head>
 <body>
 
@@ -135,7 +136,7 @@
       <a href="dit-dybe-billede.html" class="deep-bar">
         <div class="deep-bar__left">
           <p class="deep-bar__label">Din livsfase</p>
-          <p class="deep-bar__value">Fase 7 · Høsten · Metal</p>
+          <p class="deep-bar__value" id="deepPhase">Fase 7 · Høsten · Metal</p>
         </div>
         <p class="deep-bar__hint">Læs hele fasen</p>
         <svg class="deep-bar__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 6l6 6-6 6"/></svg>
