@@ -26,6 +26,9 @@
   margin: 0 auto 14px;
   display: flex; align-items: center; justify-content: center;
 }
+.dp-hero__symbol--below {
+  margin: 18px auto 0;
+}
 .dp-hero__halo {
   position: absolute; inset: 0;
   width: 100%; height: 100%;
