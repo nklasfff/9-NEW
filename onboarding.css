@@ -14,16 +14,12 @@
   position: fixed;
   inset: 0;
   z-index: 10;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 1.2s var(--ease);
 }
 .ob-step--active {
-  opacity: 1;
-  pointer-events: auto;
+  display: flex;
 }
 .ob-step__inner {
   position: relative;
