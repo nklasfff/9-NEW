@@ -166,6 +166,13 @@
           <button class="dp-expand__btn">Hjælp til refleksion</button>
           <div class="dp-expand__body"><p class="dp-text">Luk øjnene og gå tilbage til den dato du valgte. Hvad kunne du mærke i kroppen? Hvilken energi drev dig — ildens mod, jordens tryghed, vandets intuition? Sammenlign med i dag: lever den energi stadig i dig, eller har den forandret sig? Det du opdager fortæller dig noget vigtigt om hvem du er blevet.</p></div>
         </div>
+        <div class="journal" data-theme="Tidsrejse · Erindring">
+          <textarea class="journal__area" placeholder="Skriv dine tanker her..." rows="1"></textarea>
+          <div class="journal__actions">
+            <span class="journal__saved">Gemt ✓</span>
+            <button class="journal__save" disabled>Gem i journal</button>
+          </div>
+        </div>
       </section>
 
       <div class="dp-back reveal">
@@ -184,6 +191,7 @@
   </nav>
 
   <script src="menu.js"></script>
+  <script src="journal.js"></script>
   <script>
   document.querySelectorAll('.reveal').forEach((el, i) => {
     setTimeout(() => el.classList.add('visible'), 80 + i * 70);

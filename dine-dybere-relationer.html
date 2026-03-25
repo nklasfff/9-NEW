@@ -234,6 +234,13 @@
           <button class="dp-expand__btn">Hjælp til refleksion</button>
           <div class="dp-expand__body"><p class="dp-text">Vælg én person du holder af. Spørg dig selv: gør jeg ting for dem af kærlighed — eller af vane og pligt? Metallets visdom er at den dybeste omsorg ikke altid er handling. Nogle gange er det stilhed, tålmodighed eller bare at være til stede uden at reparere noget. Prøv det i én uge og mærk forskellen.</p></div>
         </div>
+        <div class="journal" data-theme="Relationer · Nærvær">
+          <textarea class="journal__area" placeholder="Skriv dine tanker her..." rows="1"></textarea>
+          <div class="journal__actions">
+            <span class="journal__saved">Gemt ✓</span>
+            <button class="journal__save" disabled>Gem i journal</button>
+          </div>
+        </div>
       </section>
 
       <div class="dp-back reveal">
@@ -252,6 +259,7 @@
   </nav>
 
   <script src="menu.js"></script>
+  <script src="journal.js"></script>
   <script>
   // Reveal
   document.querySelectorAll('.reveal').forEach((el, i) => {

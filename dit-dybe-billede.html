@@ -237,6 +237,13 @@
           <button class="dp-expand__btn">Hjælp til refleksion</button>
           <div class="dp-expand__body"><p class="dp-text">Sæt dig i stilhed med dette spørgsmål i fem minutter. Lad svaret komme af sig selv — det behøver ikke være klogt eller poetisk. Skriv det første der dukker op, uden at redigere. Metallets klarhed viser sig bedst når du ikke forsøger at styre den. Vend tilbage til dit svar om en uge og mærk hvad der har ændret sig.</p></div>
         </div>
+        <div class="journal" data-theme="Metal · Høsten">
+          <textarea class="journal__area" placeholder="Skriv dine tanker her..." rows="1"></textarea>
+          <div class="journal__actions">
+            <span class="journal__saved">Gemt ✓</span>
+            <button class="journal__save" disabled>Gem i journal</button>
+          </div>
+        </div>
       </section>
 
       <!-- Metal condensing into water drops — the transition -->
@@ -276,6 +283,7 @@
   </nav>
 
   <script src="menu.js"></script>
+  <script src="journal.js"></script>
   <script>
   document.querySelectorAll('.reveal').forEach((el, i) => {
     setTimeout(() => el.classList.add('visible'), 80 + i * 70);
