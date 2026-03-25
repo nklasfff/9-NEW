@@ -314,10 +314,56 @@ a{text-decoration:none;color:inherit}
 ::-webkit-scrollbar-thumb:hover{background:rgba(255,255,255,.20)}
 
 /* ═══════════════════════════════════
+   SLIDE MENU
+   ═══════════════════════════════════ */
+.menu-overlay{position:fixed;inset:0;z-index:200;background:rgba(0,0,0,.50);opacity:0;pointer-events:none;transition:opacity .4s var(--ease)}
+.menu-overlay.open{opacity:1;pointer-events:auto}
+.menu-panel{position:fixed;top:0;left:0;bottom:0;z-index:201;width:280px;max-width:80vw;background:var(--surface);border-right:1px solid var(--border-light);transform:translateX(-100%);transition:transform .4s var(--ease);display:flex;flex-direction:column;overflow-y:auto;-webkit-overflow-scrolling:touch}
+.menu-panel.open{transform:translateX(0)}
+.menu-panel__header{padding:28px 24px 20px;border-bottom:1px solid var(--border-light)}
+.menu-panel__brand{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.2rem;font-weight:400;color:var(--text-bright)}
+.menu-panel__sub{font-size:.62rem;color:var(--text-dim);letter-spacing:.06em;margin-top:2px}
+.menu-panel__nav{padding:12px 0;flex:1}
+.menu-link{display:flex;align-items:center;gap:14px;padding:14px 24px;color:var(--text-primary);font-size:.88rem;transition:all var(--transition)}
+.menu-link:hover{background:var(--glass-hover);color:var(--text-bright)}
+.menu-link.active{color:var(--text-bright);font-weight:500}
+.menu-link__icon{width:20px;height:20px;flex-shrink:0;opacity:.5}
+.menu-link__icon svg{width:100%;height:100%}
+.menu-link__label{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.05rem;font-weight:400}
+.menu-panel__footer{padding:16px 24px 28px;border-top:1px solid var(--border-light)}
+.menu-panel__footer p{font-size:.60rem;color:var(--text-dim);letter-spacing:.04em;line-height:1.6}
+
+/* ═══════════════════════════════════
    RESPONSIVE
    ═══════════════════════════════════ */
 @media(max-width:580px){
   .container{padding:0 18px}
   .halo--1{width:340px;height:250px}
   .halo--2{width:220px;height:162px}
+}
+
+/* ═══════════════════════════════════
+   DESKTOP APP FRAME (≥768px)
+   Centers app in a 700px frame
+   ═══════════════════════════════════ */
+@media(min-width:768px){
+  /* Centrer topbar */
+  .topnav{max-width:700px;margin-left:auto;margin-right:auto}
+  /* Centrer bundnavigation */
+  .tabbar{max-width:700px;margin-left:auto;margin-right:auto}
+  /* Centrer hovedsektioner */
+  .mirror,.cycles-now,.portrait-deep,.reading,.explore,.footer,.divider,
+  .tj-mirror,.tj-picker,.tj-result,
+  .rel-mirror,.rel-constellation,
+  .win-mirror,.win-now,.win-upcoming,
+  .deep,.ob-step__inner{max-width:700px;margin-left:auto;margin-right:auto}
+  /* Vertikal ramme */
+  body::after{content:'';position:fixed;top:0;bottom:0;left:0;right:0;max-width:700px;margin:0 auto;border-left:1.5px solid var(--border);border-right:1.5px solid var(--border);pointer-events:none;z-index:150}
+  /* Hamburger-menu inden for rammen */
+  .menu-panel{left:calc(50% - 350px)}
+  .menu-overlay{max-width:700px;left:0;right:0;margin-left:auto;margin-right:auto}
+  /* Ambient orbs inden for rammen */
+  .ambient{max-width:700px;margin-left:auto;margin-right:auto}
+  /* Grain inden for rammen */
+  .grain{max-width:700px;left:50%;transform:translateX(-50%);right:auto}
 }

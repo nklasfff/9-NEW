@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Mere — De 9 Livsfaser</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="deep.css">
+  <link rel="stylesheet" href="light.css">
+  <script src="theme.js"></script>
+</head>
+<body class="body--deep">
+
+  <svg class="grain" aria-hidden="true">
+    <filter id="grn"><feTurbulence type="fractalNoise" baseFrequency="0.80" numOctaves="4" stitchTiles="stitch"/></filter>
+    <rect width="200%" height="200%" filter="url(#grn)"/>
+  </svg>
+
+  <div class="ambient" aria-hidden="true">
+    <div class="orb orb--1"></div>
+    <div class="orb orb--2"></div>
+  </div>
+
+  <nav class="topnav topnav--inner scrolled">
+    <a href="index.html" class="topnav__btn" aria-label="Tilbage">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+    </a>
+    <span class="topnav__brand">Mere</span>
+    <button class="theme-toggle" aria-label="Skift tema"></button>
+  </nav>
+
+  <main class="deep">
+    <div class="container">
+
+      <!-- ══ Din Profil ══ -->
+      <section class="dp-section reveal">
+        <p class="dp-label">Din Profil</p>
+        <div class="mere-profile">
+          <div class="mere-profile__char" id="mere-char">金</div>
+          <div class="mere-profile__info">
+            <h2 class="dp-heading" id="mere-phase">Fase 7 · Høsten</h2>
+            <p class="dp-meta" id="mere-element">Metal · 42 – 49 år</p>
+            <p class="dp-meta" id="mere-birthday">Født: –</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══ De Ni Faser ══ -->
+      <section class="dp-section reveal">
+        <p class="dp-label">De Ni Livsfaser</p>
+        <p class="dp-text" style="margin-bottom:14px">Livet udfolder sig i ni faser á syv år, hver styret af et af de fem elementer.</p>
+
+        <div class="mere-phases">
+          <div class="mere-phase">
+            <span class="mere-phase__dot" style="background:rgba(90,138,106,0.70)"></span>
+            <span class="mere-phase__num">1</span>
+            <span class="mere-phase__name">Spiring</span>
+            <span class="mere-phase__range">0 – 7</span>
+            <span class="mere-phase__el">Træ</span>
+          </div>
+          <div class="mere-phase">
+            <span class="mere-phase__dot" style="background:rgba(90,138,106,0.55)"></span>
+            <span class="mere-phase__num">2</span>
+            <span class="mere-phase__name">Vækst</span>
+            <span class="mere-phase__range">7 – 14</span>
+            <span class="mere-phase__el">Træ</span>
+          </div>
+          <div class="mere-phase">
+            <span class="mere-phase__dot" style="background:rgba(160,96,80,0.70)"></span>
+            <span class="mere-phase__num">3</span>
+            <span class="mere-phase__name">Flammen</span>
+            <span class="mere-phase__range">14 – 21</span>
+            <span class="mere-phase__el">Ild</span>
+          </div>
+          <div class="mere-phase">
+            <span class="mere-phase__dot" style="background:rgba(160,96,80,0.55)"></span>
+            <span class="mere-phase__num">4</span>
+            <span class="mere-phase__name">Det Åbne Hjerte</span>
+            <span class="mere-phase__range">21 – 28</span>
+            <span class="mere-phase__el">Ild</span>
+          </div>
+          <div class="mere-phase">
+            <span class="mere-phase__dot" style="background:rgba(138,122,96,0.70)"></span>
+            <span class="mere-phase__num">5</span>
+            <span class="mere-phase__name">Fundament</span>
+            <span class="mere-phase__range">28 – 35</span>
+            <span class="mere-phase__el">Jord</span>
+          </div>
+          <div class="mere-phase">
+            <span class="mere-phase__dot" style="background:rgba(138,122,96,0.55)"></span>
+            <span class="mere-phase__num">6</span>
+            <span class="mere-phase__name">Modning</span>
+            <span class="mere-phase__range">35 – 42</span>
+            <span class="mere-phase__el">Jord</span>
+          </div>
+          <div class="mere-phase">
+            <span class="mere-phase__dot" style="background:rgba(122,154,181,0.70)"></span>
+            <span class="mere-phase__num">7</span>
+            <span class="mere-phase__name">Høsten</span>
+            <span class="mere-phase__range">42 – 49</span>
+            <span class="mere-phase__el">Metal</span>
+          </div>
+          <div class="mere-phase">
+            <span class="mere-phase__dot" style="background:rgba(80,112,160,0.70)"></span>
+            <span class="mere-phase__num">8</span>
+            <span class="mere-phase__name">Stilheden</span>
+            <span class="mere-phase__range">49 – 56</span>
+            <span class="mere-phase__el">Vand</span>
+          </div>
+          <div class="mere-phase">
+            <span class="mere-phase__dot" style="background:rgba(90,138,106,0.80)"></span>
+            <span class="mere-phase__num">9</span>
+            <span class="mere-phase__name">Det Andet Forår</span>
+            <span class="mere-phase__range">56+</span>
+            <span class="mere-phase__el">Træ</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══ De Fem Elementer ══ -->
+      <section class="dp-section reveal">
+        <p class="dp-label">De Fem Elementer</p>
+        <div class="dp-expand" data-expand="el-wood">
+          <button class="dp-expand__btn dp-expand__btn--tema"><span class="dp-tema-dot" style="background:rgba(90,138,106,0.60)"></span>Træ · 木 · Vækst & Retning</button>
+          <div class="dp-expand__body"><p class="dp-text">Træet er livets begyndelse og genkomst. Lever, galdeblære, forår, vind. Evnen til at have en retning og vokse mod den.</p></div>
+        </div>
+        <div class="dp-expand" data-expand="el-fire">
+          <button class="dp-expand__btn dp-expand__btn--tema"><span class="dp-tema-dot" style="background:rgba(160,96,80,0.60)"></span>Ild · 火 · Hjerte & Forbindelse</button>
+          <div class="dp-expand__body"><p class="dp-text">Ilden er hjertets element. Hjerte, tyndtarm, sommer, varme. Evnen til at forbinde sig, elske og blive set.</p></div>
+        </div>
+        <div class="dp-expand" data-expand="el-earth">
+          <button class="dp-expand__btn dp-expand__btn--tema"><span class="dp-tema-dot" style="background:rgba(138,122,96,0.60)"></span>Jord · 土 · Næring & Fundament</button>
+          <div class="dp-expand__body"><p class="dp-text">Jorden er midten, fundamentet. Mave, milt, sensommer, fugt. Evnen til at nære og blive næret — at være til stede.</p></div>
+        </div>
+        <div class="dp-expand" data-expand="el-metal">
+          <button class="dp-expand__btn dp-expand__btn--tema"><span class="dp-tema-dot" style="background:rgba(122,154,181,0.60)"></span>Metal · 金 · Klarhed & Skelnen</button>
+          <div class="dp-expand__body"><p class="dp-text">Metal er efterårets element. Lunger, tyktarm, tørhed. Evnen til at slippe det overflødige og finde det essentielle.</p></div>
+        </div>
+        <div class="dp-expand" data-expand="el-water">
+          <button class="dp-expand__btn dp-expand__btn--tema"><span class="dp-tema-dot" style="background:rgba(80,112,160,0.60)"></span>Vand · 水 · Dybde & Stilhed</button>
+          <div class="dp-expand__body"><p class="dp-text">Vand er livets dybeste lag. Nyrer, blære, vinter, kulde. Evnen til at hvile, lytte indad og samle visdom.</p></div>
+        </div>
+      </section>
+
+      <!-- ══ Organur ══ -->
+      <section class="dp-section reveal">
+        <p class="dp-label">Organuret</p>
+        <p class="dp-text" style="margin-bottom:14px">Kroppen gennemløber 12 to-timers perioder i døgnet. Hvert organ har sin tid og sit element.</p>
+        <div class="mere-clock">
+          <div class="mere-clock__row"><span class="mere-clock__time">01–03</span><span class="mere-clock__organ">Lever</span><span class="mere-clock__el">Træ</span></div>
+          <div class="mere-clock__row"><span class="mere-clock__time">03–05</span><span class="mere-clock__organ">Lunger</span><span class="mere-clock__el">Metal</span></div>
+          <div class="mere-clock__row"><span class="mere-clock__time">05–07</span><span class="mere-clock__organ">Tyktarm</span><span class="mere-clock__el">Metal</span></div>
+          <div class="mere-clock__row"><span class="mere-clock__time">07–09</span><span class="mere-clock__organ">Mave</span><span class="mere-clock__el">Jord</span></div>
+          <div class="mere-clock__row"><span class="mere-clock__time">09–11</span><span class="mere-clock__organ">Milt</span><span class="mere-clock__el">Jord</span></div>
+          <div class="mere-clock__row"><span class="mere-clock__time">11–13</span><span class="mere-clock__organ">Hjerte</span><span class="mere-clock__el">Ild</span></div>
+          <div class="mere-clock__row"><span class="mere-clock__time">13–15</span><span class="mere-clock__organ">Tyndtarm</span><span class="mere-clock__el">Ild</span></div>
+          <div class="mere-clock__row"><span class="mere-clock__time">15–17</span><span class="mere-clock__organ">Blære</span><span class="mere-clock__el">Vand</span></div>
+          <div class="mere-clock__row"><span class="mere-clock__time">17–19</span><span class="mere-clock__organ">Nyrer</span><span class="mere-clock__el">Vand</span></div>
+          <div class="mere-clock__row"><span class="mere-clock__time">19–21</span><span class="mere-clock__organ">Perikardium</span><span class="mere-clock__el">Ild</span></div>
+          <div class="mere-clock__row"><span class="mere-clock__time">21–23</span><span class="mere-clock__organ">Trippelvarmer</span><span class="mere-clock__el">Ild</span></div>
+          <div class="mere-clock__row"><span class="mere-clock__time">23–01</span><span class="mere-clock__organ">Galdeblære</span><span class="mere-clock__el">Træ</span></div>
+        </div>
+      </section>
+
+      <!-- ══ Indstillinger ══ -->
+      <section class="dp-section reveal">
+        <p class="dp-label">Indstillinger</p>
+
+        <div class="mere-setting">
+          <div class="mere-setting__left">
+            <p class="mere-setting__title">Tema</p>
+            <p class="mere-setting__desc">Skift mellem mørk og lys</p>
+          </div>
+          <button class="mere-theme-btn" id="mere-theme-btn">
+            <span class="mere-theme-btn__icon" id="mere-theme-icon"></span>
+            <span id="mere-theme-label">Mørk</span>
+          </button>
+        </div>
+
+        <div class="mere-setting">
+          <div class="mere-setting__left">
+            <p class="mere-setting__title">Nulstil</p>
+            <p class="mere-setting__desc">Slet din data og start forfra</p>
+          </div>
+          <button class="mere-reset-btn" id="mere-reset-btn">Nulstil</button>
+        </div>
+      </section>
+
+      <!-- ══ Om ══ -->
+      <section class="dp-section dp-section--center reveal">
+        <p class="dp-label">Om</p>
+        <p class="dp-reflection"><em>De Ni Livsfaser</em></p>
+        <p class="dp-text">Et levende spejl baseret på kinesisk medicins femtusindårige visdom. Hvert liv udfolder sig i ni faser, hver formet af de fem elementer — træ, ild, jord, metal og vand.</p>
+        <p class="dp-text" style="margin-top:12px">Appen beregner intet om dig. Den spejler blot de naturlige cykler, du allerede lever i.</p>
+      </section>
+
+      <div class="dp-back reveal">
+        <a href="index.html">← Tilbage til dit spejl</a>
+      </div>
+
+    </div>
+  </main>
+
+  <nav class="tabbar">
+    <a href="index.html" class="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></svg><span>Lige Nu</span></a>
+    <a href="tidsrejse.html" class="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4,12 Q8,4 12,12 Q16,20 20,12"/><circle cx="12" cy="12" r="1.5"/></svg><span>Tidsrejse</span></a>
+    <a href="relationer.html" class="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="9" cy="12" r="5"/><circle cx="15" cy="12" r="5"/></svg><span>Relationer</span></a>
+    <a href="vinduer.html" class="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="8" stroke-dasharray="2 3"/><circle cx="12" cy="12" r="3"/></svg><span>Vinduer</span></a>
+    <a href="mere.html" class="tab active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="19" r="1.5"/></svg><span>Mere</span></a>
+  </nav>
+
+  <script src="menu.js"></script>
+  <script>
+  // Reveal
+  document.querySelectorAll('.reveal').forEach(function(el, i) {
+    setTimeout(function() { el.classList.add('visible'); }, 80 + i * 70);
+  });
+  // Expand/collapse
+  document.querySelectorAll('.dp-expand__btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var wrap = btn.closest('.dp-expand');
+      wrap.classList.toggle('open');
+      if (wrap.classList.contains('open')) {
+        btn.dataset.openText = btn.innerHTML;
+        var dot = btn.querySelector('.dp-tema-dot');
+        btn.innerHTML = '';
+        if (dot) btn.appendChild(dot);
+        btn.appendChild(document.createTextNode('Skjul'));
+      } else {
+        btn.innerHTML = btn.dataset.openText;
+      }
+    });
+  });
+  // Profile data from localStorage
+  (function() {
+    var bday = localStorage.getItem('dnl_birthday');
+    var phaseStr = localStorage.getItem('dnl_phase');
+    if (bday) {
+      var el = document.getElementById('mere-birthday');
+      if (el) el.textContent = 'Født: ' + bday.split('-').reverse().join('.');
+    }
+    if (phaseStr) {
+      try {
+        var p = JSON.parse(phaseStr);
+        var charEl = document.getElementById('mere-char');
+        var phaseEl = document.getElementById('mere-phase');
+        var elemEl = document.getElementById('mere-element');
+        if (charEl) charEl.textContent = p.char;
+        if (phaseEl) phaseEl.textContent = 'Fase ' + p.num + ' · ' + p.name;
+        if (elemEl) elemEl.textContent = p.element + ' · ' + p.range;
+      } catch(e) {}
+    }
+    // Highlight current phase row
+    if (phaseStr) {
+      try {
+        var p = JSON.parse(phaseStr);
+        var rows = document.querySelectorAll('.mere-phase');
+        if (rows[p.num - 1]) rows[p.num - 1].classList.add('mere-phase--active');
+      } catch(e) {}
+    }
+    // Theme button
+    var themeBtn = document.getElementById('mere-theme-btn');
+    var themeLabel = document.getElementById('mere-theme-label');
+    var themeIcon = document.getElementById('mere-theme-icon');
+    function updateThemeBtn() {
+      var isLight = document.documentElement.classList.contains('light');
+      themeLabel.textContent = isLight ? 'Lys' : 'Mørk';
+      themeIcon.textContent = isLight ? '☀' : '☾';
+    }
+    updateThemeBtn();
+    themeBtn.addEventListener('click', function() {
+      document.documentElement.classList.toggle('light');
+      var isLight = document.documentElement.classList.contains('light');
+      localStorage.setItem('dnl_theme', isLight ? 'light' : 'dark');
+      updateThemeBtn();
+      // Sync the topnav toggle
+      var topToggle = document.querySelector('.theme-toggle');
+      if (topToggle) topToggle.click();
+    });
+    // Reset
+    document.getElementById('mere-reset-btn').addEventListener('click', function() {
+      if (confirm('Er du sikker? Al din data slettes.')) {
+        localStorage.removeItem('dnl_birthday');
+        localStorage.removeItem('dnl_phase');
+        localStorage.removeItem('dnl_onboarded');
+        window.location.href = 'onboarding.html';
+      }
+    });
+  })();
+  </script>
+</body>
+</html>
