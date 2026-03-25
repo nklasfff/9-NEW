@@ -134,15 +134,20 @@ a{text-decoration:none;color:inherit}
   line-height:1.8;max-width:340px;margin:0 auto;
 }
 
-/* Deeper CTA in mirror */
+/* Deeper CTA in mirror — card style like deep-bars */
 .mirror__deeper{
   display:inline-flex;align-items:center;gap:6px;
   margin-top:24px;
+  padding:12px 24px;
   font-size:.68rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;
-  color:rgba(255,255,255,.35);
+  color:var(--text-primary);
+  background:var(--surface);
+  border:1px solid var(--border-light);
+  border-radius:30px;
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
   transition:all var(--transition);
 }
-.mirror__deeper:hover{color:rgba(255,255,255,.60)}
+.mirror__deeper:hover{color:var(--text-bright);background:var(--surface-hover);border-color:var(--glass-border);box-shadow:var(--shadow-up);transform:translateY(-1px)}
 .mirror__deeper svg{transition:transform var(--transition)}
 .mirror__deeper:hover svg{transform:translateY(2px)}
 
