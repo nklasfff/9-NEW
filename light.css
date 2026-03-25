@@ -494,3 +494,13 @@ html.light .theme-toggle {
 .topnav.scrolled .theme-toggle {
   color: var(--text-dim);
 }
+
+/* ═══════════════════════════════════
+   DESKTOP FRAME — light border
+   ═══════════════════════════════════ */
+@media(min-width:768px){
+  html.light body::after {
+    border-left-color: var(--border);
+    border-right-color: var(--border);
+  }
+}

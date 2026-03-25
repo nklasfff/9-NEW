@@ -353,3 +353,9 @@
   .ob-elements { margin: 18px 0 16px; }
   .ob-btn { margin-top: 20px; }
 }
+
+/* Desktop frame */
+@media (min-width: 768px) {
+  .ob-step { max-width: 700px; margin-left: auto; margin-right: auto; }
+  .ob-progress { max-width: 700px; }
+}

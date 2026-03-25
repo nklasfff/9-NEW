@@ -341,3 +341,29 @@ a{text-decoration:none;color:inherit}
   .halo--1{width:340px;height:250px}
   .halo--2{width:220px;height:162px}
 }
+
+/* ═══════════════════════════════════
+   DESKTOP APP FRAME (≥768px)
+   Centers app in a 700px frame
+   ═══════════════════════════════════ */
+@media(min-width:768px){
+  /* Centrer topbar */
+  .topnav{max-width:700px;margin-left:auto;margin-right:auto}
+  /* Centrer bundnavigation */
+  .tabbar{max-width:700px;margin-left:auto;margin-right:auto}
+  /* Centrer hovedsektioner */
+  .mirror,.cycles-now,.portrait-deep,.reading,.explore,.footer,.divider,
+  .tj-mirror,.tj-picker,.tj-result,
+  .rel-mirror,.rel-constellation,
+  .win-mirror,.win-now,.win-upcoming,
+  .deep,.ob-step__inner{max-width:700px;margin-left:auto;margin-right:auto}
+  /* Vertikal ramme */
+  body::after{content:'';position:fixed;top:0;bottom:0;left:0;right:0;max-width:700px;margin:0 auto;border-left:1.5px solid var(--border);border-right:1.5px solid var(--border);pointer-events:none;z-index:150}
+  /* Hamburger-menu inden for rammen */
+  .menu-panel{left:calc(50% - 350px)}
+  .menu-overlay{max-width:700px;left:0;right:0;margin-left:auto;margin-right:auto}
+  /* Ambient orbs inden for rammen */
+  .ambient{max-width:700px;margin-left:auto;margin-right:auto}
+  /* Grain inden for rammen */
+  .grain{max-width:700px;left:50%;transform:translateX(-50%);right:auto}
+}
