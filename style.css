@@ -361,7 +361,7 @@ a{text-decoration:none;color:inherit}
   body::after{content:'';position:fixed;top:0;bottom:0;left:0;right:0;max-width:700px;margin:0 auto;border-left:1.5px solid var(--border);border-right:1.5px solid var(--border);pointer-events:none;z-index:150}
   /* Hamburger-menu inden for rammen */
   .menu-panel{left:calc(50% - 350px)}
-  .menu-overlay{max-width:700px;left:0;right:0;margin-left:auto;margin-right:auto}
+  .menu-overlay{inset:0;left:calc(50% - 350px);right:calc(50% - 350px)}
   /* Ambient orbs inden for rammen */
   .ambient{max-width:700px;margin-left:auto;margin-right:auto}
   /* Grain inden for rammen */
