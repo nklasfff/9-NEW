@@ -365,3 +365,163 @@
   0%, 100% { opacity: .6; }
   50% { opacity: .3; }
 }
+
+/* ═══════════════════════════════════
+   MERE PAGE — profile, phases, clock
+   ═══════════════════════════════════ */
+
+/* Profile card */
+.mere-profile {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 10px;
+}
+.mere-profile__char {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 2.6rem;
+  font-weight: 300;
+  color: var(--text-bright);
+  opacity: .70;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.mere-profile__info { flex: 1; min-width: 0; }
+
+/* Nine phases list */
+.mere-phases {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.mere-phase {
+  display: grid;
+  grid-template-columns: 8px 20px 1fr auto auto;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border-light);
+  transition: background .3s var(--ease);
+}
+.mere-phase:last-child { border-bottom: none; }
+.mere-phase--active {
+  background: rgba(122,154,181,.06);
+  margin: 0 -12px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border-bottom-color: transparent;
+}
+.mere-phase__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+.mere-phase__num {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: .80rem;
+  color: var(--text-dim);
+  text-align: center;
+}
+.mere-phase__name {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: .95rem;
+  font-weight: 400;
+  color: var(--text-primary);
+}
+.mere-phase--active .mere-phase__name {
+  color: var(--text-bright);
+  font-weight: 500;
+}
+.mere-phase__range {
+  font-size: .65rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+.mere-phase__el {
+  font-size: .62rem;
+  color: var(--text-dim);
+  letter-spacing: .06em;
+  width: 36px;
+  text-align: right;
+}
+
+/* Organ clock */
+.mere-clock {
+  display: flex;
+  flex-direction: column;
+}
+.mere-clock__row {
+  display: grid;
+  grid-template-columns: 48px 1fr auto;
+  gap: 8px;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border-light);
+}
+.mere-clock__row:last-child { border-bottom: none; }
+.mere-clock__time {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: .88rem;
+  color: var(--text-dim);
+}
+.mere-clock__organ {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: .92rem;
+  color: var(--text-primary);
+}
+.mere-clock__el {
+  font-size: .62rem;
+  color: var(--text-dim);
+  letter-spacing: .06em;
+}
+
+/* Settings */
+.mere-setting {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border-light);
+}
+.mere-setting:last-child { border-bottom: none; }
+.mere-setting__left { flex: 1; min-width: 0; }
+.mere-setting__title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1rem;
+  color: var(--text-bright);
+}
+.mere-setting__desc {
+  font-size: .68rem;
+  color: var(--text-dim);
+  margin-top: 1px;
+}
+.mere-theme-btn, .mere-reset-btn {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 6px 16px;
+  font-family: 'Inter', sans-serif;
+  font-size: .68rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.mere-theme-btn:hover, .mere-reset-btn:hover {
+  border-color: var(--accent);
+  color: var(--text-bright);
+}
+.mere-theme-btn__icon {
+  font-size: .85rem;
+  line-height: 1;
+}
+.mere-reset-btn {
+  color: var(--sym);
+  border-color: rgba(160,96,80,.25);
+}
+.mere-reset-btn:hover {
+  border-color: rgba(160,96,80,.50);
+  color: var(--sym);
+}

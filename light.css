@@ -445,6 +445,34 @@ html.light .ob-progress__dot--active {
 }
 
 /* ═══════════════════════════════════
+   SLIDE MENU — light
+   ═══════════════════════════════════ */
+html.light .menu-overlay {
+  background: rgba(0,0,0,.20);
+}
+html.light .menu-panel {
+  background: var(--surface);
+  border-right-color: var(--border-light);
+}
+html.light .menu-link:hover {
+  background: rgba(0,0,0,.03);
+}
+
+/* ═══════════════════════════════════
+   MERE PAGE — light overrides
+   ═══════════════════════════════════ */
+html.light .mere-phase--active {
+  background: rgba(80,100,130,.06);
+}
+html.light .mere-reset-btn {
+  color: #a06050;
+  border-color: rgba(160,96,80,.20);
+}
+html.light .mere-reset-btn:hover {
+  border-color: rgba(160,96,80,.40);
+}
+
+/* ═══════════════════════════════════
    THEME TOGGLE BUTTON
    ═══════════════════════════════════ */
 .theme-toggle {
