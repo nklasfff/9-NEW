@@ -1,0 +1,898 @@
+/* ══════════════════════════════════════════════════
+   Translations — Danish (da) + English (en)
+   ══════════════════════════════════════════════════ */
+window.TRANSLATIONS = {
+
+  // ─── DANISH (original) ───────────────────────────
+  da: {
+
+    // Page titles
+    _title_index: 'De 9 Livsfaser',
+    _title_tidsrejse: 'Tidsrejse — De 9 Livsfaser',
+    _title_din_tidsrejse: 'Din Tidsrejse — De 9 Livsfaser',
+    _title_relationer: 'Relationer — De 9 Livsfaser',
+    _title_dine_relationer: 'Dine Dybere Relationer — De 9 Livsfaser',
+    _title_dit_dybe: 'Dit Dybe Billede — De 9 Livsfaser',
+    _title_vinduer: 'Vinduer — De 9 Livsfaser',
+    _title_dit_vindue: 'Dit Vindue — De 9 Livsfaser',
+
+    // ── Shared nav & tabs ──
+    brand: 'De Ni Livsfaser',
+    tab_now: 'Lige Nu',
+    tab_time: 'Tidsrejse',
+    tab_rel: 'Relationer',
+    tab_win: 'Vinduer',
+    tab_more: 'Mere',
+    aria_menu: 'Menu',
+    aria_search: 'Søg',
+    aria_back: 'Tilbage',
+
+    // ── Shared footer ──
+    footer_brand: 'De Ni Livsfaser',
+    footer_sub: 'Baseret på kinesisk medicins visdom',
+
+    // ── Shared buttons ──
+    btn_hide: 'Skjul',
+    btn_read_more: 'Læs mere',
+    btn_dive_deeper: 'Dyk dybere',
+
+    // ═══════════════════════════════
+    // INDEX.HTML
+    // ═══════════════════════════════
+
+    // Greetings (set by app.js, but we store them for reference)
+    greet_night: 'Stille nat',
+    greet_morning: 'God morgen',
+    greet_forenoon: 'God formiddag',
+    greet_afternoon: 'God eftermiddag',
+    greet_evening: 'God aften',
+    greet_late: 'Stille aften',
+
+    // Mirror climate fallback
+    mirror_climate: 'Forår møder metal i dig lige nu — en sjælden spænding mellem det nye og det essentielle.',
+    mirror_deeper: 'Dyk dybere',
+
+    // Cycles
+    cycle_phase_label: 'Livsfase',
+    cycle_phase_value: 'Fase 7 · Høsten',
+    cycle_phase_detail: '42 – 49 år',
+    cycle_season_label: 'Årstid',
+    cycle_season_detail: 'Marts',
+    cycle_organ_label: 'Organur',
+    cycle_day_label: 'Ugedag',
+    cycle_sensommer: 'Sensommer-energi',
+
+    // Life phases
+    phase_prefix: 'Fase',
+    phase_1: 'Spiring',
+    phase_2: 'Vækst',
+    phase_3: 'Flammen',
+    phase_4: 'Det Åbne Hjerte',
+    phase_5: 'Fundament',
+    phase_6: 'Modning',
+    phase_7: 'Høsten',
+    phase_8: 'Stilheden',
+    phase_9: 'Det Andet Forår',
+
+    // Deep bars
+    deep_climate_label: 'Dit indre klima',
+    deep_climate_hint: 'Hvad det betyder for dig',
+    deep_phase_label: 'Din livsfase',
+    deep_phase_value: 'Fase 7 · Høsten · Metal',
+    deep_phase_hint: 'Læs hele fasen',
+    deep_organ_label: 'Organur lige nu',
+    deep_organ_hint: 'Råd og øvelser',
+    deep_season_label: 'Årstid × Element',
+    deep_season_hint: 'Hvad det vækker',
+
+    // Daily reading
+    reading_label: 'Dagens Læsning',
+    reading_text: 'Metallets gave til dig i dag er evnen til at slippe det, der ikke længere tjener dig. Mærk efter — hvad kan du lægge fra dig?',
+
+    // Explore
+    explore_label: 'Udforsk',
+    bar_tidsrejse: 'Tidsrejse',
+    bar_tidsrejse_sub: 'Rejse til enhver dato i dit liv',
+    bar_relationer: 'Relationer',
+    bar_relationer_sub: 'Det usynlige rum mellem jer',
+    bar_phases: 'De Ni Faser',
+    bar_phases_sub: 'Fra spiring til det Andet Forår',
+    bar_vinduer: 'Vinduer',
+    bar_vinduer_sub: 'Sjældne øjeblikke af resonans',
+
+    // ═══════════════════════════════
+    // TIDSREJSE.HTML
+    // ═══════════════════════════════
+    tj_brand: 'Tidsrejse',
+    tj_greeting: 'Rejse gennem tid',
+    tj_title: 'Tidsrejse',
+    tj_intro: 'Vælg en dato — din fødselsdag, et vendepunkt, en drøm — og se hvilken energi der var i spil.',
+    tj_pick_label: 'Vælg en dato',
+    tj_go: 'Se energien',
+    tj_el_label: 'Element',
+    tj_season_label: 'Årstid',
+    tj_phase_label: 'Livsfase',
+    tj_organ_label: 'Organur',
+    tj_deep_label_prefix: 'Dyk ned i ',
+    tj_deep_hint: 'Alt om denne energi',
+    tj_deep_date_label: 'Denne dato',
+
+    // Milestones
+    tj_milestone_label: 'Vigtige datoer',
+    tj_birthday_title: 'Din fødselsdag',
+    tj_birthday_sub: 'Dagen det hele begyndte',
+    tj_turning_title: 'Et vendepunkt',
+    tj_turning_sub: 'Den dag noget ændrede sig',
+    tj_future_title: 'En fremtidig dato',
+    tj_future_sub: 'Se hvilken energi der venter',
+
+    // ═══════════════════════════════
+    // DIN-TIDSREJSE.HTML
+    // ═══════════════════════════════
+    dtj_brand: '15. juni 2000',
+    dtj_hero_title: 'Ild · Sommer',
+    dtj_hero_meta: '15. juni 2000 · Fase 3 · Forvandlingen',
+    dtj_hero_climate: 'Sommer-ild brændte stærkt den dag — hjertet var åbent, og verden var ny.',
+    dtj_day_label: 'Den dag',
+    dtj_day_heading: 'Ildens Hjerte var åbent',
+    dtj_day_text: 'Sommeren 2000. Du var i Fase 3 — Forvandlingens tid. Hjertet bankede hårdt, og alt var muligt.',
+    dtj_day_expand: 'Hvad det betød',
+    dtj_day_expand_text: 'Ild-elementet i sommer-årstiden skaber dobbelt ild — en sjælden intensitet. Hjertet og tyndtarmen var de dominerende organer. Alt du følte den dag var forstærket, fordi årstiden og dit element var i fuld resonans.',
+    dtj_element_label: 'Elementet den dag',
+    dtj_element_heading: 'Ild · Hjerte & Forbindelse',
+    dtj_element_text: 'Ildens kvalitet er varme, glæde og kontakt. Hjertet banker hurtigere, ordene kommer lettere, og man forelsker sig i verden.',
+    dtj_element_strength: 'Ildens styrke',
+    dtj_element_strength_text: 'Ild-mennesket er magnetisk. Humor, spontanitet, evnen til at lyse et rum op. Sommeren forstærkede det hele — du var på toppen af din naturlige kraft.',
+    dtj_element_vuln: 'Ildens sårbarhed',
+    dtj_element_vuln_text: 'For meget ild brænder. Uro, søvnbesvær, hjerteanker, oversvømmende følelser. Grænsen mellem passion og panik er tynd i dobbelt ild.',
+    dtj_then_label: 'Dengang & Nu',
+    dtj_then_heading: 'Fra Ild til Metal',
+    dtj_then_text: 'Den dag var du i ildens centrum. I dag er du i metallets klarhed. Rejsen derimellem er dit livs bue.',
+    dtj_tag_then: 'Ild · 2000',
+    dtj_tag_now: 'Metal · Nu',
+    dtj_reflection_label: 'Refleksion',
+    dtj_reflection: 'Hvad brændte i dig den dag — og brænder det stadig?',
+    dtj_journal: 'Skriv i din journal →',
+    dtj_back: '← Tilbage til tidsrejse',
+
+    // ═══════════════════════════════
+    // RELATIONER.HTML
+    // ═══════════════════════════════
+    rel_brand: 'Relationer',
+    rel_greeting: 'Rummet mellem jer',
+    rel_title: 'Relationer',
+    rel_intro: 'I Fase 7 holder du mange tråde — opad til dine forældre, nedad til dine børn, og vandret til din partner.',
+    rel_you_label: 'Du',
+    rel_you_value: 'Fase 7 · Metal · Høsten',
+    rel_you_detail: '42–49 år',
+    rel_partner_label: 'Partner',
+    rel_partner_value: 'Fase 6 · Metal · Vendepunktet',
+    rel_partner_detail: '35–42 år',
+    rel_child_label: 'Barn',
+    rel_child_value: 'Fase 3 · Ild · Forvandlingen',
+    rel_child_detail: '14–21 år',
+    rel_parent_label: 'Forælder',
+    rel_parent_value: 'Fase 9 · Træ · Det Andet Forår',
+    rel_parent_detail: '56+ år',
+
+    // Deep bars
+    rel_deep_partner_label: 'Partnerskab',
+    rel_deep_partner_value: 'Metal møder Metal — skarp resonans',
+    rel_deep_partner_hint: 'Jeres dynamik',
+    rel_deep_child_label: 'Dit barn',
+    rel_deep_child_value: 'Ild i dit metal — gnister og modstand',
+    rel_deep_child_hint: 'Forstå jeres møde',
+    rel_deep_parent_label: 'Din forælder',
+    rel_deep_parent_value: 'Træets frihed møder dit metals grænser',
+    rel_deep_parent_hint: 'Rollerne bytter',
+    rel_deep_sandwich_label: 'Sandwich-generationen',
+    rel_deep_sandwich_value: 'Opad og nedad — du bærer begge veje',
+    rel_deep_sandwich_hint: 'Din position',
+
+    // Reading
+    rel_reading_label: 'Relationens Indsigt',
+    rel_reading_text: 'I Fase 7 lærer du, at den dybeste forbindelse ikke kræver at du giver alt — men at du giver det rigtige.',
+
+    // Explore
+    rel_explore_label: 'Udforsk',
+    rel_3gen_title: 'Tre Generationer',
+    rel_3gen_sub: 'Se jeres elementer side om side',
+    rel_dynamics_title: 'Element-dynamik',
+    rel_dynamics_sub: 'Hvordan jeres elementer mødes',
+    rel_windows_title: 'Relationsvinduer',
+    rel_windows_sub: 'Øjeblikke af dybere møde',
+
+    // ═══════════════════════════════
+    // DINE-DYBERE-RELATIONER.HTML
+    // ═══════════════════════════════
+    dr_brand: 'Dine Relationer',
+    dr_hero_title: 'Dine Relationer',
+    dr_hero_meta: 'Fase 7 · Sandwich-generationen',
+    dr_hero_desc: 'I Fase 7 er du bindeleddet — den der holder tre generationer sammen med metallets stille styrke.',
+
+    // Partnership
+    dr_partner_label: 'Partnerskab',
+    dr_partner_heading: 'Metal møder Metal',
+    dr_partner_text: 'To mennesker i metallets fase kan spejle hinanden med foruroligende klarhed. I ved hvad I mener — og det kan skære.',
+    dr_partner_strength: 'Jeres styrke',
+    dr_partner_strength_text: 'I kender forskel på vigtigt og uvæsentligt. I kan sidde i stilhed uden at det er truende. Jeres parforhold har renset sig for det overflødige — det der er tilbage er ægte.',
+    dr_partner_challenge: 'Jeres udfordring',
+    dr_partner_challenge_text: 'Metallets skyggeside er isolation. Når begge trækker sig indad, kan afstanden vokse til taushed. Kroppen ændrer sig — lysten skifter, hormonerne svinger. Det kræver en ny slags intimitet.',
+    dr_partner_exercise: 'Øvelse for jer',
+    dr_partner_exercise_text: 'Sid overfor hinanden. Læg en hånd på den andens håndflade. Mærk varmen. Sig ingenting i tre minutter. Metallets forbindelse er ikke gennem ord — den er gennem berøring og nærvær.',
+
+    // Child
+    dr_child_label: 'Dit barn',
+    dr_child_heading: 'Ild i dit Metal',
+    dr_child_text: 'Dit barn er i Forvandlingens fase — alt brænder med en intensitet, der udfordrer din rolige skelneevne.',
+    dr_child_need: 'Hvad de har brug for',
+    dr_child_need_text: 'Ildens teenager har brug for en base, der ikke brænder med. Din metalklarhed er præcis det — en kølig, stabil overflade at komme hjem til. De har ikke brug for at du forstår alt. De har brug for at du er der.',
+    dr_child_spark: 'Jeres gnist',
+    dr_child_spark_text: 'Ild smelter metal. Barnet vil udfordre dine grænser, din autoritet, din tålmodighed. Det føles som opposition — men det er vækst. Metallets opgave er ikke at slukke ilden, men at give den en retning.',
+    dr_child_exercise: 'Øvelse',
+    dr_child_exercise_text: 'Når konflikten koger: træk vejret ud længere end ind (4:2:8). Din udåndning er metallets redskab. Den køler ned. Og svar først når du kan tale med klarhed — ikke reaktion.',
+
+    // Parent
+    dr_parent_label: 'Din forælder',
+    dr_parent_heading: 'Træets frihed møder dit Metal',
+    dr_parent_text: 'Din forælder er i det Andet Forår — en ny frihed, men også nye behov. Rollerne bytter langsomt om.',
+    dr_parent_landscape: 'Det nye landskab',
+    dr_parent_landscape_text: 'Den der passede på dig, begynder at have brug for at du passer på dem. Det er en af livets mest skælvende overgange. Metallets skelneevne hjælper dig med at finde den rette afstand — tæt nok til at hjælpe, langt nok til at bevare jeres værdighed.',
+    dr_parent_grief: 'Uforløst sorg',
+    dr_parent_grief_text: 'Meget af det du bærer i relationen til dine forældre er uforløst. Metallets opgave er at lade det komme frem — ikke som anklage, men som vemodig anerkendelse. Ikke alt behøver at blive sagt. Noget kan blot anerkendes indeni.',
+
+    // Sandwich
+    dr_sandwich_label: 'Sandwich-generationen',
+    dr_sandwich_heading: 'Du bærer begge veje',
+    dr_sandwich_text: 'Opad holder du øje med dine forældre. Nedad holder du øje med dine børn. I midten er du — og du glemmer at holde øje med dig selv.',
+    dr_sandwich_gift: 'Metallets gave her',
+    dr_sandwich_gift_text: 'Metallets evne til at skelne det væsentlige er din største ressource nu. Du kan ikke gøre alt. Du kan ikke redde alle. Men du kan vælge præcist — og det, du gør, kan du gøre helt. Ikke mere, ikke mindre.',
+    dr_sandwich_risk: 'Risikoen',
+    dr_sandwich_risk_text: 'Metallets ubalance i sandwich-positionen er udmattelse forklædt som funktionalitet. Du virker stærk. Du håndterer alt. Men lungerne bliver korte, huden tør, søvnen tynd. Mærk efter: hvornår holdt du sidst vejret?',
+    dr_sandwich_one: 'Én ting du kan gøre',
+    dr_sandwich_one_text: 'Giv dig selv fem minutter om dagen, der kun er dine. Luk døren. Træk vejret. Mærk dine fødder mod gulvet. Du er ikke kun bindeleddet — du er også dig selv.',
+
+    dr_reflection_label: 'Refleksion',
+    dr_reflection: 'Hvem i dit liv har brug for at du gør mindre — og er mere?',
+    dr_journal: 'Skriv i din journal →',
+    dr_back: '← Tilbage til relationer',
+
+    // ═══════════════════════════════
+    // DIT-DYBE-BILLEDE.HTML
+    // ═══════════════════════════════
+    db_brand: 'Dit Dybe Billede',
+    db_hero_title: 'Metal · Høsten',
+    db_hero_meta: 'Fase 7 · 42 – 49 år',
+    db_hero_climate: 'Forår møder metal i dig — træets vækst presser mod metallets klarhed.',
+
+    db_feeling_label: 'Fasens Følelse',
+    db_feeling_heading: 'Skelneevne & Vemod',
+    db_feeling_text: 'Metallets natur er at adskille kerne fra skal. En venligere, skarpere klarhed der ved hvad der betyder noget.',
+    db_feeling_expand: 'Læs mere',
+    db_feeling_expand_text: 'Vemod kommer som bølger — en sang, en duft, et foto af et yngre jeg. Det er sundt, for det betyder, du har elsket dit liv. Skelneevnen er metallets gave: evnen til at skelne det væsentlige fra det overflødige, fordi du har levet længe nok til at kende forskellen.',
+
+    db_body_label: 'Kroppen',
+    db_body_heading: 'Balance & Ubalance',
+    db_body_text: 'Stille autoritet. Kender sit eget værd. Dyb, fri vejrtrækning. Klarhed i hud, blik og tale.',
+    db_body_expand: 'Se ubalance-tegn',
+    db_body_expand_text: 'Tør hud, kortere åndedræt, trægere fordøjelse. Uventet vemod over ungdommens krop. Humørsvingninger man ikke genkender.',
+    db_body_expand_cause: 'Årsager:',
+    db_body_expand_cause_text: 'Overgangsalder, uforløst sorg, stress der komprimerer vejrtrækningen.',
+
+    db_themes_label: 'Temaer i Fase 7',
+    db_theme_menopause: 'Overgangsalderen',
+    db_theme_menopause_text: 'Perimenopausen er en lang afsked. Mange opdager en mere stabil, dybere kraft nedenunder.',
+    db_theme_harvest: 'Høsten — det du har skabt',
+    db_theme_harvest_text: 'Stop og anerkend hvad du har bygget. Fejr det hele — både det der lykkedes og det du slap.',
+    db_theme_roles: 'Roller der skifter',
+    db_theme_roles_text: 'Børn bliver voksne, forældre ældes. Metallets klarhed hjælper dig med at skelne ægte ansvar fra vane.',
+    db_theme_breath: 'Åndedrættet som praksis',
+    db_theme_breath_text: 'Lungerne er metallets organ. 10 dybe åndedrag om dagen ændrer alt.',
+
+    db_rel_label: 'Relationer',
+    db_rel_heading: 'Sandwich-generationen',
+    db_rel_text: 'Børn typisk i Fase 3-4 — har brug for dig som tryg base. Forældre i Fase 8-9 — rollerne bytter langsomt om.',
+    db_rel_expand: 'Læs mere om relationer',
+    db_rel_expand_text: 'Partnerskabet testes: kroppen ændrer sig, hormoner svinger, lysten skifter. For kvinder uden børn: det biologiske vindue lukker endeligt — sorg kan vende tilbage med fornyet styrke.',
+
+    db_practice_label: 'Dagens Praksis',
+    db_practice_heading: 'Lungernes Åndedræt',
+    db_practice_text: 'Indånd 4 tæl gennem næsen — ribbenene udvider sig. Hold 2. Udånd 8 tæl med en lang "ssss"-lyd. Metallets helende lyd.',
+    db_practice_meta: '8–10 gentagelser · Sidende eller stående',
+
+    db_advice_label: 'Fasens Råd',
+    db_advice_heading: '5 råd til dig i Fase 7',
+    db_advice_1: 'Træk vejret bevidst — udånd længere end indånd',
+    db_advice_2: 'Ryd op — skuffer, skabe, kalender',
+    db_advice_3: 'Gå i frisk luft dagligt — lungerne elsker kølig luft',
+    db_advice_4: 'Tillad vemodet — det er sundere med plads',
+    db_advice_5: 'Øv dig i at sige nej — skelneevnen behøver handling',
+
+    db_food_label: 'Kost & Krop',
+    db_food_heading: 'Det der nærer dit Metal',
+    db_food_text: 'Hvide fødevarer: blomkål, pærer, ris, mandler. Supper og grød. Pærer kogt med ingefær og honning.',
+    db_food_expand: 'Mere om kost',
+    db_food_expand_text: 'Urter: timian, salvie, ingefær, hvidløg. Salvie-te mod hedeture. Undgå for tør/rå mad og koffein. Knoglestøtte: mandler, sesamfrø, mørke bladgrøntsager.',
+
+    db_reflection_label: 'Refleksion',
+    db_reflection: 'Hvad ved du nu, som du ikke kunne have vidst for 20 år siden?',
+    db_journal: 'Skriv i din journal →',
+
+    db_transition_label: 'Overgangen',
+    db_transition_heading: 'Mod Vandets Stilhed',
+    db_transition_text: 'Metal nærer Vand. Energien strømmer nedad og indad — mod stilhed, dybde, visdom.',
+    db_transition_from: 'Metal · Fase 7',
+    db_transition_to: 'Vand · Fase 8',
+
+    db_back: '← Tilbage til dit spejl',
+
+    // ═══════════════════════════════
+    // VINDUER.HTML
+    // ═══════════════════════════════
+    win_brand: 'Vinduer',
+    win_greeting: 'Sjældne øjeblikke',
+    win_title: 'Vinduer',
+    win_intro: 'Når livsfase, årstid, organur og ugedag mødes i samme element — åbner der sig et vindue af sjælden resonans.',
+    win_now_label: 'Lige nu',
+    win_status_title: 'Delvis resonans',
+    win_status_desc: 'To af fire cyklusser deler element — en svag men mærkbar harmoni.',
+    win_align_phase: 'Livsfase',
+    win_align_season: 'Årstid',
+    win_align_organ: 'Organur',
+    win_align_day: 'Ugedag',
+
+    win_upcoming_label: 'Kommende vinduer',
+    win_next_full_label: 'Næste fulde resonans',
+    win_next_full_value: 'Torsdag 27. marts · Træ',
+    win_next_full_hint: '3 af 4 matcher',
+    win_next_fire_label: 'Stærk ild-resonans',
+    win_next_fire_value: 'Fredag 4. april · kl. 11–13',
+    win_next_fire_hint: 'Hjerte-timen',
+    win_next_metal_label: 'Metal-vindue',
+    win_next_metal_value: 'Efterår 2026 · Fase 7 + Årstid',
+    win_next_metal_hint: 'Din stærkeste tid',
+
+    win_reading_label: 'Vinduets Indsigt',
+    win_reading_text: 'Et vindue er ikke noget du skaber — det er noget du opdager. Når cyklusserne mødes, er din opgave blot at være opmærksom.',
+
+    win_explore_label: 'Forstå vinduer',
+    win_what_title: 'Hvad er et vindue?',
+    win_what_sub: 'Forstå resonans mellem cyklusser',
+    win_pairs_title: 'Element-par',
+    win_pairs_sub: 'Når to elementer mødes i dig',
+    win_personal_title: 'Dine personlige vinduer',
+    win_personal_sub: 'Baseret på din fødselsdato',
+
+    // ═══════════════════════════════
+    // DIT-VINDUE.HTML
+    // ═══════════════════════════════
+    dv_brand: 'Dit Vindue',
+    dv_hero_title: 'Vinduer af Resonans',
+    dv_hero_meta: 'Når cyklusserne mødes',
+    dv_hero_climate: 'Et vindue er det øjeblik, hvor flere lag af tid vibrerer i samme frekvens.',
+
+    dv_what_label: 'Forståelse',
+    dv_what_heading: 'Hvad er et vindue?',
+    dv_what_text: 'Hver dag krydser fire cyklusser i dig: livsfase, årstid, organur og ugedag. Hvert lag har sit element. Når to eller flere deler element, opstår der resonans — et vindue.',
+    dv_what_layers: 'De fire lag',
+    dv_what_layers_text: 'Livsfasen skifter hvert 7. år. Årstiden hvert kvartal. Organens energi hver 2. time. Ugedagen dagligt. Når de mødes i samme element, forstærkes dets kvalitet eksponentielt.',
+    dv_what_degrees: 'Grader af resonans',
+    dv_what_2of4: '2 af 4:',
+    dv_what_2of4_text: 'Svag resonans — en undertone du kan mærke hvis du lytter.',
+    dv_what_3of4: '3 af 4:',
+    dv_what_3of4_text: 'Stærk resonans — elementet pulserer tydeligt i krop og sind.',
+    dv_what_4of4: '4 af 4:',
+    dv_what_4of4_text: 'Fuld resonans — sjælden. Alt vibrerer i samme frekvens. Et vindue der kun åbner sig kort.',
+
+    dv_next_label: 'Dit næste vindue',
+    dv_next_heading: 'Torsdag 27. marts · Træ',
+    dv_next_text: 'Årstid (Forår·Træ) + Ugedag (Torsdag·Træ) + Organur (Lever·Træ, kl. 01–03). Tre af fire cyklusser i Træ.',
+    dv_next_action: 'Hvad du kan gøre',
+    dv_next_action_text: 'Træ-resonans handler om retning og vækst. Brug dette vindue til at sætte en intention — ikke en plan, men en retning. Skriv ét ord der beskriver hvad du vil gro mod. Lad det ligge i dig.',
+    dv_next_exercise: 'Øvelse for dette vindue',
+    dv_next_exercise_text: 'Stå oprejst. Mærk fødderne som rødder. Stræk armene opad som grene. Hold 30 sekunder. Mærk retningen — opad. Træets bevægelse er altid opad, også når det er svært.',
+
+    dv_five_label: 'De fem vinduer',
+    dv_wood: 'Træ-vindue',
+    dv_wood_text: 'Vækst, retning, nye begyndelser. Bedst til at sætte intentioner og starte projekter. Kroppen vil bevæge sig — gå en tur, stræk dig.',
+    dv_fire: 'Ild-vindue',
+    dv_fire_text: 'Forbindelse, glæde, åbenhed. Bedst til samtaler, kreativt arbejde, at møde mennesker. Hjertet banker hurtigere.',
+    dv_earth: 'Jord-vindue',
+    dv_earth_text: 'Næring, fundament, omsorg. Bedst til at tage sig af andre og sig selv. Lav mad, ryd op, skab struktur.',
+    dv_metal: 'Metal-vindue',
+    dv_metal_text: 'Klarhed, skelneevne, slippe. Bedst til at rydde op — fysisk og mentalt. Sige nej. Trække vejret dybt.',
+    dv_water: 'Vand-vindue',
+    dv_water_text: 'Dybde, stilhed, visdom. Bedst til meditation, journalskrivning, at lytte indad. Kroppen vil hvile.',
+
+    dv_reflection_label: 'Refleksion',
+    dv_reflection: 'Hvornår har du sidst mærket at alt faldt på plads — uden at du gjorde noget?',
+    dv_journal: 'Skriv i din journal →',
+    dv_back: '← Tilbage til vinduer',
+
+    // ── Dynamic text (app.js) ──
+    elem_wood: 'Træ',
+    elem_fire: 'Ild',
+    elem_earth: 'Jord',
+    elem_metal: 'Metal',
+    elem_water: 'Vand',
+    qual_wood: 'Vækst & Retning',
+    qual_fire: 'Hjerte & Forbindelse',
+    qual_earth: 'Næring & Fundament',
+    qual_metal: 'Klarhed & Skelnen',
+    qual_water: 'Dybde & Stilhed',
+    organ_liver: 'Lever',
+    organ_lungs: 'Lunger',
+    organ_large_intestine: 'Tyktarm',
+    organ_stomach: 'Mave',
+    organ_spleen: 'Milt',
+    organ_heart: 'Hjerte',
+    organ_small_intestine: 'Tyndtarm',
+    organ_bladder: 'Blære',
+    organ_kidneys: 'Nyrer',
+    organ_pericardium: 'Perikardium',
+    organ_triple_heater: 'Trippelvarmer',
+    organ_gallbladder: 'Galdeblære',
+    season_spring: 'Forår',
+    season_summer: 'Sommer',
+    season_late_summer: 'Sensommer',
+    season_autumn: 'Efterår',
+    season_winter: 'Vinter',
+    day_sun: 'Søndag',
+    day_mon: 'Mandag',
+    day_tue: 'Tirsdag',
+    day_wed: 'Onsdag',
+    day_thu: 'Torsdag',
+    day_fri: 'Fredag',
+    day_sat: 'Lørdag',
+    time_prefix: 'kl. ',
+    climate_resonance: 'Fuld resonans — ',
+    climate_resonance_suffix: '-energien pulserer i alt omkring dig lige nu. Mærk den.',
+    climate_meets: ' møder ',
+    climate_tension_a: 'sjælden spænding',
+    climate_tension_b: 'poetisk dialog',
+    climate_between: ' mellem ',
+    climate_and: ' og ',
+    deep_resonance_prefix: 'Fuld resonans i ',
+    deep_tension_prefix: 'Kreativ spænding — ',
+  },
+
+  // ─── ENGLISH ─────────────────────────────────
+  en: {
+
+    // Page titles
+    _title_index: 'The Nine Life Phases',
+    _title_tidsrejse: 'Time Travel — The Nine Life Phases',
+    _title_din_tidsrejse: 'Your Time Travel — The Nine Life Phases',
+    _title_relationer: 'Relationships — The Nine Life Phases',
+    _title_dine_relationer: 'Your Deeper Relationships — The Nine Life Phases',
+    _title_dit_dybe: 'Your Deep Portrait — The Nine Life Phases',
+    _title_vinduer: 'Windows — The Nine Life Phases',
+    _title_dit_vindue: 'Your Window — The Nine Life Phases',
+
+    // ── Shared nav & tabs ──
+    brand: 'The Nine Life Phases',
+    tab_now: 'Right Now',
+    tab_time: 'Time Travel',
+    tab_rel: 'Relationships',
+    tab_win: 'Windows',
+    tab_more: 'More',
+    aria_menu: 'Menu',
+    aria_search: 'Search',
+    aria_back: 'Back',
+
+    // ── Shared footer ──
+    footer_brand: 'The Nine Life Phases',
+    footer_sub: 'Rooted in the wisdom of Chinese medicine',
+
+    // ── Shared buttons ──
+    btn_hide: 'Hide',
+    btn_read_more: 'Read more',
+    btn_dive_deeper: 'Go deeper',
+
+    // ═══════════════════════════════
+    // INDEX.HTML
+    // ═══════════════════════════════
+
+    greet_night: 'Quiet night',
+    greet_morning: 'Good morning',
+    greet_forenoon: 'Good morning',
+    greet_afternoon: 'Good afternoon',
+    greet_evening: 'Good evening',
+    greet_late: 'Quiet evening',
+
+    mirror_climate: 'Spring meets metal within you right now — a rare tension between what is emerging and what is essential.',
+    mirror_deeper: 'Go deeper',
+
+    cycle_phase_label: 'Life phase',
+    cycle_phase_value: 'Phase 7 · The Harvest',
+    cycle_phase_detail: 'Ages 42 – 49',
+    cycle_season_label: 'Season',
+    cycle_season_detail: 'March',
+    cycle_organ_label: 'Organ clock',
+    cycle_day_label: 'Weekday',
+    cycle_sensommer: 'Late summer energy',
+
+    // Life phases
+    phase_prefix: 'Phase',
+    phase_1: 'Sprouting',
+    phase_2: 'Growth',
+    phase_3: 'The Flame',
+    phase_4: 'The Open Heart',
+    phase_5: 'Foundation',
+    phase_6: 'Ripening',
+    phase_7: 'The Harvest',
+    phase_8: 'The Stillness',
+    phase_9: 'The Second Spring',
+
+    deep_climate_label: 'Your inner climate',
+    deep_climate_hint: 'What it means for you',
+    deep_phase_label: 'Your life phase',
+    deep_phase_value: 'Phase 7 · The Harvest · Metal',
+    deep_phase_hint: 'Explore the full phase',
+    deep_organ_label: 'Organ clock right now',
+    deep_organ_hint: 'Guidance and exercises',
+    deep_season_label: 'Season × Element',
+    deep_season_hint: 'What it awakens',
+
+    reading_label: 'Daily Reading',
+    reading_text: "Metal's gift to you today is the ability to release what no longer serves you. Feel into it — what can you set down?",
+
+    explore_label: 'Explore',
+    bar_tidsrejse: 'Time Travel',
+    bar_tidsrejse_sub: 'Journey to any moment in your life',
+    bar_relationer: 'Relationships',
+    bar_relationer_sub: 'The invisible space between you',
+    bar_phases: 'The Nine Phases',
+    bar_phases_sub: 'From first bloom to the Second Spring',
+    bar_vinduer: 'Windows',
+    bar_vinduer_sub: 'Rare moments of resonance',
+
+    // ═══════════════════════════════
+    // TIDSREJSE.HTML
+    // ═══════════════════════════════
+    tj_brand: 'Time Travel',
+    tj_greeting: 'A journey through time',
+    tj_title: 'Time Travel',
+    tj_intro: 'Choose a date — your birthday, a turning point, a dream — and discover what energy was at play.',
+    tj_pick_label: 'Choose a date',
+    tj_go: 'Reveal the energy',
+    tj_el_label: 'Element',
+    tj_season_label: 'Season',
+    tj_phase_label: 'Life phase',
+    tj_organ_label: 'Organ clock',
+    tj_deep_label_prefix: 'Dive into ',
+    tj_deep_hint: 'Everything about this energy',
+    tj_deep_date_label: 'This date',
+
+    tj_milestone_label: 'Key dates',
+    tj_birthday_title: 'Your birthday',
+    tj_birthday_sub: 'The day it all began',
+    tj_turning_title: 'A turning point',
+    tj_turning_sub: 'The day something shifted',
+    tj_future_title: 'A future date',
+    tj_future_sub: 'See what energy lies ahead',
+
+    // ═══════════════════════════════
+    // DIN-TIDSREJSE.HTML
+    // ═══════════════════════════════
+    dtj_brand: '15 June 2000',
+    dtj_hero_title: 'Fire · Summer',
+    dtj_hero_meta: '15 June 2000 · Phase 3 · The Transformation',
+    dtj_hero_climate: 'Summer fire burned fiercely that day — the heart was wide open, and the world felt brand new.',
+    dtj_day_label: 'That day',
+    dtj_day_heading: "Fire's Heart was wide open",
+    dtj_day_text: 'Summer 2000. You were in Phase 3 — the time of Transformation. Your heart was pounding, and everything felt possible.',
+    dtj_day_expand: 'What it meant',
+    dtj_day_expand_text: 'The Fire element during the summer season creates double fire — a rare intensity. The heart and small intestine were the dominant organs. Everything you felt that day was amplified, because the season and your element were in perfect resonance.',
+    dtj_element_label: 'The element that day',
+    dtj_element_heading: 'Fire · Heart & Connection',
+    dtj_element_text: "Fire's quality is warmth, joy, and contact. The heart beats faster, words come more easily, and you fall in love with the world.",
+    dtj_element_strength: "Fire's strength",
+    dtj_element_strength_text: 'The fire personality is magnetic. Humour, spontaneity, the gift of lighting up a room. Summer amplified all of it — you were at the peak of your natural power.',
+    dtj_element_vuln: "Fire's vulnerability",
+    dtj_element_vuln_text: 'Too much fire burns. Restlessness, sleeplessness, heart palpitations, overwhelming emotions. The line between passion and panic runs thin in double fire.',
+    dtj_then_label: 'Then & Now',
+    dtj_then_heading: 'From Fire to Metal',
+    dtj_then_text: "That day you stood at fire's centre. Today you stand in metal's clarity. The arc between them is the story of your life.",
+    dtj_tag_then: 'Fire · 2000',
+    dtj_tag_now: 'Metal · Now',
+    dtj_reflection_label: 'Reflection',
+    dtj_reflection: 'What burned in you that day — and does it still burn?',
+    dtj_journal: 'Write in your journal \u2192',
+    dtj_back: '\u2190 Back to Time Travel',
+
+    // ═══════════════════════════════
+    // RELATIONER.HTML
+    // ═══════════════════════════════
+    rel_brand: 'Relationships',
+    rel_greeting: 'The space between you',
+    rel_title: 'Relationships',
+    rel_intro: 'In Phase 7, you hold many threads — upward to your parents, downward to your children, and across to your partner.',
+    rel_you_label: 'You',
+    rel_you_value: 'Phase 7 · Metal · The Harvest',
+    rel_you_detail: 'Ages 42–49',
+    rel_partner_label: 'Partner',
+    rel_partner_value: 'Phase 6 · Metal · The Turning Point',
+    rel_partner_detail: 'Ages 35–42',
+    rel_child_label: 'Child',
+    rel_child_value: 'Phase 3 · Fire · The Transformation',
+    rel_child_detail: 'Ages 14–21',
+    rel_parent_label: 'Parent',
+    rel_parent_value: 'Phase 9 · Wood · The Second Spring',
+    rel_parent_detail: 'Age 56+',
+
+    rel_deep_partner_label: 'Partnership',
+    rel_deep_partner_value: 'Metal meets Metal — a sharp resonance',
+    rel_deep_partner_hint: 'Your dynamic',
+    rel_deep_child_label: 'Your child',
+    rel_deep_child_value: 'Fire in your metal — sparks and resistance',
+    rel_deep_child_hint: 'Understanding how you meet',
+    rel_deep_parent_label: 'Your parent',
+    rel_deep_parent_value: "Wood's freedom meets metal's boundaries",
+    rel_deep_parent_hint: 'The roles are shifting',
+    rel_deep_sandwich_label: 'The sandwich generation',
+    rel_deep_sandwich_value: 'Upward and downward — you carry both ways',
+    rel_deep_sandwich_hint: 'Your position',
+
+    rel_reading_label: "The Relationship's Insight",
+    rel_reading_text: 'In Phase 7, you learn that the deepest connection does not ask you to give everything — only to give what truly matters.',
+
+    rel_explore_label: 'Explore',
+    rel_3gen_title: 'Three Generations',
+    rel_3gen_sub: 'See your elements side by side',
+    rel_dynamics_title: 'Element dynamics',
+    rel_dynamics_sub: 'How your elements meet',
+    rel_windows_title: 'Relationship windows',
+    rel_windows_sub: 'Moments of deeper encounter',
+
+    // ═══════════════════════════════
+    // DINE-DYBERE-RELATIONER.HTML
+    // ═══════════════════════════════
+    dr_brand: 'Your Relationships',
+    dr_hero_title: 'Your Relationships',
+    dr_hero_meta: 'Phase 7 · The sandwich generation',
+    dr_hero_desc: "In Phase 7, you are the connective thread — the one holding three generations together with metal's quiet strength.",
+
+    dr_partner_label: 'Partnership',
+    dr_partner_heading: 'Metal meets Metal',
+    dr_partner_text: 'Two people in the metal phase can mirror each other with unsettling clarity. You both know exactly what you mean — and that precision can cut.',
+    dr_partner_strength: 'Your strength together',
+    dr_partner_strength_text: 'You know the difference between what matters and what does not. You can sit in silence without it feeling like a threat. Your relationship has shed the excess — what remains is real.',
+    dr_partner_challenge: 'Your challenge',
+    dr_partner_challenge_text: "Metal's shadow side is isolation. When both of you withdraw inward, the distance can grow into silence. The body is changing — desire shifts, hormones fluctuate. This calls for a new kind of intimacy.",
+    dr_partner_exercise: 'An exercise for you both',
+    dr_partner_exercise_text: "Sit facing each other. Place your hand on your partner's palm. Feel the warmth. Say nothing for three minutes. Metal's connection is not through words — it runs through touch and presence.",
+
+    dr_child_label: 'Your child',
+    dr_child_heading: 'Fire in your Metal',
+    dr_child_text: 'Your child is in the phase of Transformation — everything burns with an intensity that challenges your quiet discernment.',
+    dr_child_need: 'What they need',
+    dr_child_need_text: "A fire-age teenager needs a base that doesn't catch alight. Your metal clarity is exactly that — a cool, steady surface to come home to. They don't need you to understand everything. They need you to be there.",
+    dr_child_spark: 'The spark between you',
+    dr_child_spark_text: "Fire melts metal. Your child will push your boundaries, your authority, your patience. It feels like opposition — but it is growth. Metal's task is not to extinguish the fire, but to give it direction.",
+    dr_child_exercise: 'Exercise',
+    dr_child_exercise_text: "When conflict boils over: breathe out longer than you breathe in (4:2:8). Your exhale is metal's instrument. It cools. And respond only when you can speak with clarity — not reaction.",
+
+    dr_parent_label: 'Your parent',
+    dr_parent_heading: "Wood's freedom meets your Metal",
+    dr_parent_text: 'Your parent is in the Second Spring — a new kind of freedom, but also new needs. The roles are quietly reversing.',
+    dr_parent_landscape: 'The new landscape',
+    dr_parent_landscape_text: "The person who once cared for you is beginning to need your care in return. This is one of life's most tender transitions. Metal's discernment helps you find the right distance — close enough to help, far enough to preserve both your dignities.",
+    dr_parent_grief: 'Unresolved grief',
+    dr_parent_grief_text: "Much of what you carry in the relationship with your parents remains unresolved. Metal's task is to let it surface — not as accusation, but as gentle acknowledgement. Not everything needs to be spoken. Some things can simply be recognised within.",
+
+    dr_sandwich_label: 'The sandwich generation',
+    dr_sandwich_heading: 'You carry both ways',
+    dr_sandwich_text: 'Upward, you watch over your parents. Downward, you watch over your children. In the middle stands you — and you forget to watch over yourself.',
+    dr_sandwich_gift: "Metal's gift here",
+    dr_sandwich_gift_text: "Metal's ability to discern what truly matters is your greatest resource right now. You cannot do everything. You cannot save everyone. But you can choose precisely — and what you do, you can do completely. No more, no less.",
+    dr_sandwich_risk: 'The risk',
+    dr_sandwich_risk_text: "Metal's imbalance in the sandwich position is exhaustion disguised as competence. You seem strong. You handle everything. But the breath grows shallow, the skin dries out, sleep thins. Notice: when did you last hold your breath?",
+    dr_sandwich_one: 'One thing you can do',
+    dr_sandwich_one_text: 'Give yourself five minutes a day that belong only to you. Close the door. Breathe. Feel your feet on the floor. You are not only the link between others — you are also yourself.',
+
+    dr_reflection_label: 'Reflection',
+    dr_reflection: 'Who in your life needs you to do less — and simply be more?',
+    dr_journal: 'Write in your journal \u2192',
+    dr_back: '\u2190 Back to Relationships',
+
+    // ═══════════════════════════════
+    // DIT-DYBE-BILLEDE.HTML
+    // ═══════════════════════════════
+    db_brand: 'Your Deep Portrait',
+    db_hero_title: 'Metal · The Harvest',
+    db_hero_meta: 'Phase 7 · Ages 42 – 49',
+    db_hero_climate: "Spring meets metal within you — wood's growth pressing against metal's clarity.",
+
+    db_feeling_label: 'The Feeling of this Phase',
+    db_feeling_heading: 'Discernment & Wistfulness',
+    db_feeling_text: 'Metal separates the core from the shell. A kinder, sharper clarity that knows what truly matters.',
+    db_feeling_expand: 'Read more',
+    db_feeling_expand_text: 'Wistfulness arrives in waves — a song, a scent, a photograph of a younger self. This is healthy, because it means you have loved your life. Discernment is metal\'s gift: the ability to tell what matters from what does not, because you have lived long enough to know the difference.',
+
+    db_body_label: 'The Body',
+    db_body_heading: 'Balance & Imbalance',
+    db_body_text: 'Quiet authority. Knowing your own worth. Deep, unrestricted breathing. Clarity in skin, gaze, and speech.',
+    db_body_expand: 'Signs of imbalance',
+    db_body_expand_text: "Dry skin, shorter breath, sluggish digestion. An unexpected grief for the body's youth. Mood shifts you don't quite recognise.",
+    db_body_expand_cause: 'Causes:',
+    db_body_expand_cause_text: 'Menopause, unresolved grief, stress that compresses the breath.',
+
+    db_themes_label: 'Themes in Phase 7',
+    db_theme_menopause: 'Menopause',
+    db_theme_menopause_text: 'Perimenopause is a long farewell. Many discover a steadier, deeper power underneath.',
+    db_theme_harvest: 'The Harvest — what you have built',
+    db_theme_harvest_text: 'Pause and acknowledge what you have created. Celebrate it all — both what succeeded and what you let go of.',
+    db_theme_roles: 'Shifting roles',
+    db_theme_roles_text: "Children become adults, parents grow older. Metal's clarity helps you distinguish genuine responsibility from habit.",
+    db_theme_breath: 'Breathing as practice',
+    db_theme_breath_text: "The lungs are metal's organ. Ten deep breaths a day change everything.",
+
+    db_rel_label: 'Relationships',
+    db_rel_heading: 'The sandwich generation',
+    db_rel_text: 'Children typically in Phase 3–4 — they need you as a safe base. Parents in Phase 8–9 — the roles are slowly reversing.',
+    db_rel_expand: 'More about relationships',
+    db_rel_expand_text: 'The partnership is tested: the body changes, hormones fluctuate, desire shifts. For women without children: the biological window closes definitively — grief may return with renewed force.',
+
+    db_practice_label: 'Daily Practice',
+    db_practice_heading: 'The Lung Breath',
+    db_practice_text: 'Breathe in for 4 counts through the nose — feel the ribs expand. Hold for 2. Breathe out for 8 counts with a long "ssss" sound. The healing sound of metal.',
+    db_practice_meta: '8–10 repetitions · Seated or standing',
+
+    db_advice_label: 'Phase Guidance',
+    db_advice_heading: '5 pieces of guidance for Phase 7',
+    db_advice_1: 'Breathe with intention — exhale longer than you inhale',
+    db_advice_2: 'Clear out — drawers, cupboards, your calendar',
+    db_advice_3: 'Walk in fresh air daily — the lungs love cool air',
+    db_advice_4: 'Allow the wistfulness — it is healthier given room',
+    db_advice_5: 'Practise saying no — discernment needs action',
+
+    db_food_label: 'Nourishment & Body',
+    db_food_heading: 'What nourishes your Metal',
+    db_food_text: 'White foods: cauliflower, pears, rice, almonds. Soups and porridge. Pears poached with ginger and honey.',
+    db_food_expand: 'More on nourishment',
+    db_food_expand_text: 'Herbs: thyme, sage, ginger, garlic. Sage tea for hot flushes. Avoid overly dry or raw food and caffeine. Bone support: almonds, sesame seeds, dark leafy greens.',
+
+    db_reflection_label: 'Reflection',
+    db_reflection: 'What do you know now that you could not possibly have known twenty years ago?',
+    db_journal: 'Write in your journal \u2192',
+
+    db_transition_label: 'The Transition',
+    db_transition_heading: "Towards Water's Stillness",
+    db_transition_text: 'Metal nourishes Water. The energy flows downward and inward — toward stillness, depth, wisdom.',
+    db_transition_from: 'Metal · Phase 7',
+    db_transition_to: 'Water · Phase 8',
+
+    db_back: '\u2190 Back to your mirror',
+
+    // ═══════════════════════════════
+    // VINDUER.HTML
+    // ═══════════════════════════════
+    win_brand: 'Windows',
+    win_greeting: 'Rare moments',
+    win_title: 'Windows',
+    win_intro: 'When life phase, season, organ clock, and weekday converge on the same element — a window of rare resonance opens.',
+    win_now_label: 'Right now',
+    win_status_title: 'Partial resonance',
+    win_status_desc: 'Two of four cycles share an element — a gentle but perceptible harmony.',
+    win_align_phase: 'Life phase',
+    win_align_season: 'Season',
+    win_align_organ: 'Organ clock',
+    win_align_day: 'Weekday',
+
+    win_upcoming_label: 'Upcoming windows',
+    win_next_full_label: 'Next full resonance',
+    win_next_full_value: 'Thursday 27 March · Wood',
+    win_next_full_hint: '3 of 4 match',
+    win_next_fire_label: 'Strong fire resonance',
+    win_next_fire_value: 'Friday 4 April · 11 am–1 pm',
+    win_next_fire_hint: 'The heart hour',
+    win_next_metal_label: 'Metal window',
+    win_next_metal_value: 'Autumn 2026 · Phase 7 + Season',
+    win_next_metal_hint: 'Your strongest time',
+
+    win_reading_label: "The Window's Insight",
+    win_reading_text: 'A window is not something you create — it is something you discover. When the cycles converge, your only task is to pay attention.',
+
+    win_explore_label: 'Understanding windows',
+    win_what_title: 'What is a window?',
+    win_what_sub: 'Understanding resonance between cycles',
+    win_pairs_title: 'Element pairs',
+    win_pairs_sub: 'When two elements meet within you',
+    win_personal_title: 'Your personal windows',
+    win_personal_sub: 'Based on your date of birth',
+
+    // ═══════════════════════════════
+    // DIT-VINDUE.HTML
+    // ═══════════════════════════════
+    dv_brand: 'Your Window',
+    dv_hero_title: 'Windows of Resonance',
+    dv_hero_meta: 'When the cycles converge',
+    dv_hero_climate: 'A window is the moment when several layers of time vibrate at the same frequency.',
+
+    dv_what_label: 'Understanding',
+    dv_what_heading: 'What is a window?',
+    dv_what_text: 'Four cycles cross within you every day: life phase, season, organ clock, and weekday. Each layer carries its own element. When two or more share the same element, resonance arises — a window.',
+    dv_what_layers: 'The four layers',
+    dv_what_layers_text: 'The life phase shifts every seven years. The season every quarter. The organ energy every two hours. The weekday daily. When they converge on the same element, its quality intensifies exponentially.',
+    dv_what_degrees: 'Degrees of resonance',
+    dv_what_2of4: '2 of 4:',
+    dv_what_2of4_text: 'Gentle resonance — an undertone you can sense if you listen.',
+    dv_what_3of4: '3 of 4:',
+    dv_what_3of4_text: 'Strong resonance — the element pulses clearly in body and mind.',
+    dv_what_4of4: '4 of 4:',
+    dv_what_4of4_text: 'Full resonance — rare. Everything vibrates at the same frequency. A window that opens only briefly.',
+
+    dv_next_label: 'Your next window',
+    dv_next_heading: 'Thursday 27 March · Wood',
+    dv_next_text: 'Season (Spring·Wood) + Weekday (Thursday·Wood) + Organ clock (Liver·Wood, 1–3 am). Three of four cycles in Wood.',
+    dv_next_action: 'What you can do',
+    dv_next_action_text: 'Wood resonance is about direction and growth. Use this window to set an intention — not a plan, but a direction. Write a single word that describes what you want to grow toward. Let it settle within you.',
+    dv_next_exercise: 'Exercise for this window',
+    dv_next_exercise_text: 'Stand upright. Feel your feet as roots. Stretch your arms upward like branches. Hold for 30 seconds. Feel the direction — upward. The movement of wood is always upward, even when things are hard.',
+
+    dv_five_label: 'The five windows',
+    dv_wood: 'Wood window',
+    dv_wood_text: 'Growth, direction, new beginnings. Best for setting intentions and starting projects. The body wants to move — go for a walk, stretch.',
+    dv_fire: 'Fire window',
+    dv_fire_text: 'Connection, joy, openness. Best for conversations, creative work, meeting people. The heart beats a little faster.',
+    dv_earth: 'Earth window',
+    dv_earth_text: 'Nourishment, foundation, care. Best for tending to others and to yourself. Cook a meal, tidy up, build structure.',
+    dv_metal: 'Metal window',
+    dv_metal_text: 'Clarity, discernment, letting go. Best for clearing out — physically and mentally. Saying no. Breathing deeply.',
+    dv_water: 'Water window',
+    dv_water_text: 'Depth, stillness, wisdom. Best for meditation, journalling, turning inward. The body wants to rest.',
+
+    dv_reflection_label: 'Reflection',
+    dv_reflection: 'When did you last feel everything fall into place — without having to do a thing?',
+    dv_journal: 'Write in your journal \u2192',
+    dv_back: '\u2190 Back to Windows',
+
+    // ── Dynamic text (app.js) ──
+    elem_wood: 'Wood',
+    elem_fire: 'Fire',
+    elem_earth: 'Earth',
+    elem_metal: 'Metal',
+    elem_water: 'Water',
+    qual_wood: 'Growth & Direction',
+    qual_fire: 'Heart & Connection',
+    qual_earth: 'Nourishment & Foundation',
+    qual_metal: 'Clarity & Discernment',
+    qual_water: 'Depth & Stillness',
+    organ_liver: 'Liver',
+    organ_lungs: 'Lungs',
+    organ_large_intestine: 'Large Intestine',
+    organ_stomach: 'Stomach',
+    organ_spleen: 'Spleen',
+    organ_heart: 'Heart',
+    organ_small_intestine: 'Small Intestine',
+    organ_bladder: 'Bladder',
+    organ_kidneys: 'Kidneys',
+    organ_pericardium: 'Pericardium',
+    organ_triple_heater: 'Triple Heater',
+    organ_gallbladder: 'Gallbladder',
+    season_spring: 'Spring',
+    season_summer: 'Summer',
+    season_late_summer: 'Late Summer',
+    season_autumn: 'Autumn',
+    season_winter: 'Winter',
+    day_sun: 'Sunday',
+    day_mon: 'Monday',
+    day_tue: 'Tuesday',
+    day_wed: 'Wednesday',
+    day_thu: 'Thursday',
+    day_fri: 'Friday',
+    day_sat: 'Saturday',
+    time_prefix: '',
+    climate_resonance: 'Full resonance — ',
+    climate_resonance_suffix: ' energy pulses through everything around you right now. Feel it.',
+    climate_meets: ' meets ',
+    climate_tension_a: 'a rare tension',
+    climate_tension_b: 'a poetic dialogue',
+    climate_between: ' between ',
+    climate_and: ' and ',
+    deep_resonance_prefix: 'Full resonance in ',
+    deep_tension_prefix: 'Creative tension — ',
+  }
+
+};

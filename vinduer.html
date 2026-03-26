@@ -26,11 +26,12 @@
   </div>
 
   <nav class="topnav">
-    <button class="topnav__btn" aria-label="Menu">
+    <button class="topnav__btn" aria-label="Menu" data-i18n-aria="aria_menu">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="16" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
     </button>
-    <span class="topnav__brand">Vinduer</span>
+    <span class="topnav__brand" data-i18n="win_brand">Vinduer</span>
     <button class="theme-toggle" aria-label="Skift tema"></button>
+    <button class="topnav__btn lang-switch" aria-label="Switch to English">EN</button>
   </nav>
 
   <!-- ═══════════════════════════════════════
@@ -43,14 +44,14 @@
     </div>
 
     <div class="mirror__content">
-      <p class="mirror__greeting anim-fade" style="--d:.3s">Sjældne øjeblikke</p>
+      <p class="mirror__greeting anim-fade" style="--d:.3s" data-i18n="win_greeting">Sjældne øjeblikke</p>
 
-      <h1 class="win-mirror__title anim-fade" style="--d:.6s">Vinduer</h1>
+      <h1 class="win-mirror__title anim-fade" style="--d:.6s" data-i18n="win_title">Vinduer</h1>
 
       <div class="mirror__rule anim-fade" style="--d:.9s"></div>
 
       <p class="mirror__climate anim-fade" style="--d:1.1s">
-        <em>Når livsfase, årstid, organur og ugedag mødes i samme element — åbner der sig et vindue af sjælden resonans.</em>
+        <em data-i18n="win_intro">Når livsfase, årstid, organur og ugedag mødes i samme element — åbner der sig et vindue af sjælden resonans.</em>
       </p>
     </div>
 
@@ -75,7 +76,7 @@
        ═══════════════════════════════════════ -->
   <section class="win-now reveal">
     <div class="container">
-      <p class="win-now__label">Lige nu</p>
+      <p class="win-now__label" data-i18n="win_now_label">Lige nu</p>
 
       <div class="win-status" id="winStatus">
         <div class="win-status__icon">
@@ -86,23 +87,23 @@
           </svg>
         </div>
         <div class="win-status__body">
-          <p class="win-status__title">Delvis resonans</p>
-          <p class="win-status__desc">To af fire cyklusser deler element — en svag men mærkbar harmoni.</p>
+          <p class="win-status__title" data-i18n="win_status_title">Delvis resonans</p>
+          <p class="win-status__desc" data-i18n="win_status_desc">To af fire cyklusser deler element — en svag men mærkbar harmoni.</p>
         </div>
       </div>
 
       <div class="win-alignment reveal">
         <div class="win-align-dot" style="background:rgba(122,154,181,0.60)"></div>
-        <span class="win-align-label">Livsfase</span>
+        <span class="win-align-label" data-i18n="win_align_phase">Livsfase</span>
         <span class="win-align-el">Metal</span>
         <div class="win-align-dot" style="background:rgba(90,138,106,0.60)"></div>
-        <span class="win-align-label">Årstid</span>
+        <span class="win-align-label" data-i18n="win_align_season">Årstid</span>
         <span class="win-align-el">Træ</span>
         <div class="win-align-dot" style="background:rgba(160,96,80,0.60)"></div>
-        <span class="win-align-label">Organur</span>
+        <span class="win-align-label" data-i18n="win_align_organ">Organur</span>
         <span class="win-align-el">Ild</span>
         <div class="win-align-dot" style="background:rgba(138,122,96,0.60)"></div>
-        <span class="win-align-label">Ugedag</span>
+        <span class="win-align-label" data-i18n="win_align_day">Ugedag</span>
         <span class="win-align-el">Jord</span>
       </div>
     </div>
@@ -113,32 +114,32 @@
        ═══════════════════════════════════════ -->
   <section class="win-upcoming reveal">
     <div class="container">
-      <p class="win-upcoming__label">Kommende vinduer</p>
+      <p class="win-upcoming__label" data-i18n="win_upcoming_label">Kommende vinduer</p>
 
       <a href="dit-vindue.html" class="deep-bar">
         <div class="deep-bar__left">
-          <p class="deep-bar__label">Næste fulde resonans</p>
-          <p class="deep-bar__value">Torsdag 27. marts · Træ</p>
+          <p class="deep-bar__label" data-i18n="win_next_full_label">Næste fulde resonans</p>
+          <p class="deep-bar__value" data-i18n="win_next_full_value">Torsdag 27. marts · Træ</p>
         </div>
-        <p class="deep-bar__hint">3 af 4 matcher</p>
+        <p class="deep-bar__hint" data-i18n="win_next_full_hint">3 af 4 matcher</p>
         <svg class="deep-bar__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 6l6 6-6 6"/></svg>
       </a>
 
       <a href="dit-vindue.html" class="deep-bar">
         <div class="deep-bar__left">
-          <p class="deep-bar__label">Stærk ild-resonans</p>
-          <p class="deep-bar__value">Fredag 4. april · kl. 11–13</p>
+          <p class="deep-bar__label" data-i18n="win_next_fire_label">Stærk ild-resonans</p>
+          <p class="deep-bar__value" data-i18n="win_next_fire_value">Fredag 4. april · kl. 11–13</p>
         </div>
-        <p class="deep-bar__hint">Hjerte-timen</p>
+        <p class="deep-bar__hint" data-i18n="win_next_fire_hint">Hjerte-timen</p>
         <svg class="deep-bar__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 6l6 6-6 6"/></svg>
       </a>
 
       <a href="dit-vindue.html" class="deep-bar">
         <div class="deep-bar__left">
-          <p class="deep-bar__label">Metal-vindue</p>
-          <p class="deep-bar__value">Efterår 2026 · Fase 7 + Årstid</p>
+          <p class="deep-bar__label" data-i18n="win_next_metal_label">Metal-vindue</p>
+          <p class="deep-bar__value" data-i18n="win_next_metal_value">Efterår 2026 · Fase 7 + Årstid</p>
         </div>
-        <p class="deep-bar__hint">Din stærkeste tid</p>
+        <p class="deep-bar__hint" data-i18n="win_next_metal_hint">Din stærkeste tid</p>
         <svg class="deep-bar__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 6l6 6-6 6"/></svg>
       </a>
     </div>
@@ -166,8 +167,8 @@
   <section class="reading reveal">
     <div class="container">
       <div class="reading__card">
-        <p class="reading__label">Vinduets Indsigt</p>
-        <p class="reading__text">Et vindue er ikke noget du skaber — det er noget du opdager. Når cyklusserne mødes, er din opgave blot at være opmærksom.</p>
+        <p class="reading__label" data-i18n="win_reading_label">Vinduets Indsigt</p>
+        <p class="reading__text" data-i18n="win_reading_text">Et vindue er ikke noget du skaber — det er noget du opdager. Når cyklusserne mødes, er din opgave blot at være opmærksom.</p>
       </div>
     </div>
   </section>
@@ -177,7 +178,7 @@
        ═══════════════════════════════════════ -->
   <section class="explore reveal">
     <div class="container">
-      <p class="explore__label">Forstå vinduer</p>
+      <p class="explore__label" data-i18n="win_explore_label">Forstå vinduer</p>
 
       <a href="dit-vindue.html" class="bar">
         <div class="bar__illo">
@@ -188,8 +189,8 @@
           </svg>
         </div>
         <div class="bar__body">
-          <h3 class="bar__title">Hvad er et vindue?</h3>
-          <p class="bar__sub">Forstå resonans mellem cyklusser</p>
+          <h3 class="bar__title" data-i18n="win_what_title">Hvad er et vindue?</h3>
+          <p class="bar__sub" data-i18n="win_what_sub">Forstå resonans mellem cyklusser</p>
         </div>
         <svg class="bar__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 6l6 6-6 6"/></svg>
       </a>
@@ -203,8 +204,8 @@
           </svg>
         </div>
         <div class="bar__body">
-          <h3 class="bar__title">Element-par</h3>
-          <p class="bar__sub">Når to elementer mødes i dig</p>
+          <h3 class="bar__title" data-i18n="win_pairs_title">Element-par</h3>
+          <p class="bar__sub" data-i18n="win_pairs_sub">Når to elementer mødes i dig</p>
         </div>
         <svg class="bar__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 6l6 6-6 6"/></svg>
       </a>
@@ -219,8 +220,8 @@
           </svg>
         </div>
         <div class="bar__body">
-          <h3 class="bar__title">Dine personlige vinduer</h3>
-          <p class="bar__sub">Baseret på din fødselsdato</p>
+          <h3 class="bar__title" data-i18n="win_personal_title">Dine personlige vinduer</h3>
+          <p class="bar__sub" data-i18n="win_personal_sub">Baseret på din fødselsdato</p>
         </div>
         <svg class="bar__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 6l6 6-6 6"/></svg>
       </a>
@@ -230,20 +231,22 @@
   <footer class="footer reveal">
     <div class="container">
       <div class="footer__rule"></div>
-      <p class="footer__brand">De Ni Livsfaser</p>
-      <p class="footer__sub">Baseret på kinesisk medicins visdom</p>
+      <p class="footer__brand" data-i18n="footer_brand">De Ni Livsfaser</p>
+      <p class="footer__sub" data-i18n="footer_sub">Baseret på kinesisk medicins visdom</p>
     </div>
   </footer>
 
   <nav class="tabbar">
-    <a href="index.html" class="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></svg><span>Lige Nu</span></a>
-    <a href="tidsrejse.html" class="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4,12 Q8,4 12,12 Q16,20 20,12"/><circle cx="12" cy="12" r="1.5"/></svg><span>Tidsrejse</span></a>
-    <a href="relationer.html" class="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="9" cy="12" r="5"/><circle cx="15" cy="12" r="5"/></svg><span>Relationer</span></a>
-    <a href="vinduer.html" class="tab active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="8" stroke-dasharray="2 3"/><circle cx="12" cy="12" r="3"/></svg><span>Vinduer</span></a>
-    <a href="mere.html" class="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="19" r="1.5"/></svg><span>Mere</span></a>
+    <a href="index.html" class="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></svg><span data-i18n="tab_now">Lige Nu</span></a>
+    <a href="tidsrejse.html" class="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4,12 Q8,4 12,12 Q16,20 20,12"/><circle cx="12" cy="12" r="1.5"/></svg><span data-i18n="tab_time">Tidsrejse</span></a>
+    <a href="relationer.html" class="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="9" cy="12" r="5"/><circle cx="15" cy="12" r="5"/></svg><span data-i18n="tab_rel">Relationer</span></a>
+    <a href="vinduer.html" class="tab active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="8" stroke-dasharray="2 3"/><circle cx="12" cy="12" r="3"/></svg><span data-i18n="tab_win">Vinduer</span></a>
+    <a href="mere.html" class="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="19" r="1.5"/></svg><span data-i18n="tab_more">Mere</span></a>
   </nav>
 
   <script src="menu.js"></script>
+  <script src="translations.js"></script>
+  <script src="i18n.js"></script>
   <script src="app.js"></script>
   <script>
   document.querySelectorAll('.reveal').forEach((el, i) => {
