@@ -69,7 +69,7 @@
         <circle cx="220" cy="58" r="5" fill="rgba(122,154,181,0.95)" class="td td--now"/>
         <circle cx="255" cy="58" r="3" fill="rgba(80,112,160,0.55)" class="td td--8"/>
         <circle cx="285" cy="42" r="3" fill="rgba(90,138,106,0.50)" class="td td--9"/>
-        <text x="220" y="78" fill="rgba(255,255,255,0.65)" font-size="6" font-family="Inter,sans-serif" font-weight="400" text-anchor="middle" letter-spacing="0.15em">NU</text>
+        <text x="220" y="78" fill="rgba(255,255,255,0.65)" font-size="6" font-family="Inter,sans-serif" font-weight="400" text-anchor="middle" letter-spacing="0.15em" data-i18n="tj_now_label">NU</text>
       </svg>
     </div>
   </section>
@@ -95,8 +95,8 @@
 
       <div class="tj-result__hero">
         <span class="tj-result__char" id="tjChar">火</span>
-        <h2 class="tj-result__title" id="tjTitle">Ild · Forvandlingen</h2>
-        <p class="tj-result__meta" id="tjMeta">Fase 3 · 14–21 år · Sommer</p>
+        <h2 class="tj-result__title" id="tjTitle" data-i18n="tj_result_title_default">Ild · Forvandlingen</h2>
+        <p class="tj-result__meta" id="tjMeta" data-i18n="tj_result_meta_default">Fase 3 · 14–21 år · Sommer</p>
       </div>
 
       <!-- Hourglass — time flowing -->
@@ -118,28 +118,28 @@
       <div class="tj-row reveal">
         <div class="tj-row__dot" style="background:rgba(160,96,80,0.70)"></div>
         <div class="tj-row__label" data-i18n="tj_el_label">Element</div>
-        <div class="tj-row__value" id="tjElement">Ild</div>
+        <div class="tj-row__value" id="tjElement" data-i18n="tj_el_default">Ild</div>
       </div>
       <div class="tj-row reveal">
         <div class="tj-row__dot" style="background:rgba(90,138,106,0.70)"></div>
         <div class="tj-row__label" data-i18n="tj_season_label">Årstid</div>
-        <div class="tj-row__value" id="tjSeason">Sommer · Ild</div>
+        <div class="tj-row__value" id="tjSeason" data-i18n="tj_season_default">Sommer · Ild</div>
       </div>
       <div class="tj-row reveal">
         <div class="tj-row__dot" style="background:rgba(122,154,181,0.70)"></div>
         <div class="tj-row__label" data-i18n="tj_phase_label">Livsfase</div>
-        <div class="tj-row__value" id="tjPhase">Fase 3 · Forvandlingen</div>
+        <div class="tj-row__value" id="tjPhase" data-i18n="tj_phase_default">Fase 3 · Forvandlingen</div>
       </div>
       <div class="tj-row reveal">
         <div class="tj-row__dot" style="background:rgba(138,122,96,0.70)"></div>
         <div class="tj-row__label" data-i18n="tj_organ_label">Organur</div>
-        <div class="tj-row__value" id="tjOrgan">Hjerte · Ild</div>
+        <div class="tj-row__value" id="tjOrgan" data-i18n="tj_organ_default">Hjerte · Ild</div>
       </div>
 
       <a href="din-tidsrejse.html" class="deep-bar reveal" style="margin-top:16px">
         <div class="deep-bar__left">
           <p class="deep-bar__label" data-i18n="tj_deep_date_label">Denne dato</p>
-          <p class="deep-bar__value" id="tjDeepLabel">Dyk ned i 15. juni 2000</p>
+          <p class="deep-bar__value" id="tjDeepLabel" data-i18n="tj_deep_default">Dyk ned i 15. juni 2000</p>
         </div>
         <p class="deep-bar__hint" data-i18n="tj_deep_hint">Alt om denne energi</p>
         <svg class="deep-bar__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 6l6 6-6 6"/></svg>
@@ -181,8 +181,8 @@
             </svg>
           </div>
           <div class="bar__body">
-            <h3 class="bar__title">Din fødselsdag</h3>
-            <p class="bar__sub">Dagen det hele begyndte</p>
+            <h3 class="bar__title" data-i18n="tj_birthday_title">Din fødselsdag</h3>
+            <p class="bar__sub" data-i18n="tj_birthday_sub">Dagen det hele begyndte</p>
           </div>
           <svg class="bar__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg>
         </div>
@@ -204,8 +204,8 @@
             </svg>
           </div>
           <div class="bar__body">
-            <h3 class="bar__title">Vendepunkter</h3>
-            <p class="bar__sub">Når livet skiftede retning</p>
+            <h3 class="bar__title" data-i18n="tj_turning_title">Et vendepunkt</h3>
+            <p class="bar__sub" data-i18n="tj_turning_sub">Den dag noget ændrede sig</p>
           </div>
           <svg class="bar__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg>
         </div>
@@ -226,8 +226,8 @@
             </svg>
           </div>
           <div class="bar__body">
-            <h3 class="bar__title">Den næste fase</h3>
-            <p class="bar__sub">Se hvilken energi der venter</p>
+            <h3 class="bar__title" data-i18n="tj_future_title">En fremtidig dato</h3>
+            <p class="bar__sub" data-i18n="tj_future_sub">Se hvilken energi der venter</p>
           </div>
           <svg class="bar__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg>
         </div>
