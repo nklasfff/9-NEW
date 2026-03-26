@@ -31,6 +31,22 @@ window.TRANSLATIONS = {
     footer_brand: 'De Ni Livsfaser',
     footer_sub: 'Baseret på kinesisk medicins visdom',
 
+    // ── Journal ──
+    journal_label: 'Journal',
+    journal_placeholder: 'Hvad lægger du mærke til lige nu?',
+    journal_save: 'Gem',
+    journal_saved: 'Gemt',
+    journal_share: 'Del',
+    journal_delete: 'Slet',
+    journal_empty: 'Ingen journaler endnu. Skriv din første refleksion.',
+    journal_share_attribution: 'De Ni Livsfaser',
+    journal_theme_deep: 'Dit Dybe Billede',
+    journal_theme_time: 'Tidsrejse',
+    journal_theme_relations: 'Relationer',
+    journal_theme_windows: 'Vinduer',
+    mere_journal_label: 'Din Journal',
+    mere_journal_intro: 'Dine refleksioner fra alle sider, samlet ét sted.',
+
     // ── Shared buttons ──
     btn_hide: 'Skjul',
     btn_read_more: 'Læs mere',
@@ -575,6 +591,22 @@ window.TRANSLATIONS = {
     _title_dit_dybe: 'Your Deep Portrait — The Nine Life Phases',
     _title_vinduer: 'Windows — The Nine Life Phases',
     _title_dit_vindue: 'Your Window — The Nine Life Phases',
+
+    // ── Journal ──
+    journal_label: 'Journal',
+    journal_placeholder: 'What are you noticing right now?',
+    journal_save: 'Save',
+    journal_saved: 'Saved',
+    journal_share: 'Share',
+    journal_delete: 'Delete',
+    journal_empty: 'No journal entries yet. Write your first reflection.',
+    journal_share_attribution: 'The Nine Life Phases',
+    journal_theme_deep: 'Your Deep Portrait',
+    journal_theme_time: 'Time Travel',
+    journal_theme_relations: 'Relationships',
+    journal_theme_windows: 'Windows',
+    mere_journal_label: 'Your Journal',
+    mere_journal_intro: 'Your reflections from every page, gathered in one place.',
 
     // ── Shared nav & tabs ──
     brand: 'The Nine Life Phases',

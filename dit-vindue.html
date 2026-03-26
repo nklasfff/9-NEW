@@ -159,7 +159,17 @@
       <section class="dp-section dp-section--center reveal">
         <p class="dp-label" data-i18n="dv_reflection_label">Refleksion</p>
         <p class="dp-reflection"><em data-i18n="dv_reflection">Hvornår har du sidst mærket at alt faldt på plads — uden at du gjorde noget?</em></p>
-        <a href="#" class="dp-link" data-i18n="dv_journal">Skriv i din journal →</a>
+      </section>
+
+      <section class="dp-section reveal">
+        <p class="dp-label" data-i18n="journal_label">Journal</p>
+        <div class="journal" data-journal-theme="windows">
+          <textarea class="journal__area" placeholder="Hvad lægger du mærke til lige nu?"></textarea>
+          <div class="journal__actions">
+            <span class="journal__saved">Gemt</span>
+            <button class="journal__save" disabled>Gem</button>
+          </div>
+        </div>
       </section>
 
       <div class="dp-back reveal">
@@ -179,6 +189,7 @@
   <script src="menu.js"></script>
   <script src="translations.js"></script>
   <script src="i18n.js"></script>
+  <script src="journal.js"></script>
   <script>
   document.querySelectorAll('.reveal').forEach((el, i) => {
     setTimeout(() => el.classList.add('visible'), 80 + i * 70);

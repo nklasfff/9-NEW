@@ -646,7 +646,12 @@
   color: var(--text-secondary);
   line-height: 1.7;
 }
-.journal-entry__delete {
+.journal-entry__actions {
+  display: flex;
+  gap: 4px;
+}
+.journal-entry__delete,
+.journal-entry__share {
   background: none;
   border: none;
   cursor: pointer;
@@ -657,6 +662,17 @@
 }
 .journal-entry__delete:hover {
   color: var(--sym);
+}
+.journal-entry__share:hover {
+  color: var(--accent-light);
+}
+.journal-group__count {
+  font-weight: 400;
+  opacity: .6;
+  font-size: .85em;
+}
+.journal-group + .journal-group {
+  margin-top: 8px;
 }
 .journal-empty {
   font-family: 'Cormorant Garamond', Georgia, serif;

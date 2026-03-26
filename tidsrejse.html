@@ -240,6 +240,19 @@
     </div>
   </section>
 
+  <section class="explore reveal" style="padding-top:0">
+    <div class="container">
+      <p class="explore__label" data-i18n="journal_label">Journal</p>
+      <div class="journal" data-journal-theme="time">
+        <textarea class="journal__area" placeholder="Hvad lægger du mærke til lige nu?"></textarea>
+        <div class="journal__actions">
+          <span class="journal__saved">Gemt</span>
+          <button class="journal__save" disabled>Gem</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <footer class="footer reveal">
     <div class="container">
       <div class="footer__rule"></div>
@@ -260,6 +273,7 @@
   <script src="translations.js"></script>
   <script src="i18n.js"></script>
   <script src="app.js"></script>
+  <script src="journal.js"></script>
   <script>
   // Reveal
   document.querySelectorAll('.reveal').forEach((el, i) => {
