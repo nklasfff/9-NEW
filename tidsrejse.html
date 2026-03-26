@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="tidsrejse.css">
+  <link rel="stylesheet" href="deep.css">
   <link rel="stylesheet" href="light.css">
   <script src="theme.js"></script>
 </head>
@@ -240,14 +241,16 @@
     </div>
   </section>
 
-  <section class="explore reveal" style="padding-top:0">
+  <section class="reading reveal">
     <div class="container">
-      <p class="explore__label" data-i18n="journal_label">Journal</p>
-      <div class="journal" data-journal-theme="time">
-        <textarea class="journal__area" placeholder="Hvad lægger du mærke til lige nu?"></textarea>
-        <div class="journal__actions">
-          <span class="journal__saved">Gemt</span>
-          <button class="journal__save" disabled>Gem</button>
+      <div class="reading__card">
+        <p class="reading__label" data-i18n="journal_label">Journal</p>
+        <div class="journal" data-journal-theme="time">
+          <textarea class="journal__area" placeholder="Hvad lægger du mærke til lige nu?"></textarea>
+          <div class="journal__actions">
+            <span class="journal__saved">Gemt</span>
+            <button class="journal__save" disabled>Gem</button>
+          </div>
         </div>
       </div>
     </div>
