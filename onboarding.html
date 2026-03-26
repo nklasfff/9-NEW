@@ -32,9 +32,9 @@
        ═══════════════════════════════════════ -->
   <section class="ob-step ob-step--active" data-step="1">
     <div class="ob-step__inner">
-      <h1 class="ob-title anim-fade" style="--d:.6s">De Ni Livsfaser</h1>
+      <h1 class="ob-title anim-fade" style="--d:.6s" data-i18n="ob_title">De Ni Livsfaser</h1>
       <div class="ob-rule anim-fade" style="--d:1s"></div>
-      <p class="ob-text anim-fade" style="--d:1.3s">Et levende spejl baseret på kinesisk medicins visdom.<br>Ni faser. Fem elementer. Dit liv — lige nu.</p>
+      <p class="ob-text anim-fade" style="--d:1.3s" data-i18n="ob_intro" data-i18n-html>Et levende spejl baseret på kinesisk medicins visdom.<br>Ni faser. Fem elementer. Dit liv — lige nu.</p>
 
       <!-- Breathing seed SVG — below text -->
       <div class="ob-seed anim-fade" style="--d:1.5s" aria-hidden="true">
@@ -46,7 +46,7 @@
         </svg>
       </div>
 
-      <button class="ob-btn anim-fade" style="--d:1.8s" data-next="2">Begynd</button>
+      <button class="ob-btn anim-fade" style="--d:1.8s" data-next="2" data-i18n="ob_btn_start">Begynd</button>
     </div>
   </section>
 
@@ -56,29 +56,29 @@
   <section class="ob-step" data-step="2">
     <div class="ob-step__inner">
 
-      <p class="ob-label">For at finde din fase</p>
-      <h2 class="ob-heading">Hvornår blev du født?</h2>
-      <p class="ob-hint">Din fødselsdato er alt vi behøver</p>
+      <p class="ob-label" data-i18n="ob_bday_label">For at finde din fase</p>
+      <h2 class="ob-heading" data-i18n="ob_bday_heading">Hvornår blev du født?</h2>
+      <p class="ob-hint" data-i18n="ob_bday_hint">Din fødselsdato er alt vi behøver</p>
 
       <div class="ob-date">
         <div class="ob-date__field">
-          <label class="ob-date__label" for="ob-day">Dag</label>
+          <label class="ob-date__label" for="ob-day" data-i18n="ob_day">Dag</label>
           <input class="ob-date__input" type="text" id="ob-day" maxlength="2" placeholder="15" inputmode="numeric" autocomplete="off">
         </div>
         <span class="ob-date__sep">·</span>
         <div class="ob-date__field">
-          <label class="ob-date__label" for="ob-month">Måned</label>
+          <label class="ob-date__label" for="ob-month" data-i18n="ob_month">Måned</label>
           <input class="ob-date__input" type="text" id="ob-month" maxlength="2" placeholder="6" inputmode="numeric" autocomplete="off">
         </div>
         <span class="ob-date__sep">·</span>
         <div class="ob-date__field">
-          <label class="ob-date__label" for="ob-year">År</label>
+          <label class="ob-date__label" for="ob-year" data-i18n="ob_year">År</label>
           <input class="ob-date__input ob-date__input--wide" type="text" id="ob-year" maxlength="4" placeholder="1980" inputmode="numeric" autocomplete="off">
         </div>
       </div>
 
       <p class="ob-error" id="ob-error"></p>
-      <button class="ob-btn" data-next="3" id="ob-birthday-btn" disabled>Fortsæt</button>
+      <button class="ob-btn" data-next="3" id="ob-birthday-btn" disabled data-i18n="ob_btn_continue">Fortsæt</button>
     </div>
   </section>
 
@@ -88,43 +88,43 @@
   <section class="ob-step" data-step="3">
     <div class="ob-step__inner">
 
-      <p class="ob-label anim-fade" style="--d:.3s">Fem elementer</p>
-      <h2 class="ob-heading anim-fade" style="--d:.5s">Alt liv pulserer i cykler</h2>
+      <p class="ob-label anim-fade" style="--d:.3s" data-i18n="ob_elem_label">Fem elementer</p>
+      <h2 class="ob-heading anim-fade" style="--d:.5s" data-i18n="ob_elem_heading">Alt liv pulserer i cykler</h2>
 
       <div class="ob-elements anim-fade" style="--d:.8s">
         <div class="ob-el">
           <div class="ob-el__dot" style="background:rgba(90,138,106,0.70)"></div>
           <span class="ob-el__char">木</span>
-          <span class="ob-el__name">Træ</span>
-          <span class="ob-el__quality">Vækst</span>
+          <span class="ob-el__name" data-i18n="ob_el_wood">Træ</span>
+          <span class="ob-el__quality" data-i18n="ob_eq_wood">Vækst</span>
         </div>
         <div class="ob-el">
           <div class="ob-el__dot" style="background:rgba(160,96,80,0.70)"></div>
           <span class="ob-el__char">火</span>
-          <span class="ob-el__name">Ild</span>
-          <span class="ob-el__quality">Forbindelse</span>
+          <span class="ob-el__name" data-i18n="ob_el_fire">Ild</span>
+          <span class="ob-el__quality" data-i18n="ob_eq_fire">Forbindelse</span>
         </div>
         <div class="ob-el">
           <div class="ob-el__dot" style="background:rgba(138,122,96,0.70)"></div>
           <span class="ob-el__char">土</span>
-          <span class="ob-el__name">Jord</span>
-          <span class="ob-el__quality">Næring</span>
+          <span class="ob-el__name" data-i18n="ob_el_earth">Jord</span>
+          <span class="ob-el__quality" data-i18n="ob_eq_earth">Næring</span>
         </div>
         <div class="ob-el">
           <div class="ob-el__dot" style="background:rgba(122,154,181,0.70)"></div>
           <span class="ob-el__char">金</span>
-          <span class="ob-el__name">Metal</span>
-          <span class="ob-el__quality">Klarhed</span>
+          <span class="ob-el__name" data-i18n="ob_el_metal">Metal</span>
+          <span class="ob-el__quality" data-i18n="ob_eq_metal">Klarhed</span>
         </div>
         <div class="ob-el">
           <div class="ob-el__dot" style="background:rgba(80,112,160,0.70)"></div>
           <span class="ob-el__char">水</span>
-          <span class="ob-el__name">Vand</span>
-          <span class="ob-el__quality">Dybde</span>
+          <span class="ob-el__name" data-i18n="ob_el_water">Vand</span>
+          <span class="ob-el__quality" data-i18n="ob_eq_water">Dybde</span>
         </div>
       </div>
 
-      <p class="ob-text anim-fade" style="--d:1.1s">Hvert element har sin årstid, sit organ, sin livsalder.<br>Sammen danner de dit indre klima.</p>
+      <p class="ob-text anim-fade" style="--d:1.1s" data-i18n="ob_elem_text" data-i18n-html>Hvert element har sin årstid, sit organ, sin livsalder.<br>Sammen danner de dit indre klima.</p>
 
       <!-- Nine dots arc -->
       <div class="ob-arc anim-fade" style="--d:1.4s" aria-hidden="true">
@@ -142,7 +142,7 @@
         </svg>
       </div>
 
-      <button class="ob-btn anim-fade" style="--d:1.7s" data-next="4">Se min fase</button>
+      <button class="ob-btn anim-fade" style="--d:1.7s" data-next="4" data-i18n="ob_btn_phase">Se min fase</button>
     </div>
   </section>
 
@@ -152,7 +152,7 @@
   <section class="ob-step" data-step="4">
     <div class="ob-step__inner">
 
-      <p class="ob-label ob-reveal-label">Din livsfase</p>
+      <p class="ob-label ob-reveal-label" data-i18n="ob_phase_label">Din livsfase</p>
       <div class="ob-reveal-char" id="ob-reveal-char">金</div>
       <h2 class="ob-reveal-title" id="ob-reveal-title">Metal · Høsten</h2>
       <p class="ob-reveal-meta" id="ob-reveal-meta">Fase 7 · 42 – 49 år</p>
@@ -169,7 +169,7 @@
         </svg>
       </div>
 
-      <button class="ob-btn ob-btn--final" id="ob-enter-btn">Åbn dit spejl</button>
+      <button class="ob-btn ob-btn--final" id="ob-enter-btn" data-i18n="ob_btn_enter">Åbn dit spejl</button>
     </div>
   </section>
 
@@ -181,6 +181,8 @@
     <div class="ob-progress__dot" data-dot="4"></div>
   </div>
 
+  <script src="translations.js"></script>
+  <script src="i18n.js"></script>
   <script src="onboarding.js"></script>
 </body>
 </html>

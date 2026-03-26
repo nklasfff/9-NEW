@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="deep.css">
   <link rel="stylesheet" href="light.css">
   <script src="theme.js"></script>
+  <script src="translations.js"></script>
+  <script src="i18n.js"></script>
 </head>
 <body class="body--deep">
 
@@ -28,7 +30,7 @@
     <a href="index.html" class="topnav__btn" aria-label="Tilbage">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
     </a>
-    <span class="topnav__brand">Mere</span>
+    <span class="topnav__brand" data-i18n="mere_brand">Mere</span>
     <button class="theme-toggle" aria-label="Skift tema"></button>
   </nav>
 
@@ -37,131 +39,131 @@
 
       <!-- ══ Din Profil ══ -->
       <section class="dp-section reveal">
-        <p class="dp-label">Din Profil</p>
+        <p class="dp-label" data-i18n="mere_profile_label">Din Profil</p>
         <div class="mere-profile">
           <div class="mere-profile__char" id="mere-char">金</div>
           <div class="mere-profile__info">
-            <h2 class="dp-heading" id="mere-phase">Fase 7 · Høsten</h2>
-            <p class="dp-meta" id="mere-element">Metal · 42 – 49 år</p>
-            <p class="dp-meta" id="mere-birthday">Født: –</p>
+            <h2 class="dp-heading" id="mere-phase" data-i18n="mere_phase_default">Fase 7 · Høsten</h2>
+            <p class="dp-meta" id="mere-element" data-i18n="mere_element_default">Metal · 42 – 49 år</p>
+            <p class="dp-meta" id="mere-birthday" data-i18n="mere_born_default">Født: –</p>
           </div>
         </div>
       </section>
 
       <!-- ══ De Ni Faser ══ -->
       <section class="dp-section reveal">
-        <p class="dp-label">De Ni Livsfaser</p>
-        <p class="dp-text" style="margin-bottom:14px">Livet udfolder sig i ni faser á syv år, hver styret af et af de fem elementer.</p>
+        <p class="dp-label" data-i18n="mere_phases_label">De Ni Livsfaser</p>
+        <p class="dp-text" style="margin-bottom:14px" data-i18n="mere_phases_intro">Livet udfolder sig i ni faser á syv år, hver styret af et af de fem elementer.</p>
 
         <div class="mere-phases">
           <div class="mere-phase">
             <span class="mere-phase__dot" style="background:rgba(90,138,106,0.70)"></span>
             <span class="mere-phase__num">1</span>
-            <span class="mere-phase__name">Spiring</span>
+            <span class="mere-phase__name" data-i18n="phase_1">Spiring</span>
             <span class="mere-phase__range">0 – 7</span>
-            <span class="mere-phase__el">Træ</span>
+            <span class="mere-phase__el" data-i18n="elem_wood">Træ</span>
           </div>
           <div class="mere-phase">
             <span class="mere-phase__dot" style="background:rgba(90,138,106,0.55)"></span>
             <span class="mere-phase__num">2</span>
-            <span class="mere-phase__name">Vækst</span>
+            <span class="mere-phase__name" data-i18n="phase_2">Vækst</span>
             <span class="mere-phase__range">7 – 14</span>
-            <span class="mere-phase__el">Træ</span>
+            <span class="mere-phase__el" data-i18n="elem_wood">Træ</span>
           </div>
           <div class="mere-phase">
             <span class="mere-phase__dot" style="background:rgba(160,96,80,0.70)"></span>
             <span class="mere-phase__num">3</span>
-            <span class="mere-phase__name">Flammen</span>
+            <span class="mere-phase__name" data-i18n="phase_3">Flammen</span>
             <span class="mere-phase__range">14 – 21</span>
-            <span class="mere-phase__el">Ild</span>
+            <span class="mere-phase__el" data-i18n="elem_fire">Ild</span>
           </div>
           <div class="mere-phase">
             <span class="mere-phase__dot" style="background:rgba(160,96,80,0.55)"></span>
             <span class="mere-phase__num">4</span>
-            <span class="mere-phase__name">Det Åbne Hjerte</span>
+            <span class="mere-phase__name" data-i18n="phase_4">Det Åbne Hjerte</span>
             <span class="mere-phase__range">21 – 28</span>
-            <span class="mere-phase__el">Ild</span>
+            <span class="mere-phase__el" data-i18n="elem_fire">Ild</span>
           </div>
           <div class="mere-phase">
             <span class="mere-phase__dot" style="background:rgba(138,122,96,0.70)"></span>
             <span class="mere-phase__num">5</span>
-            <span class="mere-phase__name">Fundament</span>
+            <span class="mere-phase__name" data-i18n="phase_5">Fundament</span>
             <span class="mere-phase__range">28 – 35</span>
-            <span class="mere-phase__el">Jord</span>
+            <span class="mere-phase__el" data-i18n="elem_earth">Jord</span>
           </div>
           <div class="mere-phase">
             <span class="mere-phase__dot" style="background:rgba(138,122,96,0.55)"></span>
             <span class="mere-phase__num">6</span>
-            <span class="mere-phase__name">Modning</span>
+            <span class="mere-phase__name" data-i18n="phase_6">Modning</span>
             <span class="mere-phase__range">35 – 42</span>
-            <span class="mere-phase__el">Jord</span>
+            <span class="mere-phase__el" data-i18n="elem_earth">Jord</span>
           </div>
           <div class="mere-phase">
             <span class="mere-phase__dot" style="background:rgba(122,154,181,0.70)"></span>
             <span class="mere-phase__num">7</span>
-            <span class="mere-phase__name">Høsten</span>
+            <span class="mere-phase__name" data-i18n="phase_7">Høsten</span>
             <span class="mere-phase__range">42 – 49</span>
-            <span class="mere-phase__el">Metal</span>
+            <span class="mere-phase__el" data-i18n="elem_metal">Metal</span>
           </div>
           <div class="mere-phase">
             <span class="mere-phase__dot" style="background:rgba(80,112,160,0.70)"></span>
             <span class="mere-phase__num">8</span>
-            <span class="mere-phase__name">Stilheden</span>
+            <span class="mere-phase__name" data-i18n="phase_8">Stilheden</span>
             <span class="mere-phase__range">49 – 56</span>
-            <span class="mere-phase__el">Vand</span>
+            <span class="mere-phase__el" data-i18n="elem_water">Vand</span>
           </div>
           <div class="mere-phase">
             <span class="mere-phase__dot" style="background:rgba(90,138,106,0.80)"></span>
             <span class="mere-phase__num">9</span>
-            <span class="mere-phase__name">Det Andet Forår</span>
+            <span class="mere-phase__name" data-i18n="phase_9">Det Andet Forår</span>
             <span class="mere-phase__range">56+</span>
-            <span class="mere-phase__el">Træ</span>
+            <span class="mere-phase__el" data-i18n="elem_wood">Træ</span>
           </div>
         </div>
       </section>
 
       <!-- ══ De Fem Elementer ══ -->
       <section class="dp-section reveal">
-        <p class="dp-label">De Fem Elementer</p>
+        <p class="dp-label" data-i18n="mere_elements_label">De Fem Elementer</p>
         <div class="dp-expand" data-expand="el-wood">
-          <button class="dp-expand__btn dp-expand__btn--tema"><span class="dp-tema-dot" style="background:rgba(90,138,106,0.60)"></span>Træ · 木 · Vækst & Retning</button>
-          <div class="dp-expand__body"><p class="dp-text">Træet er livets begyndelse og genkomst. Lever, galdeblære, forår, vind. Evnen til at have en retning og vokse mod den.</p></div>
+          <button class="dp-expand__btn dp-expand__btn--tema" data-i18n-btn="mere_el_wood_btn"><span class="dp-tema-dot" style="background:rgba(90,138,106,0.60)"></span><span data-i18n="mere_el_wood_btn">Træ · 木 · Vækst & Retning</span></button>
+          <div class="dp-expand__body"><p class="dp-text" data-i18n="mere_el_wood_text">Træet er livets begyndelse og genkomst. Lever, galdeblære, forår, vind. Evnen til at have en retning og vokse mod den.</p></div>
         </div>
         <div class="dp-expand" data-expand="el-fire">
-          <button class="dp-expand__btn dp-expand__btn--tema"><span class="dp-tema-dot" style="background:rgba(160,96,80,0.60)"></span>Ild · 火 · Hjerte & Forbindelse</button>
-          <div class="dp-expand__body"><p class="dp-text">Ilden er hjertets element. Hjerte, tyndtarm, sommer, varme. Evnen til at forbinde sig, elske og blive set.</p></div>
+          <button class="dp-expand__btn dp-expand__btn--tema" data-i18n-btn="mere_el_fire_btn"><span class="dp-tema-dot" style="background:rgba(160,96,80,0.60)"></span><span data-i18n="mere_el_fire_btn">Ild · 火 · Hjerte & Forbindelse</span></button>
+          <div class="dp-expand__body"><p class="dp-text" data-i18n="mere_el_fire_text">Ilden er hjertets element. Hjerte, tyndtarm, sommer, varme. Evnen til at forbinde sig, elske og blive set.</p></div>
         </div>
         <div class="dp-expand" data-expand="el-earth">
-          <button class="dp-expand__btn dp-expand__btn--tema"><span class="dp-tema-dot" style="background:rgba(138,122,96,0.60)"></span>Jord · 土 · Næring & Fundament</button>
-          <div class="dp-expand__body"><p class="dp-text">Jorden er midten, fundamentet. Mave, milt, sensommer, fugt. Evnen til at nære og blive næret — at være til stede.</p></div>
+          <button class="dp-expand__btn dp-expand__btn--tema" data-i18n-btn="mere_el_earth_btn"><span class="dp-tema-dot" style="background:rgba(138,122,96,0.60)"></span><span data-i18n="mere_el_earth_btn">Jord · 土 · Næring & Fundament</span></button>
+          <div class="dp-expand__body"><p class="dp-text" data-i18n="mere_el_earth_text">Jorden er midten, fundamentet. Mave, milt, sensommer, fugt. Evnen til at nære og blive næret — at være til stede.</p></div>
         </div>
         <div class="dp-expand" data-expand="el-metal">
-          <button class="dp-expand__btn dp-expand__btn--tema"><span class="dp-tema-dot" style="background:rgba(122,154,181,0.60)"></span>Metal · 金 · Klarhed & Skelnen</button>
-          <div class="dp-expand__body"><p class="dp-text">Metal er efterårets element. Lunger, tyktarm, tørhed. Evnen til at slippe det overflødige og finde det essentielle.</p></div>
+          <button class="dp-expand__btn dp-expand__btn--tema" data-i18n-btn="mere_el_metal_btn"><span class="dp-tema-dot" style="background:rgba(122,154,181,0.60)"></span><span data-i18n="mere_el_metal_btn">Metal · 金 · Klarhed & Skelnen</span></button>
+          <div class="dp-expand__body"><p class="dp-text" data-i18n="mere_el_metal_text">Metal er efterårets element. Lunger, tyktarm, tørhed. Evnen til at slippe det overflødige og finde det essentielle.</p></div>
         </div>
         <div class="dp-expand" data-expand="el-water">
-          <button class="dp-expand__btn dp-expand__btn--tema"><span class="dp-tema-dot" style="background:rgba(80,112,160,0.60)"></span>Vand · 水 · Dybde & Stilhed</button>
-          <div class="dp-expand__body"><p class="dp-text">Vand er livets dybeste lag. Nyrer, blære, vinter, kulde. Evnen til at hvile, lytte indad og samle visdom.</p></div>
+          <button class="dp-expand__btn dp-expand__btn--tema" data-i18n-btn="mere_el_water_btn"><span class="dp-tema-dot" style="background:rgba(80,112,160,0.60)"></span><span data-i18n="mere_el_water_btn">Vand · 水 · Dybde & Stilhed</span></button>
+          <div class="dp-expand__body"><p class="dp-text" data-i18n="mere_el_water_text">Vand er livets dybeste lag. Nyrer, blære, vinter, kulde. Evnen til at hvile, lytte indad og samle visdom.</p></div>
         </div>
       </section>
 
       <!-- ══ Organur ══ -->
       <section class="dp-section reveal">
-        <p class="dp-label">Organuret</p>
-        <p class="dp-text" style="margin-bottom:14px">Kroppen gennemløber 12 to-timers perioder i døgnet. Hvert organ har sin tid og sit element.</p>
+        <p class="dp-label" data-i18n="mere_clock_label">Organuret</p>
+        <p class="dp-text" style="margin-bottom:14px" data-i18n="mere_clock_intro">Kroppen gennemløber 12 to-timers perioder i døgnet. Hvert organ har sin tid og sit element.</p>
         <div class="mere-clock">
-          <div class="mere-clock__row"><span class="mere-clock__time">01–03</span><span class="mere-clock__organ">Lever</span><span class="mere-clock__el">Træ</span></div>
-          <div class="mere-clock__row"><span class="mere-clock__time">03–05</span><span class="mere-clock__organ">Lunger</span><span class="mere-clock__el">Metal</span></div>
-          <div class="mere-clock__row"><span class="mere-clock__time">05–07</span><span class="mere-clock__organ">Tyktarm</span><span class="mere-clock__el">Metal</span></div>
-          <div class="mere-clock__row"><span class="mere-clock__time">07–09</span><span class="mere-clock__organ">Mave</span><span class="mere-clock__el">Jord</span></div>
-          <div class="mere-clock__row"><span class="mere-clock__time">09–11</span><span class="mere-clock__organ">Milt</span><span class="mere-clock__el">Jord</span></div>
-          <div class="mere-clock__row"><span class="mere-clock__time">11–13</span><span class="mere-clock__organ">Hjerte</span><span class="mere-clock__el">Ild</span></div>
-          <div class="mere-clock__row"><span class="mere-clock__time">13–15</span><span class="mere-clock__organ">Tyndtarm</span><span class="mere-clock__el">Ild</span></div>
-          <div class="mere-clock__row"><span class="mere-clock__time">15–17</span><span class="mere-clock__organ">Blære</span><span class="mere-clock__el">Vand</span></div>
-          <div class="mere-clock__row"><span class="mere-clock__time">17–19</span><span class="mere-clock__organ">Nyrer</span><span class="mere-clock__el">Vand</span></div>
-          <div class="mere-clock__row"><span class="mere-clock__time">19–21</span><span class="mere-clock__organ">Perikardium</span><span class="mere-clock__el">Ild</span></div>
-          <div class="mere-clock__row"><span class="mere-clock__time">21–23</span><span class="mere-clock__organ">Trippelvarmer</span><span class="mere-clock__el">Ild</span></div>
-          <div class="mere-clock__row"><span class="mere-clock__time">23–01</span><span class="mere-clock__organ">Galdeblære</span><span class="mere-clock__el">Træ</span></div>
+          <div class="mere-clock__row"><span class="mere-clock__time">01–03</span><span class="mere-clock__organ" data-i18n="organ_liver">Lever</span><span class="mere-clock__el" data-i18n="elem_wood">Træ</span></div>
+          <div class="mere-clock__row"><span class="mere-clock__time">03–05</span><span class="mere-clock__organ" data-i18n="organ_lungs">Lunger</span><span class="mere-clock__el" data-i18n="elem_metal">Metal</span></div>
+          <div class="mere-clock__row"><span class="mere-clock__time">05–07</span><span class="mere-clock__organ" data-i18n="organ_large_intestine">Tyktarm</span><span class="mere-clock__el" data-i18n="elem_metal">Metal</span></div>
+          <div class="mere-clock__row"><span class="mere-clock__time">07–09</span><span class="mere-clock__organ" data-i18n="organ_stomach">Mave</span><span class="mere-clock__el" data-i18n="elem_earth">Jord</span></div>
+          <div class="mere-clock__row"><span class="mere-clock__time">09–11</span><span class="mere-clock__organ" data-i18n="organ_spleen">Milt</span><span class="mere-clock__el" data-i18n="elem_earth">Jord</span></div>
+          <div class="mere-clock__row"><span class="mere-clock__time">11–13</span><span class="mere-clock__organ" data-i18n="organ_heart">Hjerte</span><span class="mere-clock__el" data-i18n="elem_fire">Ild</span></div>
+          <div class="mere-clock__row"><span class="mere-clock__time">13–15</span><span class="mere-clock__organ" data-i18n="organ_small_intestine">Tyndtarm</span><span class="mere-clock__el" data-i18n="elem_fire">Ild</span></div>
+          <div class="mere-clock__row"><span class="mere-clock__time">15–17</span><span class="mere-clock__organ" data-i18n="organ_bladder">Blære</span><span class="mere-clock__el" data-i18n="elem_water">Vand</span></div>
+          <div class="mere-clock__row"><span class="mere-clock__time">17–19</span><span class="mere-clock__organ" data-i18n="organ_kidneys">Nyrer</span><span class="mere-clock__el" data-i18n="elem_water">Vand</span></div>
+          <div class="mere-clock__row"><span class="mere-clock__time">19–21</span><span class="mere-clock__organ" data-i18n="organ_pericardium">Perikardium</span><span class="mere-clock__el" data-i18n="elem_fire">Ild</span></div>
+          <div class="mere-clock__row"><span class="mere-clock__time">21–23</span><span class="mere-clock__organ" data-i18n="organ_triple_heater">Trippelvarmer</span><span class="mere-clock__el" data-i18n="elem_fire">Ild</span></div>
+          <div class="mere-clock__row"><span class="mere-clock__time">23–01</span><span class="mere-clock__organ" data-i18n="organ_gallbladder">Galdeblære</span><span class="mere-clock__el" data-i18n="elem_wood">Træ</span></div>
         </div>
       </section>
 
@@ -174,12 +176,12 @@
 
       <!-- ══ Indstillinger ══ -->
       <section class="dp-section reveal">
-        <p class="dp-label">Indstillinger</p>
+        <p class="dp-label" data-i18n="mere_settings_label">Indstillinger</p>
 
         <div class="mere-setting">
           <div class="mere-setting__left">
-            <p class="mere-setting__title">Tema</p>
-            <p class="mere-setting__desc">Skift mellem mørk og lys</p>
+            <p class="mere-setting__title" data-i18n="mere_theme_title">Tema</p>
+            <p class="mere-setting__desc" data-i18n="mere_theme_desc">Skift mellem mørk og lys</p>
           </div>
           <button class="mere-theme-btn" id="mere-theme-btn">
             <span class="mere-theme-btn__icon" id="mere-theme-icon"></span>
@@ -189,34 +191,34 @@
 
         <div class="mere-setting">
           <div class="mere-setting__left">
-            <p class="mere-setting__title">Nulstil</p>
-            <p class="mere-setting__desc">Slet din data og start forfra</p>
+            <p class="mere-setting__title" data-i18n="mere_reset_title">Nulstil</p>
+            <p class="mere-setting__desc" data-i18n="mere_reset_desc">Slet din data og start forfra</p>
           </div>
-          <button class="mere-reset-btn" id="mere-reset-btn">Nulstil</button>
+          <button class="mere-reset-btn" id="mere-reset-btn" data-i18n="mere_reset_btn">Nulstil</button>
         </div>
       </section>
 
       <!-- ══ Om ══ -->
       <section class="dp-section dp-section--center reveal">
-        <p class="dp-label">Om</p>
-        <p class="dp-reflection"><em>De Ni Livsfaser</em></p>
-        <p class="dp-text">Et levende spejl baseret på kinesisk medicins femtusindårige visdom. Hvert liv udfolder sig i ni faser, hver formet af de fem elementer — træ, ild, jord, metal og vand.</p>
-        <p class="dp-text" style="margin-top:12px">Appen beregner intet om dig. Den spejler blot de naturlige cykler, du allerede lever i.</p>
+        <p class="dp-label" data-i18n="mere_about_label">Om</p>
+        <p class="dp-reflection"><em data-i18n="mere_about_name">De Ni Livsfaser</em></p>
+        <p class="dp-text" data-i18n="mere_about_text">Et levende spejl baseret på kinesisk medicins femtusindårige visdom. Hvert liv udfolder sig i ni faser, hver formet af de fem elementer — træ, ild, jord, metal og vand.</p>
+        <p class="dp-text" style="margin-top:12px" data-i18n="mere_about_text2">Appen beregner intet om dig. Den spejler blot de naturlige cykler, du allerede lever i.</p>
       </section>
 
       <div class="dp-back reveal">
-        <a href="index.html">← Tilbage til dit spejl</a>
+        <a href="index.html" data-i18n="mere_back">← Tilbage til dit spejl</a>
       </div>
 
     </div>
   </main>
 
   <nav class="tabbar">
-    <a href="index.html" class="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></svg><span>Lige Nu</span></a>
-    <a href="tidsrejse.html" class="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4,12 Q8,4 12,12 Q16,20 20,12"/><circle cx="12" cy="12" r="1.5"/></svg><span>Tidsrejse</span></a>
-    <a href="relationer.html" class="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="9" cy="12" r="5"/><circle cx="15" cy="12" r="5"/></svg><span>Relationer</span></a>
-    <a href="vinduer.html" class="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="8" stroke-dasharray="2 3"/><circle cx="12" cy="12" r="3"/></svg><span>Vinduer</span></a>
-    <a href="mere.html" class="tab active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="19" r="1.5"/></svg><span>Mere</span></a>
+    <a href="index.html" class="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></svg><span data-i18n="tab_now">Lige Nu</span></a>
+    <a href="tidsrejse.html" class="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4,12 Q8,4 12,12 Q16,20 20,12"/><circle cx="12" cy="12" r="1.5"/></svg><span data-i18n="tab_time">Tidsrejse</span></a>
+    <a href="relationer.html" class="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="9" cy="12" r="5"/><circle cx="15" cy="12" r="5"/></svg><span data-i18n="tab_rel">Relationer</span></a>
+    <a href="vinduer.html" class="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="8" stroke-dasharray="2 3"/><circle cx="12" cy="12" r="3"/></svg><span data-i18n="tab_win">Vinduer</span></a>
+    <a href="mere.html" class="tab active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="19" r="1.5"/></svg><span data-i18n="tab_more">Mere</span></a>
   </nav>
 
   <script src="menu.js"></script>
@@ -236,7 +238,9 @@
         var dot = btn.querySelector('.dp-tema-dot');
         btn.innerHTML = '';
         if (dot) btn.appendChild(dot);
-        btn.appendChild(document.createTextNode('Skjul'));
+        var lang = localStorage.getItem('nineLives_lang') || 'da';
+        var dict = window.TRANSLATIONS && window.TRANSLATIONS[lang];
+        btn.appendChild(document.createTextNode((dict && dict.btn_hide) || 'Skjul'));
       } else {
         btn.innerHTML = btn.dataset.openText;
       }
@@ -248,7 +252,10 @@
     var phaseStr = localStorage.getItem('dnl_phase');
     if (bday) {
       var el = document.getElementById('mere-birthday');
-      if (el) el.textContent = 'Født: ' + bday.split('-').reverse().join('.');
+      var lang = localStorage.getItem('nineLives_lang') || 'da';
+      var dict = window.TRANSLATIONS && window.TRANSLATIONS[lang];
+      var bornLabel = (dict && dict.mere_born_label) || 'Født:';
+      if (el) el.textContent = bornLabel + ' ' + bday.split('-').reverse().join('.');
     }
     if (phaseStr) {
       try {
@@ -257,8 +264,16 @@
         var phaseEl = document.getElementById('mere-phase');
         var elemEl = document.getElementById('mere-element');
         if (charEl) charEl.textContent = p.char;
-        if (phaseEl) phaseEl.textContent = 'Fase ' + p.num + ' · ' + p.name;
-        if (elemEl) elemEl.textContent = p.element + ' · ' + p.range;
+        var lang2 = localStorage.getItem('nineLives_lang') || 'da';
+        var dict2 = window.TRANSLATIONS && window.TRANSLATIONS[lang2];
+        var phasePrefix = (dict2 && dict2.phase_prefix) || 'Fase';
+        var phaseName = (dict2 && dict2['phase_' + p.num]) || p.name;
+        var elemMap = {Træ:'wood',Ild:'fire',Jord:'earth',Metal:'metal',Vand:'water'};
+        var elemName = (dict2 && dict2['elem_' + (elemMap[p.element] || 'wood')]) || p.element;
+        if (phaseEl) phaseEl.textContent = phasePrefix + ' ' + p.num + ' · ' + phaseName;
+        var range = p.range;
+        if (lang2 === 'en') range = range.replace('år', 'years');
+        if (elemEl) elemEl.textContent = elemName + ' · ' + range;
       } catch(e) {}
     }
     // Highlight current phase row
@@ -275,7 +290,9 @@
     var themeIcon = document.getElementById('mere-theme-icon');
     function updateThemeBtn() {
       var isLight = document.documentElement.classList.contains('light');
-      themeLabel.textContent = isLight ? 'Lys' : 'Mørk';
+      var langT = localStorage.getItem('nineLives_lang') || 'da';
+      var dictT = window.TRANSLATIONS && window.TRANSLATIONS[langT];
+      themeLabel.textContent = isLight ? ((dictT && dictT.mere_theme_light) || 'Lys') : ((dictT && dictT.mere_theme_dark) || 'Mørk');
       themeIcon.textContent = isLight ? '☀' : '☾';
     }
     updateThemeBtn();
@@ -290,7 +307,10 @@
     });
     // Reset
     document.getElementById('mere-reset-btn').addEventListener('click', function() {
-      if (confirm('Er du sikker? Al din data slettes.')) {
+      var langR = localStorage.getItem('nineLives_lang') || 'da';
+      var dictR = window.TRANSLATIONS && window.TRANSLATIONS[langR];
+      var confirmMsg = (dictR && dictR.mere_reset_confirm) || 'Er du sikker? Al din data slettes.';
+      if (confirm(confirmMsg)) {
         localStorage.removeItem('dnl_birthday');
         localStorage.removeItem('dnl_phase');
         localStorage.removeItem('dnl_onboarded');

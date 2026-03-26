@@ -11,6 +11,13 @@
     return;
   }
 
+  // ── i18n helper ──
+  function _t(key) {
+    var lang = localStorage.getItem('nineLives_lang') || 'da';
+    var dict = window.TRANSLATIONS && window.TRANSLATIONS[lang];
+    return (dict && dict[key] !== undefined) ? dict[key] : key;
+  }
+
   // ── Phase data ──
   var phases = [
     { num: 1, name: 'Spiring',         element: 'Træ',   char: '木', range: '0 – 7 år',   color: 'rgba(90,138,106,0.70)',  text: 'Du er frøet der sprænger jorden. Alt er nyt, alt er muligt.' },
@@ -131,30 +138,30 @@
     var y = parseInt(yearInput.value, 10);
 
     if (isNaN(d) || isNaN(m) || isNaN(y)) {
-      errorEl.textContent = 'Udfyld venligst alle felter';
+      errorEl.textContent = _t('ob_err_fill');
       return false;
     }
     if (m < 1 || m > 12) {
-      errorEl.textContent = 'Måneden skal være mellem 1 og 12';
+      errorEl.textContent = _t('ob_err_month');
       return false;
     }
     if (d < 1 || d > 31) {
-      errorEl.textContent = 'Dagen skal være mellem 1 og 31';
+      errorEl.textContent = _t('ob_err_day');
       return false;
     }
     if (y < 1920 || y > new Date().getFullYear()) {
-      errorEl.textContent = 'Indtast et gyldigt fødselsår';
+      errorEl.textContent = _t('ob_err_year');
       return false;
     }
 
     // Validate actual date
     var date = new Date(y, m - 1, d);
     if (date.getDate() !== d || date.getMonth() !== m - 1) {
-      errorEl.textContent = 'Denne dato findes ikke';
+      errorEl.textContent = _t('ob_err_invalid');
       return false;
     }
     if (date > new Date()) {
-      errorEl.textContent = 'Fødselsdatoen kan ikke være i fremtiden';
+      errorEl.textContent = _t('ob_err_future');
       return false;
     }
 
@@ -197,10 +204,15 @@
     localStorage.setItem('dnl_phase', JSON.stringify(phase));
 
     // Update reveal UI
+    var phaseName = _t('phase_' + phase.num);
+    var elemName = _t('elem_' + ({Træ:'wood',Ild:'fire',Jord:'earth',Metal:'metal',Vand:'water'}[phase.element] || 'wood'));
     document.getElementById('ob-reveal-char').textContent = phase.char;
-    document.getElementById('ob-reveal-title').textContent = phase.element + ' · ' + phase.name;
-    document.getElementById('ob-reveal-meta').textContent = 'Fase ' + phase.num + ' · ' + phase.range;
-    document.getElementById('ob-reveal-text').textContent = phase.text;
+    document.getElementById('ob-reveal-title').textContent = elemName + ' · ' + phaseName;
+    var range = phase.range;
+    var lang = localStorage.getItem('nineLives_lang') || 'da';
+    if (lang === 'en') range = range.replace('år', 'years');
+    document.getElementById('ob-reveal-meta').textContent = _t('phase_prefix') + ' ' + phase.num + ' · ' + range;
+    document.getElementById('ob-reveal-text').textContent = _t('ob_phase_text_' + phase.num);
 
     // Color the rings
     var rings = document.querySelectorAll('.ob-reveal-ring');
