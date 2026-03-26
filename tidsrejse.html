@@ -168,57 +168,74 @@
     <div class="container">
       <p class="explore__label" data-i18n="tj_milestone_label">Vigtige datoer</p>
 
-      <a href="#" class="bar tj-milestone" data-date="1984-03-15">
-        <div class="bar__illo">
-          <svg viewBox="0 0 48 48" fill="none" class="svg-sunrise">
-            <path d="M8,32 Q16,15 24,12 Q32,15 40,32" stroke="rgba(210,160,100,0.60)" stroke-width="1" fill="rgba(210,160,100,0.06)"/>
-            <line x1="6" y1="32" x2="42" y2="32" stroke="rgba(122,154,181,0.40)" stroke-width="0.7"/>
-            <circle cx="24" cy="22" r="4" fill="rgba(210,160,100,0.65)" stroke="rgba(210,160,100,0.40)" stroke-width="0.6"/>
-            <!-- Rays -->
-            <line x1="24" y1="14" x2="24" y2="10" stroke="rgba(210,160,100,0.45)" stroke-width="0.5" stroke-linecap="round"/>
-            <line x1="16" y1="17" x2="13" y2="14" stroke="rgba(210,160,100,0.35)" stroke-width="0.5" stroke-linecap="round"/>
-            <line x1="32" y1="17" x2="35" y2="14" stroke="rgba(210,160,100,0.35)" stroke-width="0.5" stroke-linecap="round"/>
-          </svg>
+      <div class="bar bar--expand" data-expand="birth">
+        <div class="bar__top">
+          <div class="bar__illo">
+            <svg viewBox="0 0 48 48" fill="none" class="svg-sunrise">
+              <path d="M8,32 Q16,15 24,12 Q32,15 40,32" stroke="rgba(210,160,100,0.60)" stroke-width="1" fill="rgba(210,160,100,0.06)"/>
+              <line x1="6" y1="32" x2="42" y2="32" stroke="rgba(122,154,181,0.40)" stroke-width="0.7"/>
+              <circle cx="24" cy="22" r="4" fill="rgba(210,160,100,0.65)" stroke="rgba(210,160,100,0.40)" stroke-width="0.6"/>
+              <line x1="24" y1="14" x2="24" y2="10" stroke="rgba(210,160,100,0.45)" stroke-width="0.5" stroke-linecap="round"/>
+              <line x1="16" y1="17" x2="13" y2="14" stroke="rgba(210,160,100,0.35)" stroke-width="0.5" stroke-linecap="round"/>
+              <line x1="32" y1="17" x2="35" y2="14" stroke="rgba(210,160,100,0.35)" stroke-width="0.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="bar__body">
+            <h3 class="bar__title">Din fødselsdag</h3>
+            <p class="bar__sub">Dagen det hele begyndte</p>
+          </div>
+          <svg class="bar__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg>
         </div>
         <div class="bar__body">
           <h3 class="bar__title" data-i18n="tj_birthday_title">Din fødselsdag</h3>
           <p class="bar__sub" data-i18n="tj_birthday_sub">Dagen det hele begyndte</p>
         </div>
-        <svg class="bar__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 6l6 6-6 6"/></svg>
-      </a>
+      </div>
 
-      <a href="#" class="bar tj-milestone" data-date="1998-09-01">
-        <div class="bar__illo">
-          <svg viewBox="0 0 48 48" fill="none" class="svg-crossroads">
-            <line x1="24" y1="6" x2="24" y2="42" stroke="rgba(122,154,181,0.50)" stroke-width="0.8" stroke-linecap="round"/>
-            <line x1="6" y1="24" x2="42" y2="24" stroke="rgba(122,154,181,0.50)" stroke-width="0.8" stroke-linecap="round"/>
-            <path d="M14,14 L34,34" stroke="rgba(122,154,181,0.30)" stroke-width="0.6" stroke-dasharray="2 3"/>
-            <path d="M34,14 L14,34" stroke="rgba(122,154,181,0.30)" stroke-width="0.6" stroke-dasharray="2 3"/>
-            <circle cx="24" cy="24" r="3" fill="rgba(196,213,226,0.65)"/>
-          </svg>
+      <div class="bar bar--expand" data-expand="turning">
+        <div class="bar__top">
+          <div class="bar__illo">
+            <svg viewBox="0 0 48 48" fill="none" class="svg-crossroads">
+              <line x1="24" y1="6" x2="24" y2="42" stroke="rgba(122,154,181,0.50)" stroke-width="0.8" stroke-linecap="round"/>
+              <line x1="6" y1="24" x2="42" y2="24" stroke="rgba(122,154,181,0.50)" stroke-width="0.8" stroke-linecap="round"/>
+              <path d="M14,14 L34,34" stroke="rgba(122,154,181,0.30)" stroke-width="0.6" stroke-dasharray="2 3"/>
+              <path d="M34,14 L14,34" stroke="rgba(122,154,181,0.30)" stroke-width="0.6" stroke-dasharray="2 3"/>
+              <circle cx="24" cy="24" r="3" fill="rgba(196,213,226,0.65)"/>
+            </svg>
+          </div>
+          <div class="bar__body">
+            <h3 class="bar__title">Vendepunkter</h3>
+            <p class="bar__sub">Når livet skiftede retning</p>
+          </div>
+          <svg class="bar__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg>
         </div>
         <div class="bar__body">
           <h3 class="bar__title" data-i18n="tj_turning_title">Et vendepunkt</h3>
           <p class="bar__sub" data-i18n="tj_turning_sub">Den dag noget ændrede sig</p>
         </div>
-        <svg class="bar__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 6l6 6-6 6"/></svg>
-      </a>
+      </div>
 
-      <a href="#" class="bar tj-milestone">
-        <div class="bar__illo">
-          <svg viewBox="0 0 48 48" fill="none" class="svg-horizon">
-            <line x1="4" y1="30" x2="44" y2="30" stroke="rgba(122,154,181,0.45)" stroke-width="0.7"/>
-            <path d="M4,30 Q14,20 24,22 Q34,24 44,18" stroke="rgba(90,138,106,0.45)" stroke-width="0.8" fill="none"/>
-            <circle cx="38" cy="19" r="2.5" fill="rgba(90,138,106,0.55)"/>
-            <circle cx="24" cy="22" r="1.5" fill="rgba(196,213,226,0.50)"/>
-          </svg>
+      <div class="bar bar--expand" data-expand="future">
+        <div class="bar__top">
+          <div class="bar__illo">
+            <svg viewBox="0 0 48 48" fill="none" class="svg-horizon">
+              <line x1="4" y1="30" x2="44" y2="30" stroke="rgba(122,154,181,0.45)" stroke-width="0.7"/>
+              <path d="M4,30 Q14,20 24,22 Q34,24 44,18" stroke="rgba(90,138,106,0.45)" stroke-width="0.8" fill="none"/>
+              <circle cx="38" cy="19" r="2.5" fill="rgba(90,138,106,0.55)"/>
+              <circle cx="24" cy="22" r="1.5" fill="rgba(196,213,226,0.50)"/>
+            </svg>
+          </div>
+          <div class="bar__body">
+            <h3 class="bar__title">Den næste fase</h3>
+            <p class="bar__sub">Se hvilken energi der venter</p>
+          </div>
+          <svg class="bar__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg>
         </div>
         <div class="bar__body">
           <h3 class="bar__title" data-i18n="tj_future_title">En fremtidig dato</h3>
           <p class="bar__sub" data-i18n="tj_future_sub">Se hvilken energi der venter</p>
         </div>
-        <svg class="bar__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 6l6 6-6 6"/></svg>
-      </a>
+      </div>
 
     </div>
   </section>
@@ -288,6 +305,13 @@
       document.getElementById('tjResult').scrollIntoView({behavior:'smooth'});
     });
   }
+
+  // Expandable bars
+  document.querySelectorAll('.bar--expand').forEach(function(bar) {
+    bar.querySelector('.bar__top').addEventListener('click', function() {
+      bar.classList.toggle('open');
+    });
+  });
   </script>
 </body>
 </html>
