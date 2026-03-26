@@ -233,12 +233,26 @@
       </section>
 
       <section class="dp-section reveal">
-        <p class="dp-label" data-i18n="journal_label">Journal</p>
+        <div class="journal-header">
+          <div class="journal-header__illo">
+            <svg viewBox="0 0 48 48" fill="none">
+              <rect x="14" y="8" width="20" height="32" rx="2" stroke="rgba(196,213,226,0.50)" stroke-width="0.8" fill="rgba(196,213,226,0.04)"/>
+              <line x1="18" y1="16" x2="30" y2="16" stroke="rgba(196,213,226,0.30)" stroke-width="0.6"/>
+              <line x1="18" y1="21" x2="28" y2="21" stroke="rgba(196,213,226,0.25)" stroke-width="0.6"/>
+              <line x1="18" y1="26" x2="26" y2="26" stroke="rgba(196,213,226,0.20)" stroke-width="0.6"/>
+              <path d="M30,30 L34,26 L36,28 L32,32 L30,32 Z" stroke="rgba(196,213,226,0.55)" stroke-width="0.7" fill="rgba(196,213,226,0.08)"/>
+            </svg>
+          </div>
+          <div class="journal-header__text">
+            <h3 class="journal-header__title" data-i18n="journal_rel_title">Om Forbindelser</h3>
+            <p class="journal-header__sub" data-i18n="journal_rel_sub">Hvad ser du i rummet mellem jer?</p>
+          </div>
+        </div>
         <div class="journal" data-journal-theme="relations">
-          <textarea class="journal__area" placeholder="Hvad lægger du mærke til lige nu?"></textarea>
+          <textarea class="journal__area" data-i18n-placeholder="journal_placeholder" placeholder="Hvad lægger du mærke til lige nu?"></textarea>
           <div class="journal__actions">
-            <span class="journal__saved">Gemt</span>
-            <button class="journal__save" disabled>Gem</button>
+            <span class="journal__saved" data-i18n="journal_saved">Gemt</span>
+            <button class="journal__save" data-i18n="journal_save" disabled>Gem</button>
           </div>
         </div>
       </section>
