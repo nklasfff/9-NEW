@@ -167,6 +167,15 @@
         </div>
       </section>
 
+      <!-- ══ Din Udvikling ══ -->
+      <section class="dp-section reveal">
+        <p class="dp-label">Din Udvikling</p>
+        <p class="dp-text" style="margin-bottom:14px">Se hvordan dine refleksioner bevæger sig over tid.</p>
+        <div id="timeline-view">
+          <p class="journal-empty" id="timeline-empty">Når du besvarer refleksionsspørgsmål og guider journalspor, vil din udvikling vise sig her.</p>
+        </div>
+      </section>
+
       <!-- ══ Din Journal ══ -->
       <section class="dp-section reveal">
         <p class="dp-label" data-i18n="mere_journal_label">Din Journal</p>
@@ -222,7 +231,114 @@
   </nav>
 
   <script src="menu.js"></script>
+  <script src="reflection-store.js"></script>
   <script src="journal.js"></script>
+  <script>
+  // ── Timeline rendering ──
+  (function() {
+    var container = document.getElementById('timeline-view');
+    var emptyMsg = document.getElementById('timeline-empty');
+    if (!container) return;
+
+    var sectionLabels = {
+      feeling: 'Fasens Følelse',
+      body: 'Kroppen',
+      relations: 'Relationer',
+      practice: 'Praksis'
+    };
+    var themeLabels = {
+      'krop': 'Kroppen',
+      'følelser': 'Følelserne',
+      'relationer': 'Relationerne',
+      'retning': 'Retningen'
+    };
+
+    function renderTimeline() {
+      var weeks = window.ReflectionStore.getTimelineGroupedByWeek();
+      if (!weeks.length) {
+        emptyMsg.style.display = '';
+        return;
+      }
+      emptyMsg.style.display = 'none';
+
+      var html = '';
+      weeks.forEach(function(week, wi) {
+        var d = new Date(week.startDate);
+        var weekLabel = d.toLocaleDateString('da-DK', { day: 'numeric', month: 'long' });
+        html += '<div class="timeline-week' + (wi === 0 ? ' timeline-week--current' : '') + '">';
+        html += '<div class="timeline-week__header">';
+        html += '<span class="timeline-week__dot"></span>';
+        html += '<span class="timeline-week__label">' + (wi === 0 ? 'Denne uge' : 'Uge fra ' + weekLabel) + '</span>';
+        html += '</div>';
+        html += '<div class="timeline-week__items">';
+
+        week.items.forEach(function(item) {
+          var itemDate = new Date(item.date).toLocaleDateString('da-DK', { day: 'numeric', month: 'short' });
+          if (item.type === 'reflection') {
+            var r = item.data;
+            var label = sectionLabels[r.section] || r.section;
+            html += '<div class="timeline-item timeline-item--reflection">';
+            html += '<p class="timeline-item__meta">' + label + ' · ' + itemDate + '</p>';
+            html += '<p class="timeline-item__text">' + r.choiceText + '</p>';
+            html += '</div>';
+          } else if (item.type === 'guided') {
+            var g = item.data;
+            var theme = themeLabels[g.theme] || g.theme;
+            html += '<div class="timeline-item timeline-item--guided">';
+            html += '<p class="timeline-item__meta">Guidet refleksion · ' + theme + ' · ' + itemDate + '</p>';
+            g.steps.forEach(function(s, si) {
+              if (si === 0 || !s.answer) return;
+              html += '<p class="timeline-item__step"><span class="timeline-item__q">' + s.question + '</span></p>';
+              html += '<p class="timeline-item__a">' + s.answer + '</p>';
+            });
+            html += '</div>';
+          }
+        });
+
+        html += '</div></div>';
+      });
+
+      // Add comparison narrative if there are reflections from different dates
+      var reflections = window.ReflectionStore.getReflections();
+      var sections = {};
+      reflections.forEach(function(r) {
+        var key = r.section + '|' + r.questionKey;
+        if (!sections[key]) sections[key] = [];
+        sections[key].push(r);
+      });
+
+      var narratives = [];
+      Object.keys(sections).forEach(function(key) {
+        var entries = sections[key];
+        if (entries.length < 2) return;
+        var newest = entries[0];
+        var oldest = entries[entries.length - 1];
+        if (newest.choiceKey !== oldest.choiceKey) {
+          var label = sectionLabels[newest.section] || newest.section;
+          var oldDate = new Date(oldest.date).toLocaleDateString('da-DK', { day: 'numeric', month: 'long' });
+          narratives.push(
+            '<div class="timeline-narrative">' +
+            '<p class="timeline-narrative__text">' + label + ' har bevæget sig. ' +
+            'Den ' + oldDate + ' svarede du anderledes end i dag — noget har forskudt sig i dig.</p>' +
+            '</div>'
+          );
+        }
+      });
+
+      if (narratives.length) {
+        html = '<div class="timeline-narratives">' +
+          '<p class="timeline-narratives__label">Bevægelser</p>' +
+          narratives.join('') +
+          '</div>' + html;
+      }
+
+      container.innerHTML = html;
+    }
+
+    renderTimeline();
+    window.addEventListener('langchange', renderTimeline);
+  })();
+  </script>
   <script>
   // Reveal
   document.querySelectorAll('.reveal').forEach(function(el, i) {

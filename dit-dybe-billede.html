@@ -71,6 +71,17 @@
             <p class="dp-text" data-i18n="db_feeling_expand_text">Vemod kommer som bølger — en sang, en duft, et foto af et yngre jeg. Det er sundt, for det betyder, du har elsket dit liv. Skelneevnen er metallets gave: evnen til at skelne det væsentlige fra det overflødige, fordi du har levet længe nok til at kende forskellen.</p>
           </div>
         </div>
+        <!-- Interactive reflection -->
+        <div class="reflect" data-section="feeling" data-question="emotional_tone">
+          <p class="reflect__prompt">Hvad mærker du mest lige nu?</p>
+          <div class="reflect__choices">
+            <button class="reflect__choice" data-choice="clarity">En stille klarhed — jeg kan skelne hvad der betyder noget</button>
+            <button class="reflect__choice" data-choice="longing">Et vemod — minder og længsler fylder</button>
+            <button class="reflect__choice" data-choice="restless">En uro — som om noget vil bevæge sig, men jeg ved ikke hvad</button>
+            <button class="reflect__choice" data-choice="numb">En tomhed — som om følelserne er dæmpede</button>
+          </div>
+          <div class="reflect__response" hidden></div>
+        </div>
       </section>
 
       <!-- Two lungs — metal's organ, leaf-shaped, breathing -->
@@ -94,6 +105,17 @@
             <p class="dp-text dim" data-i18n="db_body_expand_text">Tør hud, kortere åndedræt, trægere fordøjelse. Uventet vemod over ungdommens krop. Humørsvingninger man ikke genkender.</p>
             <p class="dp-text dim" style="margin-top:8px" data-i18n="db_body_causes" data-i18n-html><strong style="font-weight:400;color:var(--text-secondary)">Årsager:</strong> Overgangsalder, uforløst sorg, stress der komprimerer vejrtrækningen.</p>
           </div>
+        </div>
+        <!-- Interactive reflection -->
+        <div class="reflect" data-section="body" data-question="breath_now">
+          <p class="reflect__prompt">Hvordan mærker du dit åndedræt lige nu?</p>
+          <div class="reflect__choices">
+            <button class="reflect__choice" data-choice="shallow">Det sidder højt og kort</button>
+            <button class="reflect__choice" data-choice="flowing">Det flyder roligt og dybt</button>
+            <button class="reflect__choice" data-choice="unaware">Jeg lægger sjældent mærke til det</button>
+            <button class="reflect__choice" data-choice="tight">Der er en stramhed — som om noget holdes tilbage</button>
+          </div>
+          <div class="reflect__response" hidden></div>
         </div>
       </section>
 
@@ -163,6 +185,17 @@
           <button class="dp-expand__btn" data-i18n="db_rel_expand">Læs mere om relationer</button>
           <div class="dp-expand__body"><p class="dp-text" data-i18n="db_rel_expand_text">Partnerskabet testes: kroppen ændrer sig, hormoner svinger, lysten skifter. For kvinder uden børn: det biologiske vindue lukker endeligt — sorg kan vende tilbage med fornyet styrke.</p></div>
         </div>
+        <!-- Interactive reflection -->
+        <div class="reflect" data-section="relations" data-question="relational_weight">
+          <p class="reflect__prompt">Hvor bærer du mest omsorg lige nu?</p>
+          <div class="reflect__choices">
+            <button class="reflect__choice" data-choice="children">Mod mine børn — de kræver mest af mig</button>
+            <button class="reflect__choice" data-choice="parents">Mod mine forældre — rollerne er ved at skifte</button>
+            <button class="reflect__choice" data-choice="partner">Mod mit partnerskab — der er noget der skal ses</button>
+            <button class="reflect__choice" data-choice="self">Mod mig selv — jeg har glemt mig selv lidt</button>
+          </div>
+          <div class="reflect__response" hidden></div>
+        </div>
       </section>
 
       <!-- The breath visualized — 4 in, 2 hold, 8 out -->
@@ -187,6 +220,17 @@
         <h2 class="dp-heading" data-i18n="db_practice_heading">Lungernes Åndedræt</h2>
         <p class="dp-text" data-i18n="db_practice_text">Indånd 4 tæl gennem næsen — ribbenene udvider sig. Hold 2. Udånd 8 tæl med en lang "ssss"-lyd. Metallets helende lyd.</p>
         <p class="dp-meta" data-i18n="db_practice_meta">8–10 gentagelser · Sidende eller stående</p>
+        <!-- Interactive reflection -->
+        <div class="reflect" data-section="practice" data-question="practice_ease">
+          <p class="reflect__prompt">Hvornår finder du lettest ro?</p>
+          <div class="reflect__choices">
+            <button class="reflect__choice" data-choice="morning">Om morgenen, før dagen begynder</button>
+            <button class="reflect__choice" data-choice="movement">Når kroppen bevæger sig — gåture, bevægelse</button>
+            <button class="reflect__choice" data-choice="evening">Om aftenen, når alt falder til ro</button>
+            <button class="reflect__choice" data-choice="rarely">Sjældent — ro er svær at finde lige nu</button>
+          </div>
+          <div class="reflect__response" hidden></div>
+        </div>
       </section>
 
       <!-- ══ Råd ══ -->
@@ -235,6 +279,7 @@
         <p class="dp-reflection"><em data-i18n="db_reflection">Hvad ved du nu, som du ikke kunne have vidst for 20 år siden?</em></p>
       </section>
 
+      <!-- ══ Guided Journal Track ══ -->
       <section class="dp-section reveal">
         <div class="journal-header">
           <div class="journal-header__illo">
@@ -247,8 +292,64 @@
             </svg>
           </div>
           <div class="journal-header__text">
-            <h3 class="journal-header__title" data-i18n="journal_deep_title">Dine Refleksioner</h3>
-            <p class="journal-header__sub" data-i18n="journal_deep_sub">Fang hvad denne fase vækker i dig</p>
+            <h3 class="journal-header__title">Guidet Refleksion</h3>
+            <p class="journal-header__sub">Lad tankerne folde sig ud, ét skridt ad gangen</p>
+          </div>
+        </div>
+
+        <div class="guided-journal" id="guidedJournal">
+          <!-- Step 1: Theme -->
+          <div class="guided-step guided-step--active" data-step="1">
+            <p class="guided-step__label">Skridt 1 af 4</p>
+            <p class="guided-step__question">Hvad fylder mest i dig lige nu?</p>
+            <div class="guided-step__choices">
+              <button class="guided-step__choice" data-value="krop">Kroppen — noget fysisk kalder på opmærksomhed</button>
+              <button class="guided-step__choice" data-value="følelser">Følelserne — noget vil mærkes</button>
+              <button class="guided-step__choice" data-value="relationer">Relationerne — nogen fylder i mine tanker</button>
+              <button class="guided-step__choice" data-value="retning">Retningen — hvad skal det næste være?</button>
+            </div>
+          </div>
+
+          <!-- Step 2: Body awareness (appears after step 1) -->
+          <div class="guided-step" data-step="2" hidden>
+            <p class="guided-step__label">Skridt 2 af 4</p>
+            <p class="guided-step__question">Hvor mærker du det i kroppen?</p>
+            <textarea class="guided-step__area" placeholder="Mærk efter... brystet, maven, skuldrene, halsen..."></textarea>
+            <button class="guided-step__next" disabled>Videre</button>
+          </div>
+
+          <!-- Step 3: Temporal reflection (appears after step 2) -->
+          <div class="guided-step" data-step="3" hidden>
+            <p class="guided-step__label">Skridt 3 af 4</p>
+            <p class="guided-step__question">Hvornår var det sidst anderledes?</p>
+            <textarea class="guided-step__area" placeholder="Tænk tilbage... var der en tid hvor dette føltes lettere?"></textarea>
+            <button class="guided-step__next" disabled>Videre</button>
+          </div>
+
+          <!-- Step 4: Integration (appears after step 3) -->
+          <div class="guided-step" data-step="4" hidden>
+            <p class="guided-step__label">Skridt 4 af 4</p>
+            <p class="guided-step__question">Hvad har du brug for lige nu — med ét ord eller én sætning?</p>
+            <textarea class="guided-step__area" placeholder="Lad det første der kommer, komme..."></textarea>
+            <button class="guided-step__next">Gem min refleksion</button>
+          </div>
+
+          <!-- Summary (appears after all steps) -->
+          <div class="guided-summary" id="guidedSummary" hidden>
+            <p class="guided-summary__label">Din Refleksion</p>
+            <div class="guided-summary__content" id="guidedSummaryContent"></div>
+            <p class="guided-summary__date" id="guidedSummaryDate"></p>
+            <button class="guided-summary__restart" id="guidedRestart">Start en ny refleksion</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══ Free Journal (kept as supplement) ══ -->
+      <section class="dp-section reveal">
+        <div class="journal-header">
+          <div class="journal-header__text">
+            <h3 class="journal-header__title" data-i18n="journal_deep_title">Frie Tanker</h3>
+            <p class="journal-header__sub">Skriv frit, uden struktur</p>
           </div>
         </div>
         <div class="journal" data-journal-theme="deep">
@@ -299,8 +400,10 @@
   <script src="menu.js"></script>
   <script src="translations.js"></script>
   <script src="i18n.js"></script>
+  <script src="reflection-store.js"></script>
   <script src="journal.js"></script>
   <script>
+  // ── Reveal & expand ──
   document.querySelectorAll('.reveal').forEach((el, i) => {
     setTimeout(() => el.classList.add('visible'), 80 + i * 70);
   });
@@ -318,6 +421,219 @@
     });
     btn.dataset.openText = btn.textContent;
   });
+
+  // ── Interactive Reflection Questions ──
+  (function() {
+    var responses = {
+      feeling: {
+        emotional_tone: {
+          clarity: 'Metallets gave er stærk i dig — skelneevnen er vågen. Brug den til at forenkle: hvad kan du lægge fra dig i dag?',
+          longing: 'Vemodet er metallets renselse. Giv det plads — fem minutter med lukkede øjne. Tårer letter lungerne og gør dig friere.',
+          restless: 'Uroen kan være træets energi der presser indefra. Prøv en gåtur i frisk luft — lad kroppen bevæge det, tankerne ikke kan.',
+          numb: 'Når følelserne er dæmpede, er det ofte lungerne der holder igen. Prøv 4-2-8 åndedrættet — det åbner langsomt det der er lukket.'
+        }
+      },
+      body: {
+        breath_now: {
+          shallow: 'Kort åndedræt er metallets første tegn på stress. Din vigtigste øvelse lige nu: 4-2-8 åndedrættet, morgen og aften. Start med 5 gentagelser.',
+          flowing: 'Dit åndedræt er i balance — det er metallets sundhedstegn. Hold fast i denne rytme. En daglig gåtur i kølig luft vil styrke den yderligere.',
+          unaware: 'At lægge mærke til åndedrættet er det første skridt. Prøv dette: Læg en hånd på brystet lige nu. Mærk. Det er nok for i dag.',
+          tight: 'Stramhed i åndedrættet bærer ofte uforløst sorg eller holdt-tilbage ord. Øvelsen "ssss"-udåndingen kan løsne det forsigtigt over tid.'
+        }
+      },
+      relations: {
+        relational_weight: {
+          children: 'Dine børn er sandsynligvis i Ild-fasen — de brænder, og du holder rummet. Husk: du behøver ikke løse alt. Din tilstedeværelse er nok.',
+          parents: 'Når rollerne bytter om, aktiveres metallets dybeste tema: at slippe. Det er en af livets sværeste og mest kærlige handlinger.',
+          partner: 'Partnerskabet i denne fase kræver en ny ærlighed. Metal skærer til benet — brug den klarhed til at sige det der skal siges, med varme.',
+          self: 'At glemme sig selv er jordenergi i ubalance. Metallets opgave er at skelne: hvad er ægte omsorg, og hvad er vane? Start med dig selv.'
+        }
+      },
+      practice: {
+        practice_ease: {
+          morning: 'Morgenen er din tid. Brug de første 10 minutter på 4-2-8 åndedræt, før noget andet. Lungerne er mest modtagelige mellem kl. 3 og 7.',
+          movement: 'Bevægelse er din vej ind. Gå 20 minutter dagligt i stilhed — uden musik, uden samtale. Lad lungerne arbejde og tankerne falde til ro.',
+          evening: 'Aftenen er metallets naturlige tid for refleksion. En kort åndedrætspraksis før søvn vil fordybe din ro og styrke nattens genopbygning.',
+          rarely: 'Når ro er svær, er nervesystemet overbelastet. Start småt: tre dybe åndedrag, tre gange om dagen. Ikke mere. Lad kroppen lære at det er sikkert.'
+        }
+      }
+    };
+
+    // Get user phase info
+    var phaseStr = localStorage.getItem('dnl_phase');
+    var userPhase = phaseStr ? JSON.parse(phaseStr) : { element: 'Metal', num: 7 };
+
+    document.querySelectorAll('.reflect').forEach(function(reflect) {
+      var section = reflect.dataset.section;
+      var question = reflect.dataset.question;
+      var responseEl = reflect.querySelector('.reflect__response');
+
+      // Restore previous choice
+      var prev = window.ReflectionStore.getLatestReflection(section, question);
+      if (prev) {
+        var prevBtn = reflect.querySelector('[data-choice="' + prev.choiceKey + '"]');
+        if (prevBtn) {
+          prevBtn.classList.add('reflect__choice--selected');
+          responseEl.hidden = false;
+          responseEl.innerHTML = '<p class="reflect__response-text">' + prev.choiceText + '</p>' +
+            '<p class="reflect__response-date">Sidst besvaret: ' + new Date(prev.date).toLocaleDateString('da-DK', { day: 'numeric', month: 'short' }) + '</p>';
+        }
+      }
+
+      // Handle choice clicks
+      reflect.querySelectorAll('.reflect__choice').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          var choice = btn.dataset.choice;
+          var responseText = responses[section] && responses[section][question] && responses[section][question][choice];
+          if (!responseText) return;
+
+          // Deselect siblings
+          reflect.querySelectorAll('.reflect__choice').forEach(function(b) { b.classList.remove('reflect__choice--selected'); });
+          btn.classList.add('reflect__choice--selected');
+
+          // Show response
+          responseEl.hidden = false;
+          responseEl.innerHTML = '<p class="reflect__response-text">' + responseText + '</p>';
+          responseEl.classList.add('reflect__response--entering');
+          setTimeout(function() { responseEl.classList.remove('reflect__response--entering'); }, 400);
+
+          // Save
+          window.ReflectionStore.saveReflection({
+            section: section,
+            questionKey: question,
+            choiceKey: choice,
+            choiceText: responseText,
+            phase: userPhase.num,
+            element: userPhase.element
+          });
+        });
+      });
+    });
+  })();
+
+  // ── Guided Journal ──
+  (function() {
+    var journal = document.getElementById('guidedJournal');
+    if (!journal) return;
+
+    var steps = journal.querySelectorAll('.guided-step');
+    var summaryEl = document.getElementById('guidedSummary');
+    var summaryContentEl = document.getElementById('guidedSummaryContent');
+    var summaryDateEl = document.getElementById('guidedSummaryDate');
+    var restartBtn = document.getElementById('guidedRestart');
+
+    var answers = {};
+    var phaseStr = localStorage.getItem('dnl_phase');
+    var userPhase = phaseStr ? JSON.parse(phaseStr) : { element: 'Metal', num: 7 };
+
+    // Step 1: Theme choice
+    steps[0].querySelectorAll('.guided-step__choice').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        steps[0].querySelectorAll('.guided-step__choice').forEach(function(b) { b.classList.remove('guided-step__choice--selected'); });
+        btn.classList.add('guided-step__choice--selected');
+        answers.theme = btn.dataset.value;
+        answers.themeText = btn.textContent;
+
+        // Customize step 2 question based on theme
+        var q2map = {
+          'krop': 'Hvor i kroppen mærker du det mest?',
+          'følelser': 'Hvordan føles det — hvis du skal beskrive det helt enkelt?',
+          'relationer': 'Hvad er det præcist der fylder med den person?',
+          'retning': 'Hvad trækker i dig — og hvad holder dig tilbage?'
+        };
+        steps[1].querySelector('.guided-step__question').textContent = q2map[answers.theme] || steps[1].querySelector('.guided-step__question').textContent;
+
+        // Show step 2
+        setTimeout(function() {
+          steps[0].classList.remove('guided-step--active');
+          steps[0].classList.add('guided-step--done');
+          steps[1].hidden = false;
+          steps[1].classList.add('guided-step--active');
+          steps[1].querySelector('.guided-step__area').focus();
+        }, 300);
+      });
+    });
+
+    // Steps 2-4: Textarea + next buttons
+    for (var i = 1; i < steps.length; i++) {
+      (function(idx) {
+        var area = steps[idx].querySelector('.guided-step__area');
+        var nextBtn = steps[idx].querySelector('.guided-step__next');
+        if (!area || !nextBtn) return;
+
+        area.addEventListener('input', function() {
+          // For step 4 (last step), always enable the button
+          nextBtn.disabled = idx < 3 ? !area.value.trim() : false;
+          // Auto-resize
+          area.style.height = 'auto';
+          area.style.height = area.scrollHeight + 'px';
+        });
+
+        nextBtn.addEventListener('click', function() {
+          answers['step' + (idx + 1)] = area.value.trim();
+
+          if (idx < steps.length - 1) {
+            // Move to next step
+            steps[idx].classList.remove('guided-step--active');
+            steps[idx].classList.add('guided-step--done');
+            steps[idx + 1].hidden = false;
+            steps[idx + 1].classList.add('guided-step--active');
+            var nextArea = steps[idx + 1].querySelector('.guided-step__area');
+            if (nextArea) nextArea.focus();
+          } else {
+            // Final step — save and show summary
+            steps[idx].classList.remove('guided-step--active');
+            steps[idx].classList.add('guided-step--done');
+
+            var entry = {
+              theme: answers.theme,
+              steps: [
+                { question: 'Hvad fylder mest', answer: answers.themeText },
+                { question: steps[1].querySelector('.guided-step__question').textContent, answer: answers.step2 || '' },
+                { question: steps[2].querySelector('.guided-step__question').textContent, answer: answers.step3 || '' },
+                { question: steps[3].querySelector('.guided-step__question').textContent, answer: answers.step4 || '' }
+              ],
+              phase: userPhase.num,
+              element: userPhase.element
+            };
+            window.ReflectionStore.saveGuidedEntry(entry);
+
+            // Show summary
+            summaryEl.hidden = false;
+            var html = '<div class="guided-summary__theme">' + answers.themeText + '</div>';
+            entry.steps.forEach(function(s, si) {
+              if (si === 0 || !s.answer) return;
+              html += '<div class="guided-summary__step">';
+              html += '<p class="guided-summary__q">' + s.question + '</p>';
+              html += '<p class="guided-summary__a">' + s.answer + '</p>';
+              html += '</div>';
+            });
+            summaryContentEl.innerHTML = html;
+            summaryDateEl.textContent = new Date().toLocaleDateString('da-DK', { day: 'numeric', month: 'long', year: 'numeric' });
+          }
+        });
+      })(i);
+    }
+
+    // Restart
+    restartBtn.addEventListener('click', function() {
+      answers = {};
+      summaryEl.hidden = true;
+      steps.forEach(function(s, i) {
+        s.classList.remove('guided-step--done', 'guided-step--active');
+        if (i === 0) {
+          s.classList.add('guided-step--active');
+          s.querySelectorAll('.guided-step__choice').forEach(function(b) { b.classList.remove('guided-step__choice--selected'); });
+        } else {
+          s.hidden = true;
+          var area = s.querySelector('.guided-step__area');
+          if (area) { area.value = ''; area.style.height = ''; }
+          var btn = s.querySelector('.guided-step__next');
+          if (btn) btn.disabled = true;
+        }
+      });
+    });
+  })();
   </script>
 </body>
 </html>
